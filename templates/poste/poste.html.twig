@@ -1,0 +1,320 @@
+{% extends 'cours/allCours.html.twig' %}
+{% block tabs %}{% endblock %}
+{% block fonctionnalites %}{% endblock %}
+{% block temoignages %}
+
+	{% endblock %}
+
+{% block campagne %}{% endblock %}
+{% block background %}
+<style>
+    .fx {
+        flex: 1;
+        min-width: 1px;
+    }
+    .channels--teach .small-content {
+        max-width: 510px;
+    }
+    channels--teach .text-shadow {
+        text-shadow: 0 2px 4px rgba(41, 48, 59, 0.5);
+    }
+    h3,
+    .h3 {
+        margin-top: 21px;
+        margin-bottom: 10.5px;
+    }
+
+    .text {
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #FFF ! important;
+    }
+    .col .hero-header--container--sJIdp {
+        height: 367px;
+        padding-bottom: 40px !important;
+    }
+    .channels--teach .discovery-unit-container>.unit-wrapper:nth-of-type(even) {
+        background: #FFF;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .channels--teach .hero-header h1 {
+        font-size: 24px;
+        color: #fff;
+    }
+    .channels--teach .text-shadow {
+        text-shadow: 0 2px 4px rgba(41, 48, 59, 0.5);
+    }
+    h1 {
+        display: block;
+        font-size: 45px;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: 300;
+    }
+    .btn-b {
+        color: #FFF;
+        background-color: #96bf31;
+        border: 1px solid transparent;
+        margin-top: 40px;
+        border-color: #96bf31;
+    }
+    .main_slider {
+        height: 450px;
+        background: linear-gradient(#96bf31,rgba(255, 255,255, 0) 100%, rgba(0, 30, 0)) 100% no-repeat, url("{{asset('img/s4.jpg')}}") 100% 10% no-repeat;
+        background-position: 100% 100%;
+
+
+    }
+    p {
+        text-align: center;
+    }
+    h5 {
+        text-align: center;
+        font-family: ubuntu;
+        font-size: 14px;
+    }
+    .text-shadow-text {
+        font-family: ubuntu;
+        font-weight: 300;
+        line-height: 1.287;
+        font-size: 55px;
+        word-break: break-word;
+        text-align: center;
+    }
+    .text-shadow {
+        text-align: center;
+        font-size: 16px;
+        font-family: ubuntu;
+        color: #fff ! important;
+    }
+    .title {
+        margin-top: -20px;
+        text-align: center;
+        line-height: 1.287;
+        font-family: ubuntu;
+        font-weight: 300;
+    }
+    .trait {
+        border-top: 2px solid #4682B4;
+        width: 45px;
+    }
+    #voir {
+        margin-left: 80%;
+        background: inherit;
+        border-color: #41444b;
+    }
+    #voir:hover {
+        background: #41444b;
+        color: #fff ! important;
+    }
+    h4 {
+        text-align: center;
+        color: #747777;
+        font-size: 16px;
+        font-family: ubuntu;
+    }
+    .benefit_content {
+        text-align: center;
+        font-weight: 300;
+        font-family: ubuntu;
+    }
+    .benefit_content h6 {
+        color: #747777;
+    }
+    .img_ {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        max-height: 232px;
+        align-items: center;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+
+    .container_video {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 100px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+    }
+    .component {
+        position: relative;
+        padding: 50px 100px;
+        border-bottom: 1px solid #e6f0f6;
+        border-top: 1px solid #e6f0f6;
+        background-color: #ffffff;
+    }
+    .component:hover {
+        border-bottom: 1px solid gainsboro;
+        border-top: 1px solid gainsboro;
+    }
+    .section-title {
+        font-size: 35px;
+        color: #053651;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .p_text {
+        margin: 0 0 10px;
+        font-family:'Roboto',sans-serif;
+    }
+    .span_d {
+        padding-left: 600px;
+        text-align: right;
+
+    }
+
+    .table {
+        border-left: 1px solid gainsboro;
+        border-right: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+        width: 100%;
+        margin-bottom: 250px;
+    }
+    .div_lien_etudiants {
+        border-bottom: 1px solid gainsboro;
+        border-top: 1px solid gainsboro;
+        margin-top: 60px;
+
+    }
+    .info {
+        text-align: center;
+        color: #fff;
+        position: relative;
+        display: table;
+        width: 100%;
+        height: 420px;
+        padding-top: 210px;
+    }
+    .roleFormateur {
+        color: #2a333d;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+   h1, h5,span{
+        font-family:'Roboto',sans-serif;
+    }
+</style>
+
+    <div style="background-image:url('{{asset('img/xyz.jpg')}}');background-size:contain;
+            height:auto; background-position:center center;
+                 background-repeat: no-repeat;margin-top:80px;width:100%;">
+        <div style="padding:150px;margin-left:-70px;">
+            <h2 id="cours_en_video" style="font-size:35px;">Devenez formateur pour Crowdedu</h2>
+            {#style="background: -webkit-linear-gradient(right,black,#006DA4);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;opacity:100%;#}
+            <div style="position: absolute;
+                		width: 575px;
+                		height: 1px;
+                		left: 140px;
+                		top: 230px;
+                        margin-right:10px;
+                        background:linear-gradient(90deg,#006DA4,#95C11E);"></div>
+
+            <div id="Formation_en_ligne_aupr_s_des_">
+                <span>Formation en ligne auprès des meilleurs formateurs
+                    <br/>et institutions ici 
+                        et partout dans le monde
+                </span>
+            </div>
+
+
+            <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;text-align: left;
+                    		">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <h4 style="font-family: 'Roboto', sans-serif;
+                            		font-style: normal;
+                            		font-weight: 200;
+                            		font-size: 18px;
+                            		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
+                            ">
+                    </h4>
+                {% else %}
+                    <h4 style="font-family: 'Roboto', sans-serif;
+                            		font-style: normal;
+                            		font-weight: 200;
+                            		font-size: 18px;
+                            		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
+                            ">
+                    </h4>
+                {% endif %}
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>{% endblock %}
+
+{% block barrier %}
+<div class="container_video">
+<h1 class="section-title" style="text-align:center;">Qui peut etre formateurs sur Crowdedu Africa ?</h1>
+<div class="videos" style="width:900px;">
+<iframe allowfullscreen="allowfullscreen" class="youtube" frameborder="0" height="560"  src="https://www.youtube.com/embed/YBY-nbIGxI4"
+ width="1150"></iframe>
+</div>
+</div>
+{% endblock %}
+{# {% block cours %}{% endblock %} #}
+ {% block categories %}
+<div class="component">
+<h3 class="section-title">Le mentorat chez Crowdedu Africa</h3>
+<p class="p_text">
+Crowdedu Africa est la plateforme d'éducation en ligne leader en Europe.
+ Avec plus de 2,5 millions de membres, nous rendons l'éducation accessible à tous,
+  notamment grâce à des diplômes 100% en ligne. 
+
+Le mentorat est au cœur de ces parcours diplômants : cet accompagnement personnalisé 
+permet en effet aux étudiant·e·s d’atteindre leurs objectifs plus facilement.
+ Le ou la mentor est un·e expert·e métier qui fait le point avec l'étudiant·e
+  une fois par semaine et apporte son expérience pour apprendre mieux et plus vite. 
+  C’est la garantie d’un suivi régulier pour pouvoir dépasser tout blocage et pour ne jamais
+   être à court de motivation.
+
+Nous recherchons aujourd'hui des mentors dans de multiples
+ disciplines : data science, développement web, marketing digital...
+  Si vous êtes top et que vous aimez partager votre savoir-faire, rejoignez-nous 
+  ! Notre révolution de l'éducation vous attend.</p>
+</div>
+{% endblock %} 
+{% block share %}
+
+<div class="container">
+  <h2 style="text-align:center;">Devenez Formateur</h2>
+  <p>Poste disponible</p>            
+  <table class="table table-hover ">
+    <tbody>
+      <tr>
+   {% for poste in postes %}
+        <td ><a href="{{path('poste_slug',{'slug':poste.slug})}}"><h5 class="roleFormateur"> {{poste.role}}
+</h5></a></td>
+
+        <td><span class="span_d">{{poste.category.libelle}}</span></td>
+      </tr>
+ {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+

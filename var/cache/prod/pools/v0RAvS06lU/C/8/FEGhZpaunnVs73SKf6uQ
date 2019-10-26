@@ -1,0 +1,276 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Projet',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Projet',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\ProjetRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'description' => [
+                        'fieldName' => 'description',
+                        'type' => 'text',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'description',
+                    ],
+                    'photo' => [
+                        'fieldName' => 'photo',
+                        'type' => 'blob',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'photo',
+                    ],
+                    'date' => [
+                        'fieldName' => 'date',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'date',
+                    ],
+                    'adresse' => [
+                        'fieldName' => 'adresse',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'adresse',
+                    ],
+                    'parcoursEdu' => [
+                        'fieldName' => 'parcoursEdu',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'parcours_edu',
+                    ],
+                    'opportinute' => [
+                        'fieldName' => 'opportinute',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'opportinute',
+                    ],
+                    'attentes' => [
+                        'fieldName' => 'attentes',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'attentes',
+                    ],
+                    'motivation' => [
+                        'fieldName' => 'motivation',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'motivation',
+                    ],
+                    'perspective' => [
+                        'fieldName' => 'perspective',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'perspective',
+                    ],
+                    'telephone' => [
+                        'fieldName' => 'telephone',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'telephone',
+                    ],
+                    'commentaire' => [
+                        'fieldName' => 'commentaire',
+                        'type' => 'text',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'commentaire',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'description' => 'description',
+                    'photo' => 'photo',
+                    'date' => 'date',
+                    'adresse' => 'adresse',
+                    'parcours_edu' => 'parcoursEdu',
+                    'opportinute' => 'opportinute',
+                    'attentes' => 'attentes',
+                    'motivation' => 'motivation',
+                    'perspective' => 'perspective',
+                    'telephone' => 'telephone',
+                    'commentaire' => 'commentaire',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'description' => 'description',
+                    'photo' => 'photo',
+                    'date' => 'date',
+                    'adresse' => 'adresse',
+                    'parcoursEdu' => 'parcours_edu',
+                    'opportinute' => 'opportinute',
+                    'attentes' => 'attentes',
+                    'motivation' => 'motivation',
+                    'perspective' => 'perspective',
+                    'telephone' => 'telephone',
+                    'commentaire' => 'commentaire',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'projet',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'user' => [
+                        'fieldName' => 'user',
+                        'targetEntity' => 'App\\Entity\\User',
+                        'joinColumns' => [
+                            [
+                                'name' => 'user_id',
+                                'referencedColumnName' => 'id',
+                                'unique' => true,
+                            ],
+                        ],
+                        'mappedBy' => null,
+                        'inversedBy' => null,
+                        'cascade' => [
+                            'persist',
+                        ],
+                        'orphanRemoval' => false,
+                        'fetch' => 2,
+                        'type' => 1,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Projet',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => true,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'user_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'user_id' => 'user_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'user_id',
+                        ],
+                    ],
+                    'commande' => [
+                        'fieldName' => 'commande',
+                        'targetEntity' => 'App\\Entity\\Commande',
+                        'joinColumns' => [
+                            [
+                                'name' => 'commande_id',
+                                'referencedColumnName' => 'id',
+                                'unique' => true,
+                            ],
+                        ],
+                        'mappedBy' => null,
+                        'inversedBy' => null,
+                        'cascade' => [
+                            'persist',
+                        ],
+                        'orphanRemoval' => false,
+                        'fetch' => 2,
+                        'type' => 1,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Projet',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => true,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'commande_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'commande_id' => 'commande_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'commande_id',
+                        ],
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

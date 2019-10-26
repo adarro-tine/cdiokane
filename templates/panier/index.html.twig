@@ -1,0 +1,18 @@
+<div class="well">
+    <ul class="nav nav-list">
+        <li > 
+            <a href="{{ path('page_panier') }}">
+            <i class="fa fa-shopping-cart" aria-hidden="true" style="color:#013552;"></i>
+            <span id="checkout_items" class="checkout_items">
+                {% if produits == 0 %}
+                    {{produits}}
+                {% elseif produits == 1 %}
+                    {{produits}}
+                {% else %}
+                    {{ produits }} 
+                {% endif %}
+                </span>
+            </a>
+        </li>
+    </ul>
+</div> 

@@ -1,0 +1,182 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\CampagneRepository")
+ */
+class Campagne
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $photo;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $histoire;
+    /**
+   * @ORM\OneToOne(targetEntity="App\Entity\User", cascade={"persist"})
+   */
+  private $user;
+
+  /**
+* @ORM\OneToOne(targetEntity="App\Entity\Cours", cascade={"persist"})
+*/
+private $cours;
+ /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): self
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getHistoire(): ?string
+    {
+        return $this->histoire;
+    }
+
+    public function setHistoire(string $histoire): self
+    {
+        $this->histoire = $histoire;
+
+        return $this;
+    }
+
+  /**
+   * Get the value of user
+   */ 
+  public function getUser()
+  {
+    return $this->user;
+  }
+
+  /**
+   * Set the value of user
+   *
+   * @return  self
+   */ 
+  public function setUser($user)
+  {
+    $this->user = $user;
+
+    return $this;
+  }
+
+/**
+ * Get the value of cours
+ */ 
+public function getCours()
+{
+return $this->cours;
+}
+
+/**
+ * Set the value of cours
+ *
+ * @return  self
+ */ 
+public function setCours($cours)
+{
+$this->cours = $cours;
+
+return $this;
+}
+
+    /**
+     * Get the value of date
+     */ 
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set the value of date
+     *
+     * @return  self
+     */ 
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+}

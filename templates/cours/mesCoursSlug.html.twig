@@ -1,0 +1,229 @@
+	{% extends 'cours/allCours.html.twig' %}
+	{% block fonctionnalites %}{% endblock %}
+	{% block campagne %}{% endblock %}
+	{% block categories %}{% endblock %}
+	{% block tabs %}{% endblock %}
+	{% block share %}{% endblock %}
+	{% block section %}{% endblock %}
+	{% block temoignages  %}{% endblock %}
+	{% block barrier %} {% endblock %}
+
+	{% block background %}
+	<style>
+	
+	
+	a{
+	background-color: transparent;
+	}
+	
+	h1{
+	color: #ffffff !important;	
+	margin-top:-30px;
+	font-family:'Roboto',sans-serif;
+	}
+	
+	
+	.font{
+	font-size:30px;
+	}
+	.acceuil{
+		color:#696969;
+		font-family:'Roboto',sans-serif;
+	}
+	.tr{
+		font-size:12px;		
+	}
+	.tr td a {
+		color:#686868;
+	}
+	.statu{
+		width:100px;
+		height:20px;
+		font-size:12px;
+		background: #70c989;
+		padding: 2px 8px;
+		margin-left: 10px;
+		color:#fff;
+    	border-radius: 2px;
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.tabla{
+		padding: 15px 20px;
+		letter-spacing: 1px;		
+		font-size: 11px;
+		text-transform: uppercase;
+		opacity: .9;
+		font-weight: 600;
+			
+	}
+	.item  {
+	color: #3d3d3d;
+	}
+	.item:hover {
+	color:#053651;
+	}
+	.addition{
+		margin-left:700px;
+		color:#D3D3D3;
+		font-size:32px;
+	}
+	
+	h1,h2,h3,h4,h5,h6{
+		font-family:'Roboto',sans-serif;
+	}
+	
+	</style>
+	<div class="main_slider" style="background:linear-gradient(90deg,#096ea2,#96bf31);height:300px;">
+		<div class="container fill_height" style="padding:30px;">
+			<div class="row">
+				<div class="col-lg-9" style="margin-top:33px;">
+				<h1>Formation complète {{cour.titreCours}}</h1>
+				<h3 style="color:white;font-weight:150;">{{cour.petitDescription}}...</h3>
+				<h1 style="margin-top:35px;">{{cour.universite.nom}}</h1>			
+				</div>
+				<div class="col-lg-3">
+				<div class="card cadre" style="width:230px;height:212px;border-radius:0;margin-top:15px;">
+			<div class="card-body" style="margin:-15px;">
+			<div class="product_image">
+					<img src="data:image/png;base64,{{ cour.image }}" width="150" height="200" alt="" id="tine">
+
+					</div>
+
+		
+			</div>
+			</div><br>
+
+						</div>
+
+				</div>
+			</div>
+		</div>
+	<div class="container mt-3">
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs tabla">
+	<li class="nav-item">
+		<a class="nav-link active item" data-toggle="tab" href="#home">Acceuil</a>
+	</li>
+	<li class="nav-item ">
+		<a class="nav-link item" data-toggle="tab" href="#menu1">Ce que vous allez apprendre</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link item" data-toggle="tab" href="#menu2">Avis</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link item" data-toggle="tab" href="#menu3">Enseignant</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link item" data-toggle="tab" href="#menu4">Option d'inscription</a>
+	</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+	<div id="home" class="container tab-pane active"><br>
+	<div class="row">
+	<div class="col-lg-8">
+		<h6 class="acceuil"><strong >{{cour.petitDescription}}</strong></h6>
+		<p class="acceuil">{{cour.description}}.</p><br><br><br>
+		<div class="course_curriculum accordion">
+			<h3 class="heading">
+<span style="font-family:ubuntu;text-transform: uppercase;font-size:16px;">Programme de Formation</span>
+</h3>
+
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="students"><i class="fa fa-users"style="color:#fff;font-family:ubuntu;"></i> <b>0 PARTICIPANTS</b></div>
+	</div>
+		</div>
+	</div>
+	<div id="menu1" class="container tab-pane fade"><br>
+<div class="course_curriculum accordion" style="width:700px;">
+<table class="table">		
+	<tbody>
+	
+			{% for cours in cour.chapitres %}
+			<tr class="course_lesson show tr">
+			<td class="curriculum-icon"><i class="fa fa-play-circle"></i></td>
+				{% if cours.etat == true %}
+				
+				<td><a href="" style="color:#053651;" id="a_video" data-toggle="modal" data-target="#myModal">{{cours.titreChapitre}}</a></td>
+			  <center>  
+			  <div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
+			  
+                <iframe width="700" height="400" src="{{cours.video}}"></iframe>            
+			    </div>
+				</center>
+				
+				<td><span class="statu" >Libre</span> </td>				
+				{% elseif cours.etat == false %}
+				{#<span>{{cours.titreChapitre}}</span>#}
+				</div>
+				<td><a href="" style="color:#053651;"0 id="a_video" data-toggle="modal" data-target="#myModal">{{cours.titreChapitre}}</a></td>
+			  <center>  
+			  <div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
+			  
+                <iframe width="700" height="400" src="{{cours.video}}"></iframe>            
+			    </div>
+				</center>
+				
+				<td><span class="statu" >Libre</span> </td>	
+				{% endif %}
+				<td><span class="time"><i class="fa fa-clock-o"></i> {{cours.duration}}</span></td>
+				</tr>
+			{% endfor %}
+			</tbody>
+			</table>
+			</div>
+
+
+	</div>
+	<div id="menu2" class="container tab-pane fade"><br>
+		<h3>Menu 2</h3>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+	</div>
+	<div id="menu3" class="container tab-pane fade"><br>
+		<h3>Menu 2</h3>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+	</div>
+	<div id="menu4" class="container tab-pane fade"><br>
+		<h3>Menu 2</h3>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+	</div>
+	</div>
+   
+ 
+
+</div>
+	{% endblock %}	
+	{% block script %}
+	<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('js/rate.class.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/popper.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+	<script src="{{asset('plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+	<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+	<script src="{{asset('plugins/easing/easing.js')}}"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
+	<script type="text/javascript">
+ $(document).ready(function() {
+	$('.li').each(function() {
+						$(this).append(objRate.initRate(objRate.maxRate));
+				});
+
+				$('.fa-star-o, .fa-star').on('mouseenter mouseleave', objRate.hoverHandler);
+				$('.fa-star-o, .fa-star').on('click', objRate.clickHandler);
+		});
+		$("#hide").click(function(){
+		$(".tr").toggle();
+		});
+		$("#myModal").hide();
+		$('#a_video').click(function(){
+         $("#myModal").show();
+
+		
+		});
+		</script>
+	{% endblock %}

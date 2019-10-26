@@ -1,0 +1,302 @@
+{% extends 'cours/allCours.html.twig' %}
+{% block temoignages %} {% endblock %}
+{% block barrier %} {% endblock %}
+{% block fonctionnalites %} {% endblock %}
+{% block campagne %} {% endblock %}
+{% block background %}
+	<style>
+    .contact_contents
+{
+	padding-right: 30px;
+}
+.contact_contents h1,
+.follow_us_contents h1,
+.get_in_touch_contents h1
+{
+	font-size: 40px;
+	font-weight: 500;
+}
+.contact_contents p,
+.get_in_touch_contents p
+{
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+.contact_contents div
+{
+	margin-top: 22px;
+}
+.contact_contents div:first-of-type
+{
+	margin-top: 39px;
+}
+
+/*********************************
+7. Follow Us
+*********************************/
+
+.follow_us_contents
+{
+	margin-top: 32px;
+}
+.social
+{
+	margin-top: 20px;
+}
+.social li
+{
+	margin-right: 12px;
+}
+.social li:last-child
+{
+	margin-right: 0px;
+}
+.social li a
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.social li a i
+{
+	color: #FFFFFF;
+}
+.social li:hover a
+{
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+/*********************************
+8. Contact Form
+*********************************/
+
+.form_input
+{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border: solid 1px #e5e5e5;
+	padding-left: 20px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.input_message
+{
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 16px;
+	padding-bottom: 15px;
+}
+.form_input:focus,
+#newsletter_email:focus
+{
+	border: solid 1px #7f7f7f !important;
+	box-shadow: none !important;
+}
+.message_submit_btn
+{
+	background: #1e1e27;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	width: 165px;
+	border: none;
+	height: 46px;
+	cursor: pointer;
+}
+.message_submit_btn:hover
+{
+	background: #2b2b34 !important;
+}
+:focus
+{
+	outline: none !important;
+}
+.input_ph::-webkit-input-placeholder
+{
+	font-size: 16px !important;
+	font-weight: 400;
+	color: #b9b4c7 !important;
+}
+.input_ph:-moz-placeholder /* older Firefox*/
+{
+	font-size: 16px !important;
+	font-weight: 400;
+	color: #b9b4c7 !important;
+}
+.input_ph::-moz-placeholder /* Firefox 19+ */
+{
+	font-size: 16px !important;
+	font-weight: 400;
+	color: #b9b4c7 !important;
+}
+.input_ph:-ms-input-placeholder
+{
+	font-size: 16px !important;
+	font-weight: 400;
+	color: #b9b4c7 !important;
+}
+.input_ph::input-placeholder
+{
+	font-size: 16px !important;
+	font-weight: 400;
+	color: #b9b4c7 !important;
+}
+textarea
+{
+	border: solid 1px #e5e5e5;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+textarea:hover
+{
+	border-color: #7f7f7f !important;
+}
+.input_name
+{
+	margin-bottom: 19px;
+	margin-top: 31px;
+}
+.input_review
+{
+	display: block;
+	width: 100%;
+	border: solid 1px #e5e5e5;
+	margin-top: 23px;
+	padding-left: 20px;
+	padding-top: 13px;
+}
+.user_star_rating
+{
+	display: inline-block;
+	margin-left: 18px;
+}
+.user_star_rating li
+{
+	display: inline-block;
+	margin-right: -3px;
+	cursor: pointer;
+}
+.user_star_rating li i
+{
+	color: #f5c136;
+	font-size: 18px;
+}
+.review_submit_btn
+{
+	width: 170px;
+	border: none;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+
+     </style>
+	 <div id="google_map" style="width: 100%; height: 507px;margin-top: 79px; margin-bottom:89px;">
+<div id="map" style="margin: 0 auto; width:1000px;box-shadow: 0px 27px 179px gainsboro;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7718.336774909604!2d-17.471233276891482!3d14.703067686488305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1729783494179%3A0x23bb471dc2527440!2sSICAP+Karak%2C+Dakar!5e0!3m2!1sfr!2ssn!4v1552045092536"  width="100%" height="607" margin-bottom="59" padding="25" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="row">
+
+			<div class="col-lg-6 contact_col" style="padding:100px;">
+				<div class="contact_contents">
+					<h1>Contactez-nous</h1>
+					<p>Il y a plusieurs façons de nous contacter. Vous pouvez nous contacter, nous appeler ou envoyer un email, choisir ce qui vous convient le mieux.</p>
+					<div>
+						<p>33 827 99 53</p>
+						<p>info@crowdeduafrica.com</p>
+					</div>
+					
+				</div>
+
+				<!-- Follow Us -->
+
+				<div class="follow_us_contents">
+					<h1>Suivez nous</h1>
+					<ul class="social d-flex flex-row">
+						<li><a href="https://www.facebook.com/crowdedu" style="background-color: #3a61c9"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#" style="background-color: #41a1f6"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" style="background-color: #8f6247"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
+
+			</div>
+{# formulaire de contact #}
+			<div class="col-lg-6 get_in_touch_col" style="padding:100px;">
+				<div class="get_in_touch_contents">
+					<h1>Prenez contact avec nous!</h1>
+					<p>Remplissez le formulaire ci-dessous pour recevoir un message gratuit et confidentiel.</p>
+					<div>
+		 {{form_start(our_form)}}
+                <div class="form-group ">       
+                  {{form_row(our_form.nom,{'attr':{'class':'form-control'}}) }}
+                </div>
+               <div class="form-group ">         
+                {{form_row(our_form.email,{'attr':{'class':'form-control'}}) }}
+              </div>
+                <div class="form-group">          
+                {{form_row(our_form.objet,{'attr':{'class':'form-control'}}) }}
+                </div>
+              <div class="form-group">          
+                {{form_row (our_form.message,{'attr':{'class':'form-control'}}) }}
+                </div>
+                   
+        </div>
+		<div class="form-group row">
+     <div class="col-sm-4"></div>
+     <div class="col-sm-8">
+<button id="review_submit" type="submit"  value="Submit" 
+style="background: #96bf31;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 150px;
+    border: none;
+    height: 46px;
+    cursor: pointer;">envoyer</button>     </div>
+     </div>
+          {{ form_end(our_form) }}
+    </div>
+				</div>
+			</div>
+
+		</div>
+        </div>
+
+{% endblock %}
+{% block section %}
+{% endblock %}
+{% block categories %}
+{% endblock %}
+{% block cat %}
+{% endblock %}
+{% block cours %}
+{% endblock %}
+	{% block deal %}
+    {% endblock %}
+    	{% block meilleurs_ventes %}
+{% endblock %}
+{% block options %}
+{% endblock %}
+{% block latest %}
+{% endblock %}
+
+
+

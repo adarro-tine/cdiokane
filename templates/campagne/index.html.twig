@@ -1,0 +1,210 @@
+{% extends 'cours/allCours.html.twig' %}
+{% block header %}
+<header style="position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #FFFFFF;
+	z-index: 10;">
+<div style="width: 100%;
+	height: 45px;
+	background: rgba(0,109,164,1);">
+<div class="top_nav_left" style="margin-left:150px;padding-top:3px;">
+
+
+
+{#<li><a  >Se connecter</a></li>#}
+
+<ul style="display:flex;flex-wrap:wrap;margin-top:-17px;float:right;">
+				<li style="padding:13px;color:white;"><a href="https://www.facebook.com/crowdedu"><i class="fab fa-facebook-f" style="color:white;"></i></a></li>
+				<li style="padding:13px;"><a href="#"><i class="fab fa-twitter" style="color:white;"></i></a></li>
+				<li style="padding:13px;"><a href="#"><i class="fab fa-instagram" style="color:white;"></i></a></li>
+				<li style="padding:13px;"><a href="#"><i class="fab fa-linkedin-in" style="color:white;"></i></a></li>
+				 <li class="account" style="width:150px;margin-right:30px;">
+									<a href="#" style="color:white;margin-top:13px;font-size:10px;text-decoration:none;"><i class="fa fa-user" style="padding:5px;"></i>
+										Se connecter
+										<i class="fa fa-angle-down"></i>
+									</a>
+
+
+									<ul class="account_selection" style="padding: 8px 0 16px 0;width:230px;box-shadow:0 4px 16px rgba(20,23,28,0.25);margin-top:-17px;
+">
+										{#{% if app.user != null %}#}
+										{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+										<li style="display:flex;margin-left:30px;">
+<img src="{{ asset('uploads/' ~ app.user.photo) }}" height="120px" width="120px" id="image" style="margin-left:10px;border-radius:38px;">
+</li>
+<br><br>
+					  <li style="margin-top:-90px;" class="menu_item">{{app.user.prenom}} {{app.user.nom}}</li>
+					  <li class="menu_item" style="margin-top:-15px;">{{app.user.email}}</li>
+                  <li class="menu_item" style="margin-top:-70px;"><a href="{{path('edit',{'slug':app.user.slug})}}" style="text-decoration:none;" >Compte </a></li>
+					  <li class="menu_item" style="margin-top:-15px;"><a href="{{path('security_logout')}}" style="text-decoration:none;">Déconnexion</a></li>
+
+										{% else %}
+<li><a href="#TaskListDialog" role="button" class="btn" data-toggle="modal">S'inscrire</a></li>
+
+<li><a href="#TaskListDialog" role="button" class="btn" data-toggle="modal" >Se connecter</a></li>
+										{% endif %}
+					    </ul>
+								 </li>
+                
+</ul>  
+
+</div>
+
+
+</div>
+<div class="main_nav_container" style="background-color:#f5f5f5;height:auto;height:70px;padding:0;">
+		<div class="logo_container">
+							<a href="{{path('cours')}}"> <img src="{{asset('img/logo_crowdedu.png')}}" width="75%" height="auto"/></a>
+		  </div>
+			
+		</div>
+
+
+</header>
+{% endblock %}
+{% block temoignages %} {% endblock %}
+{% block barrier %} {% endblock %}
+{% block fonctionnalites %} {% endblock %}
+{% block campagne %} {% endblock  %}
+{% block background %}
+<div style="width:1400px;height:1100px;background-color:white;padding-top:114px;">
+<div style="width:646px;height:995px;margin-left:350px;margin-top:5px;background-color:white;border:1px solid gainsboro;padding-top:-4x²0px;"><br/>
+{#<h4 style="text-align:center;font-family:'Roboto',sans-serif;">Indiquez votre objectif ici</h4><br>#}
+  
+<form method="POST" enctype="multipart/form-data"  id="demo1-upload">
+    
+      <div class="col-lg-9 col-md-1 col-sm-19 col-xs-19"  style="padding-left:15px; padding-right:15px;margin-left:75px; padding-bottom:15px;">
+            {% for flash_message in app.session.flashbag.get('success') %}
+                <div class="alert alert-success" role="alert">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
+            {% for flash_message in app.session.flashbag.get('danger') %}
+                <div class="alert alert-danger" role="alert">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
+            
+		<br/></br/>	
+            	<label>Téléphone :</label>
+                 <div class="form-group ">
+                  <input name="telephone" id="telephone" type="text" required  class="form-control caret" placeholder="Veuillez saisir votre numéro de téléphone"> 
+			   </div>
+			<label>Ville :</label>
+
+               <div class="form-group ">
+               <input name="ville" id="ville" type="text" required   class="form-control caret" placeholder="Entrer le nom de votre ville">
+              </div>
+			  	<label>Pays :</label>
+
+                <div class="form-group">
+<input name="pays" id="pays" type="text"    class="form-control caret" required  placeholder="Entrer le nom du pays">
+</div>
+				 <label>Photo :</label>
+
+<div class="form-group">
+               <input type="file" name="photo" class="form-control" placeholder="Choisir une photo" required>
+            </div>
+       				 <label>Votre parcours :</label>
+
+<div class="form-group res-mg-t-15">
+                    <textarea name="parcoursEdu"  placeholder="" rows="2" placeholder="Parler nous de votre histtoire" class="form-control caret" required>
+					</textarea>
+                      </div>
+				 <label>Formation :</label>
+
+                <div class="form-group">
+                     <select name="coursid" class="form-control" required>
+                  <option value="none" selected="" disabled="">
+                         Selectionnez la formation</option>
+                        {% for c in cours %}
+                    <option value="{{c.id}}" required>{{c.titreCours}}</option>
+                        {% endfor %}
+                </select>
+            </div>
+				 <label>Attentes :</label>
+
+			              <div class="form-group">
+<input name="attentes" id="attentes" type="text"    class="form-control caret" required  placeholder="Entrer vos attentes">
+</div>
+			
+            
+							 <label>Motivation :</label>
+
+              <div class="form-group res-mg-t-15">
+                    <textarea name="motivation"  placeholder="" rows="2" placeholder="Montrer nous votre motivation" class="form-control caret" required>
+					</textarea>
+                      </div>
+					  				 <label>Perspective :</label>
+
+					  <div class="form-group">
+<input name="perspective" id="perspective" type="text"    class="form-control caret" required  placeholder="Entrer vos perspectives">
+</div>
+<label>Lien de votre vidéo :</label>
+
+					  <div class="form-group">
+<input name="video" id="myUrl" type="text"    class="form-control caret" value="" required >
+</div>
+              
+                  <div class="card-footer text-muted" style="padding-top:5px;"><br><br>
+        <center>
+<div class="row">
+                         <div class="col-lg-12" style="margin-top:-25px;">
+ <input type="submit" name="ajouter" class="btn  waves-effect waves-light" style="width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;"  value="Enregistrer" />
+                                                    
+                        </div>
+                                                </div>          </center>        
+        </div>
+                </div>
+               
+                 
+            
+      </div>
+      </form>
+       
+</div>
+
+</div>
+
+	
+
+{% endblock %}
+{% block section %}
+{% endblock %}
+{% block categories %}
+{% endblock %}
+{% block cat %}
+{% endblock %}
+{% block cours %}
+{% endblock %}
+	{% block deal %}
+    {% endblock %}
+    	{% block meilleurs_ventes %}
+{% endblock %}
+{% block options %}
+{% endblock %}
+{% block latest %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
+ {% block script %}
+
+<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('css/bootstrap4/popper.js')}}"></script>
+<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{asset('plugins/easing/easing.js')}}"></script>
+<script src="{{asset('js/custom.js')}}"></script>
+
+<script>
+ $(document).ready(function() {
+	
+ });
+
+</script>
+{% endblock %}
+

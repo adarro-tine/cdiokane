@@ -1,0 +1,250 @@
+{% extends 'home/index.html.twig' %}
+{% block tabs %}{% endblock %}
+{% block background %}
+<style>
+.fx {
+    flex: 1;
+    min-width: 1px;
+}
+.channels--teach .small-content {
+    max-width: 510px;
+}
+channels--teach .text-shadow {
+    text-shadow: 0 2px 4px rgba(41,48,59,0.5);
+}
+h3, .h3 {
+    margin-top: 21px;
+    margin-bottom: 10.5px;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #FFF ! important;
+}
+.col .hero-header--container--sJIdp {
+    height: 367px;
+    padding-bottom: 40px !important;
+    }
+.channels--teach .discovery-unit-container>.unit-wrapper:nth-of-type(even) {
+    background: #FFF;
+}
+* {
+    box-sizing: border-box;
+}
+.channels--teach .hero-header h1 {
+    font-size: 24px;
+    color:#fff;
+}
+.channels--teach .text-shadow {
+    text-shadow: 0 2px 4px rgba(41,48,59,0.5);
+}
+h1 {
+    display: block;
+    font-size: 45px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 300;
+}
+.btn-b {
+    color: #FFF;
+    background-color: #96bf31;
+    border: 1px solid transparent;
+    margin-top:40px;
+    border-color: #96bf31;
+}
+.main_slider{
+height:450px;
+background:linear-gradient(#053651,rgba(255, 255,255, 0) 100%, rgba(0, 30, 0)) 100%  no-repeat, url("{{asset('img/s4.jpg')}}") 100% 10% no-repeat;
+background-position:100% 100%;
+
+
+}
+p{
+    text-align: center;
+}
+h5{
+  text-align: center;
+  font-family:ubuntu;
+  font-size:14px;  
+}
+.text-shadow-text{
+font-family:ubuntu;
+font-weight: 300;
+line-height: 1.287;
+font-size: 55px;
+word-break: break-word;
+text-align: center;
+}
+.text-shadow {
+text-align: center;
+font-size: 16px;
+font-family:ubuntu;
+color:#fff ! important;
+}
+.title{
+    margin-top:-20px;
+    text-align: center;
+    line-height: 1.287;
+    font-family:ubuntu;
+    font-weight: 300;
+}
+.trait{
+    border-top: 2px solid #4682B4;
+    width:45px;
+}
+#voir{
+    margin-left:80%;background:inherit;
+    border-color: #41444b;
+}
+#voir:hover{
+    background:#41444b;
+    color:#fff ! important;
+}
+h4{
+    text-align:center;
+    color:#747777;
+    font-size:16px;
+    font-family:ubuntu;
+}
+.benefit_content{
+    text-align:center;
+    font-weight: 300;
+    font-family:ubuntu;
+}
+.benefit_content h6{
+   color:#747777; 
+}
+.img_ {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-height: 232px;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.container_video {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 100px;
+    padding-top:100px;
+    padding-bottom: 50px;
+
+}
+.component {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-bottom: 1px solid #e6f0f6;
+    border-top: 1px solid #e6f0f6;
+    background-color: #ffffff;
+}
+.component:hover{
+    border-bottom:1px solid gainsboro;
+    border-top:1px solid gainsboro;
+}
+.section-title {
+    font-size: 35px;
+    color: #053651;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom:30px;
+}
+.p_text{
+        margin: 0 0 10px;
+}
+.span_d{
+    padding-left:600px;
+    text-align: right;
+
+}
+
+.table{
+    border-left:1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    width:100%;
+    margin-bottom:250px;
+}
+.div_lien_etudiants{
+ border-bottom: 1px solid gainsboro;
+ border-top: 1px solid gainsboro;
+margin-top:60px;
+
+}
+.info{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 420px;
+    padding-top:210px;
+} 
+.roleFormateur{
+    color: #2a333d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+</style>
+<div class="main_slider">
+<div class="container fill_height">
+<div class="info">
+<h2  style="color:white;">Devenez formateur pour Crowdedu Africa</h2>
+<br/>
+<p style="color:white; font-size:17px;">Partager votre expérience en accompagnant des jeunes</p>
+</div>
+</div>
+</div><br><br>
+{% endblock %}
+{% block cat %}
+
+{% endblock %}
+{# {% block cours %}{% endblock %} #}
+ {% block cours %}
+
+{% endblock %} 
+{% block deal %}
+
+
+
+{% endblock %}
+{% block newsletter %}
+	<div class="newsletter">
+			<div class="row" style="background-color:#053651;">
+					<div class="" style="height:150px; padding:25px; margin-left:450px;">
+
+						<h3 style="text-align:center; color:#ffffff;">Nous sommes là pour vous aider.</h3>
+						<button class="contact-button" tabindex="0" role="button"><a href=""><span style="color:#ffffff;">Commencer maintenant</span></a></button>
+					</div>
+				
+			</div>
+	</div>
+	{% endblock %}
+{% block meilleurs_ventes %}
+
+{% endblock %}
+{% block options %}
+
+
+{% endblock %}
+{% block latest %}
+{% endblock %}
+{% block section %}
+{% endblock %}
+{% block categories %}
+{% endblock %}

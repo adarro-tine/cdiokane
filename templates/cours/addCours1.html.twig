@@ -1,0 +1,365 @@
+{% extends 'cours/allCours.html.twig'%}
+{% block background %}
+<style>
+.fx {
+    flex: 1;
+    min-width: 1px;
+}
+.channels--teach .small-content {
+    max-width: 510px;
+}
+channels--teach .text-shadow {
+    text-shadow: 0 2px 4px rgba(41,48,59,0.5);
+}
+h3, .h3 {
+    margin-top: 21px;
+    margin-bottom: 10.5px;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #FFF ! important;
+}
+.col .hero-header--container--sJIdp {
+    height: 367px;
+    padding-bottom: 40px !important;
+    }
+.channels--teach .discovery-unit-container>.unit-wrapper:nth-of-type(even) {
+    background: #FFF;
+}
+* {
+    box-sizing: border-box;
+}
+.channels--teach .hero-header h1 {
+    font-size: 24px;
+    color:#fff;
+}
+.channels--teach .text-shadow {
+    text-shadow: 0 2px 4px rgba(41,48,59,0.5);
+}
+h1 {
+    display: block;
+    font-size: 45px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 300;
+}
+.btn-b {
+    color: #FFF;
+    background-color: #96bf31;
+    border: 1px solid transparent;
+    margin-top:40px;
+    border-color: #96bf31;
+}
+
+p{
+    text-align: center;
+}
+h5{
+  text-align: center;
+  font-family:ubuntu;
+  font-size:14px;  
+}
+.text-shadow-text{
+font-family:ubuntu;
+font-weight: 300;
+line-height: 1.287;
+font-size: 55px;
+word-break: break-word;
+text-align: center;
+}
+.text-shadow {
+text-align: center;
+font-size: 16px;
+font-family:ubuntu;
+color:#fff ! important;
+}
+.title{
+    margin-top:-20px;
+    text-align: center;
+    line-height: 1.287;
+    font-family:ubuntu;
+    font-weight: 300;
+}
+.trait{
+    border-top: 2px solid #96bf31;
+    width:45px;
+}
+#voir{
+    margin-left:80%;background:inherit;
+    border-color: #41444b;
+}
+#voir:hover{
+    background:#41444b;
+    color:#fff ! important;
+}
+h4{
+    text-align:center;
+    color:#747777;
+    font-size:16px;
+    font-family:ubuntu;
+}
+.benefit_content{
+    text-align:center;
+    font-weight: 300;
+    font-family:ubuntu;
+}
+.benefit_content h6{
+   color:#747777; 
+}
+.img_ {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-height: 232px;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.container_video {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 100px;
+    padding-top:100px;
+    padding-bottom: 50px;
+
+}
+.component {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-bottom: 1px solid #e6f0f6;
+    border-top: 1px solid #e6f0f6;
+    background-color: #ffffff;
+}
+.component:hover{
+    border-bottom:1px solid gainsboro;
+    border-top:1px solid gainsboro;
+}
+.section-title {
+    font-size: 35px;
+    color: #053651;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom:30px;
+}
+.p_text{
+        margin: 0 0 10px;
+}
+.span_d{
+    padding-left:600px;
+    text-align: right;
+
+}
+
+.table{
+    border-left:1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    width:100%;
+    margin-bottom:250px;
+}
+.div_lien_etudiants{
+ border-bottom: 1px solid gainsboro;
+ border-top: 1px solid gainsboro;
+margin-top:60px;
+
+}
+.info{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 420px;
+    padding-top:210px;
+} 
+.roleFormateur{
+        color: #2a333d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+    .text-center{
+        ext-align: center;
+    }
+    .mb{
+        border:1px solid gainsboro;
+    }
+    .mb{
+        border-top:5px solid #96bf31;
+    }
+    .imgp{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:90px;
+    height:90px;
+  }
+  .spanp{
+      font-size:13px;
+  }
+  .iot{
+      font-size:13px;
+  }
+  .title{
+      color:#053651;
+  }
+</style>
+
+    <div style="background-image:url('{{asset('img/xyz.jpg')}}');background-size:contain;
+            height:auto; background-position:center center;
+                 background-repeat: no-repeat;margin-top:80px;width:100%;">
+        <div style="padding:150px;margin-left:-70px;">
+            <h2 id="cours_en_video" style="font-size:35px;">Ayez un impact global</h2>
+            {#style="background: -webkit-linear-gradient(right,black,#006DA4);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;opacity:100%;#}
+            <div style="position: absolute;
+                		width: 575px;
+                		height: 1px;
+                		left: 140px;
+                		top: 230px;
+                        margin-right:10px;
+                        background:linear-gradient(90deg,#006DA4,#95C11E);"></div>
+
+            <div id="Formation_en_ligne_aupr_s_des_">
+                <span>Construisez votre cours en ligne et monétisez
+                    <br/>votre expertise en partageant votre savoir <br/>
+                    partout dans le monde
+                </span>
+            </div>
+
+
+            <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;text-align: left;
+                    		">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <h4 style="font-family: 'Roboto', sans-serif;
+                            		font-style: normal;
+                            		font-weight: 200;
+                            		font-size: 18px;
+                            		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
+                            ">
+                    </h4>
+                {% else %}
+                    <h4 style="font-family: 'Roboto', sans-serif;
+                            		font-style: normal;
+                            		font-weight: 200;
+                            		font-size: 18px;
+                            		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
+                            ">
+                    </h4>
+                {% endif %}
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+<br><br>
+
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+{% block cat %}{% endblock %}
+{% block categories %}
+            <section style="border-top:1px solid silver; margin:25px;">
+            
+<form method="post" action="{{path('acid')}}">
+        <div class="col-md-4 description" style="margin-top:30px;padding-right:20px;">
+        <h3>Le nom du cours</h3>
+      </div>
+      <div class="col-md-7"  style="padding-left:15px; padding-right:15px;margin-left:400px; padding-bottom:15px;">
+               
+                <div class="form-group ">
+                   <input type="text" class="form-control" id="nom" name="nom" required>
+                </div>
+                </div>
+                </section>
+                <section style="border-top:1px solid silver;" required>
+                
+                <h3 style="padding-left:35px;">
+                Choisir la catégorie
+                </h3>
+                </div>
+                <div class="form-group col-md-7" style="margin-left:400px;">
+            <select class="form-control" id="categorie" name="categorie" required="required">
+              <option value="none" selected="" disabled="">Sélectionner la catégorie</option>
+              {% for cat in categories %}
+           <option value="{{cat.id}}">{{cat.libelle}}</option>
+           {% endfor %}
+          
+       </select>
+     
+                </div>
+                  </section>
+                  <section style="padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    overflow: hidden;width:1300px;">
+                  
+                 
+                </section>
+             <section style="border-top:1px solid silver;">
+             <div class="col-md-8">
+             <h3 style="padding-left:25px;">
+             Questions
+             </h3>
+             </div>  
+                <div class="form-group col-md-7"style="margin-left:400px;;" >
+                    <select name="question" class="form-control" required="required">
+                      <option value="none" selected="" disabled="">
+                     Selectionner celui qui vous convient</option>
+                     <option value="Je suis occupé en ce moment(0 à 2h)">Je suis occupé en ce moment(0 à 2h)</option>
+                     <option value="Je travaillerai sur ce cours de temps en temps (2 à 4h)">Je travaillerai sur ce cours de temps en temps (2 à 4h)</option>
+                     <option value="Je suis très flexible (plus de 5h)">Je suis très flexible (plus de 5h)</option>
+                     <option value="Je ne sais pas encore si j'ai le temps">Je ne sais pas encore si j'ai le temps</option>
+                </select>
+
+
+
+                  </div>
+                  
+                  
+         </section>  
+      </div>
+         <div class="card-footer text-muted" style="padding-top:5px;">
+        <center>
+       <button class="btn btn-lg" style="background-color:#96bf31;color:#ffffff;font-family:ubuntu; width:250px; height:50px;" type="submit" name="ajouter"><strong style="font-size:18px;">S'inscrire</strong></button>
+                   
+          </center>        
+        </div>
+          </form>
+          
+{% endblock %}
+{% block barrier %}{% endblock %}
+{% block fonctionnalites %}{% endblock %}
+{% block newsletters %}{% endblock %}
+{% block options %}{% endblock %}
+{% block campagne %}{% endblock %}
+{% block temoignages %}{% endblock %}
+
+
+
+
+      
+
+    

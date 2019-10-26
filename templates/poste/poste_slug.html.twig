@@ -1,0 +1,120 @@
+{% extends 'cours/allCours.html.twig'%}
+{% block background %}
+<style>
+.bg_formateur{
+height:550px;
+background:linear-gradient(#96bf31,rgba(255, 255,255, 0) 100%, rgba(0, 30, 0)) 100%  no-repeat, url("{{asset('img/s4.jpg')}}") 100% 10% no-repeat;
+background-position:100% 100%;
+}
+.btn_submit{
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: 'Roboto',sans-serif;
+    font-size:  0.975rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5rem;
+	margin-left:115px;
+	background-color: #053651;
+    padding: 9px 11px 7px;
+	align-items: flex-start;
+	color:white;
+	border-style:solid;
+	border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    width:150px;
+		}
+.btn_submit:hover{
+	background-color:#096ea2;
+	color:#ffffff;
+}
+.btn_postule{
+	display: block;
+	width: 80%;
+	margin-bottom: 20px; 
+	margin-left:60px; 
+	background-color:#053651;
+	font-size: 18px;
+    text-align: center;
+    padding: 20px 0; 
+	border-radius: 4px;
+	 color:#ffffff;
+}
+.btn_postule:hover{
+	background-color:#096ea2;
+	color:#ffffff;
+
+}
+</style>
+<div style="background-image:url('{{asset('img/xyz.jpg')}}');background-size:contain;
+                    height:auto; background-position:fixed;
+                         background-repeat: no-repeat;margin-top:80px;width:100%;">
+    <div style="padding:150px;margin-left:-70px;">
+        <h2 id="cours_en_video">{{formateurs.role}}</h2>
+        {#style="background: -webkit-linear-gradient(right,black,#006DA4);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;opacity:100%;#}
+        <div style="position: absolute;
+                            		width: 575px;
+                            		height: 1px;
+                            		left: 140px;
+                            		top: 230px;
+                                    margin-right:10px;
+                                    background:linear-gradient(90deg,#006DA4,#95C11E);"></div>
+
+        <div id="Formation_en_ligne_aupr_s_des_">
+            
+        </div>
+
+
+        <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;text-align: left;
+                                    		">
+            
+
+
+        </div>
+
+
+    </div>
+
+
+</div></div>
+
+
+
+
+<br>
+<div style="display:flex;flex-wrap:wrap; border-top:1px solid silver; border-bottom:1px solid silver; padding-bottom:50px;">
+<section style="width:850px;margin-left:60px; border-right:1px solid silver; margin-top:40px; margin-top:40px;padding-right:60px;padding-top:20px;">
+<h3 style="text-align:center;font-family:'Roboto',sans-serif;">{{formateurs.role}}</h3>
+<h4 style="color:#96bf31;padding-top:15px;">description du Poste</h4>
+<p style="padding-top:10px;font-family:'Roboto',sans-serif;font-size:16px;">{{formateurs.description}}</p><br><br><br>
+<center>
+<a href="{{path('inscription_formateur',{'slug':formateurs.slug})}}" class="btn btn_submit" style="margin:0 auto;">Postuler</a>
+</center>   
+</section>
+<section style="width:400px; margin-top:40px;">
+<a class="btn btn_postule" href="{{path('inscription_formateur',{'slug':formateurs.slug})}}">Postuler pour ce Poste </a>
+
+</secton>
+</div>
+
+
+   
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+{% block barrier %}{% endblock %}
+{% block categories %}{% endblock %}
+{% block fonctionnalites %}{% endblock %}
+{% block campagne %}{% endblock %}
+{% block share %}{% endblock %}
+{% block temoignages %}{% endblock %}
+
+
+
+
+
+
+

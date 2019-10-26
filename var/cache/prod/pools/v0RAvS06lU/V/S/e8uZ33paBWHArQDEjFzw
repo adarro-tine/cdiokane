@@ -1,0 +1,168 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Chapitre',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Chapitre',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\ChapitreRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'titreChapitre' => [
+                        'fieldName' => 'titreChapitre',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'titre_chapitre',
+                    ],
+                    'duration' => [
+                        'fieldName' => 'duration',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'duration',
+                    ],
+                    'video' => [
+                        'fieldName' => 'video',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 255,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'video',
+                    ],
+                    'slug' => [
+                        'fieldName' => 'slug',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 128,
+                        'unique' => true,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'slug',
+                    ],
+                    'etat' => [
+                        'fieldName' => 'etat',
+                        'type' => 'boolean',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'etat',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'titre_chapitre' => 'titreChapitre',
+                    'duration' => 'duration',
+                    'video' => 'video',
+                    'slug' => 'slug',
+                    'etat' => 'etat',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'titreChapitre' => 'titre_chapitre',
+                    'duration' => 'duration',
+                    'video' => 'video',
+                    'slug' => 'slug',
+                    'etat' => 'etat',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'chapitre',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'cour' => [
+                        'fieldName' => 'cour',
+                        'joinColumns' => [
+                            [
+                                'name' => 'cour_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [
+                            'persist',
+                        ],
+                        'inversedBy' => 'chapitres',
+                        'targetEntity' => 'App\\Entity\\Cours',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\Chapitre',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => true,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'cour_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'cour_id' => 'cour_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'cour_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

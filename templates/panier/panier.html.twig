@@ -1,0 +1,234 @@
+{% extends 'cours/allCours.html.twig' %}
+{% set total = 0 %}
+	{% block background %}
+    <style>
+    .slider{
+        background:#96bf31;
+        height:200px;
+    }
+    ul.breadcrumb {
+	padding: 30px 16px;
+	list-style: none !important;
+	background-color: #96bf31;
+	}
+	ul.breadcrumb li {
+	display: inline;
+	font-size: 11px;
+	text-transform: uppercase;
+    font-family:'Roboto',sans-serif;
+	}
+	ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: #ffffff;
+	content: "/\00a0";
+	}
+	ul.breadcrumb li a {
+	color: #ffffff;
+	text-decoration: none;
+	}
+	ul.breadcrumb li a:hover {
+	color: #fff;
+	text-decoration: none;
+	}
+	a{
+	background-color: transparent;
+	}
+	.el{
+	color: #ffffff !important;	
+	}
+    h1{
+	color: #ffffff !important;	
+	margin-top:-30px;
+    font-family:'Roboto',sans-serif;
+	}
+    h5{
+    color: #ffffff !important; 
+    font-family:'Roboto',sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.35em; 
+    }
+    .tab{
+        color:#053651;
+        font-size:14px;
+        font-family:'Roboto',sans-serif;
+        font-weight:bold;
+        border:1px solid gainsboro;
+        
+    }
+    .thead{
+       font-size:15px; 
+       color:#686868;
+       font-family:'Roboto',sans-serif;
+       border:1px solid gainsboro;
+       
+    }
+    h2{
+    font-family:'Roboto',sans-serif;
+    }
+    .button{
+    background-color:#96bf31;
+    color:#fff !important;
+    width:300px;
+    height:50px;
+    font-family: 'Roboto',sans-serif; 
+    margin-left:27.5px;
+    font-size: 100%;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    font-weight: 700;
+    border-radius: 3px;
+    left: auto;
+    }
+   
+    #button{
+    background:#96bf31;
+    color:#fff !important;
+    width:250px;
+    height:35.5px;
+    }
+    .delete{    
+    display: block;
+    font-size: 1.5em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+    line-height: 1;
+    border-radius: 100%;
+    color: red!important;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    
+}
+    .delete:hover{
+    background:red;
+    color:#fff ! important;
+}
+#a{
+    text-decoration: none;
+}
+th,td{
+    color:#053651;
+    font-family:'Roboto',sans-serif;
+
+}
+
+span{
+    font-family:'Roboto',sans-serif;
+    
+}
+
+    </style>
+    <div class="main_slider slider" style="height:100px;background:linear-gradient(90deg,#006DA4,#95C11E);">
+		<div class="container fill_height">
+       
+                <h1 style="padding-top:25px;font-family: 'Roboto',sans-serif; ">Panier</h1>
+        <div class="row align-items-center fill_height">
+            <div class="col">
+                
+				</div>
+			</div>
+		</div>
+	</div>
+    {% endblock %}
+{% block categories %}
+        <div  style="margin-top:30px; box-shadow: 0px 27px 150px gainsboro;">
+          {% for flashMessage in app.session.flashbag.get('success') %}
+                <div class="alert alert-success" id="flash">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+            <div class="row" style="margin-left:50px;">           
+            <div class="col-lg-8">
+            <table class="table table-hover">
+                <thead class="thead">
+                <tr>
+                    <th></th>
+                    <th>Images</th>
+                    <th>Produits</th>
+                    <th>Prix</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody class=" tab">
+            {% for produit in produits %}
+            <form action="{{ path('page_ajouterPanier',{'id':produit.id}) }}" method="get">                  
+                <tr>
+                    <td><a href="{{ path('page_supprimerPanier',{'id':produit.id}) }}" id="a"><i class="delete">×</i></a></td>
+
+                    <td><img src="data:image/png;base64,{{ produit.image }}" width="40" height="40" alt="">  
+					</td> 
+                    <td>{{produit.titreCours}}</td>
+                    <td>{{produit.prix}} FCFA</td>
+                    <td>{{produit.prix}} FCFA</td>
+                </tr>
+                </form>
+                 {% set total = total + (produit.prix ) %}
+                {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            <div class="col-lg-4">
+            <div class="cart-collaterals">
+				<div class="cart_totals ">
+	<h2>Total panier</h2>
+	<table class="table table-hover">
+		<tbody>
+        <tr class="cart-subtotal">
+			<th class="theadd">Sous-total</th>
+			<td data-title="Sous-total"><span class="woocommerce-Price-amount  tabb"><span class="woocommerce-Price-currencySymbol"></span>{{total}}</span> FCFA</td>
+		</tr>
+		<tr class="order-total">
+			<th class="theadd">Total</th>
+			<td data-title="Total"><span class="woocommerce-Price-amount  tabb"><span class="woocommerce-Price-currencySymbol"></span>{{total}}</span> FCFA</td>
+		</tr>
+	</tbody>
+    </table>
+	<div class="wc-proceed-to-checkout">
+       
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+               <a href="{{path('valider_commande')}}" class="btn button" style="background-color:#96bf31;padding-top:15px;">
+        Valider la commande</a>
+            {% else %}
+              <a href="#TaskListDialog" role="button" data-toggle="modal" class="btn button" style="background-color:#96bf31;padding-top:15px;font-size:15px;text-align:center;">
+        Vous devez vous connecter pour continuer </a>
+        {% endif %}
+
+       
+        </div>
+    </div>
+			</div>
+            </div> 
+            </div>
+            </div>
+            <script>
+            $(function() {
+        $('#flash').delay(500).fadeIn('normal', function() {
+            $(this).delay(2500).fadeOut();
+        });
+        });
+            </script>
+{% endblock %}
+    {% block fonctionnalites %}{% endblock %}
+    {% block barrier %}{% endblock %}
+    {% block footer %}{% endblock %}
+    {% block campagne %}{% endblock %}
+    {% block share %}{% endblock %}
+    {% block temoignages %}{% endblock %}
+
+
+
+
+
+
+
+
+
+	
+
+	
+    

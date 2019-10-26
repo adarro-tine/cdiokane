@@ -1,0 +1,138 @@
+{% extends 'cours/allCours.html.twig'%}
+{% block background %}
+<div style="background-image:url('{{asset('img/xyz.jpg')}}');background-size:contain;
+                            height:auto; background-position:center center;
+                                 background-repeat: no-repeat;margin-top:80px;width:100%;">
+    <div style="padding:150px;margin-left:-70px;">
+        <h2 id="cours_en_video">{{rolePoste.role}}</h2>
+        {#style="background: -webkit-linear-gradient(right,black,#006DA4);
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;opacity:100%;#}
+        <div style="position: absolute;
+                                        		width: 575px;
+                                        		height: 1px;
+                                        		left: 140px;
+                                        		top: 230px;
+                                                margin-right:10px;
+                                                background:linear-gradient(90deg,#006DA4,#95C11E);"></div>
+
+        <div id="Formation_en_ligne_aupr_s_des_"></div>
+
+
+        <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;text-align: left;
+                                                		"></div>
+
+
+    </div>
+
+
+</div>
+{% endblock %}
+{% block categories %}
+
+    <section style="border-top:1px solid silver; margin:25px;">
+        {{form_start(form,{'attr':{'id':'formateur','method':'post','enctype':'multipart/form-data'}})}}
+        <div class="col-md-4 description" style="margin-top:30px;">
+            <h3>Informations personnelles</h3>
+            <p>Parlez-nous de vous</p>
+        </div>
+        <div class="col-md-7" style="padding-left:15px; padding-right:15px;margin-left:400px; padding-bottom:15px;">
+
+            <div class="form-group ">
+                {{form_row(form.nom,{'attr':{'class':'form-control champ','id':'nom','name':'nom'}}) }}
+            </div>
+            <div class="form-group ">
+                {{form_row(form.prenom,{'attr':{'class':'form-control champ','id':'prenom','name':'prenom'}}) }}
+            </div>
+            <div class="form-group ">
+                {{form_row(form.email,{'attr':{'class':'form-control champ','id':'email'}}) }}
+            </div>
+            <div class="form-group ">
+                {{form_row(form.telephone,{'attr':{'class':'form-control champ','id':'telephone'}}) }}
+            </div>
+            <div class="form-group ">
+                <label for="exampleFormControlSelect1">Poste</label>
+                <select class="form-control" id="sposte" name="sposte">
+                    <option>{{rolePoste.role}}</option>
+                </select>
+            </div>
+            <div class="form-group ">
+                {{form_row (form.photo,{'attr':{'class':'form-control champ','id':'photo'}}) }}
+            </div>
+        </div>
+        <section style="padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    padding-top: 0px;
+                    border-bottom: 1px solid silver;
+                        border-top: 1px solid silver;
+                    overflow: hidden;width:1300px;">
+            <div class="col-md-3 description">
+                <h3>
+                    CV
+                </h3>
+            </div>
+            <div class="form-group col-md-7" style="margin-left:400px;">
+                {{form_row(form.cv,{'attr':{'class':'form-control champ','id':'cv'}}) }}
+            </div>
+        </section>
+        <section style="padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    padding-top: 0px;
+                    overflow: hidden;width:1300px;">
+            <div class="col-md-6 description">
+                <h3>
+                    Lettre de motivation
+                </h3>
+            </div>
+            <div class="form-group col-md-7" style="margin-left:400px;">
+                {{form_row(form.motivation,{'attr':{'class':'form-control champ','id':'motivation'}}) }}
+            </div>
+
+        </section>
+        <section style="border-top:1px solid silver;">
+            <div class="col-md-8">
+                <h3>
+                    Questions
+                </h3>
+                <p>Merci de compléter les questions additionnelles</p>
+            </div>
+            <div class="form-group col-md-7" style="margin-left:400px;;">
+                {{form_row(form.q1,{'attr':{'class':'form-control champ','id':'q1'}}) }}
+            </div>
+            <div class="form-group col-md-7" style="margin-left:400px;">
+                {{form_row(form.q2,{'attr':{'class':'form-control champ','id':'q2'}}) }}
+            </div>
+            <div class="form-group col-md-7" style="margin-left:400px;">
+                {{form_row(form.q3,{'attr':{'class':'form-control champ','id':'q3'}}) }}
+            </div>
+
+        </section>
+    </div>
+    <div class="card-footer text-muted" style="padding-top:5px;">
+        <center>
+            <button class="btn btn-lg" style="background-color:#96bf31;color:#ffffff;font-family:ubuntu; width:250px; height:50px;">
+                <strong style="font-size:18px;">S'inscrire</strong>
+            </button>
+
+        </center>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+
+{% block tabs %}{% endblock %}
+{% block barrier %}{% endblock %}
+
+{% block campagne %}{% endblock %}
+{% block share %}{% endblock %}
+{% block temoignages %}{% endblock %}
+{% block fonctionnalites %} {% endblock %}
+
+
+
+
+      
+
+    

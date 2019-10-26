@@ -1,0 +1,105 @@
+{% extends 'cours/allCours.html.twig' %}
+{% block temoignages %} {% endblock %}
+{% block fonctionnalites %} {% endblock %}
+{% block barrier %} {% endblock %}
+
+{% block background %}
+<style>
+.form-control{
+  display: block;
+    width: 100%;
+    height: 44px;
+    padding: 10px 12px;
+    font-size: 16px;
+    line-height: 1.43;
+    color: #29303B;
+    background-color: #FFF;
+    border: 1px solid #CACBCC;
+    border-radius: 2px;
+    box-shadow: none;
+    transition: border-color ease-in-out .08s,box-shadow ease-in-out .08s;
+}
+.form-group{
+  margin-bottom: 15px;
+  position: relative;
+}
+</style>
+<div style="margin-top:152px;margin-left:250px;margin-bottom:100px;padding-left:150px;width:800px;height:500px;border:1px solid gainsboro;">
+     <ul class="nav nav-tabs nav-stacked" style="margin-left:50px;">
+         <li class="nav-item">
+             <a href="#" class="nav-link active" id="id_profil">Profil Crowdedu</a>
+         </li>
+         <li class="nav-item">
+             <a href="{{path('edit_photo',{'id':app.user.slug})}}" class="nav-link" id="id_photo">Photo profil</a>
+         </li>
+         <li class="nav-item ">
+             <a href="#" class="nav-link" id="id_securite">Confidentialités</a>
+         </li>
+     </ul>
+     <br>
+     <div id="formulaire" style="margin-left:50px;">
+         <form method="POST" >
+           <div class="form-row">
+           <div class="form-group col-md-8">
+            <label for="">Nom</label>
+            <input type="text" name="nom" value="{{app.user.nom}}" class="form-control input" placeholder="" aria-describedby="helpId" >
+                </div>
+                </div>
+                <div class="form-row">
+                 <div class="form-group col-md-8">
+                  <label for="">Prenom</label>
+                  <input type="text" name="prenom" value="{{app.user.prenom}}" class="form-control input" placeholder="" aria-describedby="helpId">
+                </div>
+                </div>
+                <div class="form-row">
+                 <div class="form-group col-md-8">
+                  <label for="">Email</label>
+                  <input type="text" name="email" value="{{app.user.email}}" class="form-control input" placeholder="" aria-describedby="helpId">
+                </div> 
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-8">
+                  <label for="">Username</label>
+                  <input type="text" name="username" value="{{app.user.username}}" class="form-control input" placeholder="" aria-describedby="helpId">
+                </div>
+                </div>
+    <button  type="submit"  value="Submit" name="modifier" style="width:250px;height:60px;background-color:#006DA4;font-size:25px;font-weight:500;color:white;margin-left:70px;">Modifier</button>
+                
+                </form>
+                </div>
+                </div>
+  
+{% endblock %}
+
+
+{% block meilleurs_ventes %}{% endblock %}
+{% block options %}{% endblock %}
+{% block categories %} {% endblock  %}
+{% block section %}{% endblock %}
+{% block cours %}{% endblock %}
+{% block cat %}{% endblock %}
+{% block deal %}{% endblock %}
+{% block latest %}{% endblock %}
+{% block campagne %} {% endblock %}
+
+{% block script %}
+	<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('js/rate.class.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/popper.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+	<script src="{{asset('plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+	<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+	<script src="{{asset('plugins/easing/easing.js')}}"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
+	<script type="text/javascript">
+		$(function() {
+
+        
+        });
+		</script>
+
+	{% endblock %}
+
+
+
+
