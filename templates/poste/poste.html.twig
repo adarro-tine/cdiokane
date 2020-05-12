@@ -1,11 +1,5 @@
 {% extends 'cours/allCours.html.twig' %}
-{% block tabs %}{% endblock %}
-{% block fonctionnalites %}{% endblock %}
-{% block temoignages %}
 
-	{% endblock %}
-
-{% block campagne %}{% endblock %}
 {% block background %}
 <style>
     .fx {
@@ -263,9 +257,8 @@
 
 
     </div>
-</div>{% endblock %}
+</div>
 
-{% block barrier %}
 <div class="container_video">
 <h1 class="section-title" style="text-align:center;">Qui peut etre formateurs sur Crowdedu Africa ?</h1>
 <div class="videos" style="width:900px;">
@@ -273,10 +266,8 @@
  width="1150"></iframe>
 </div>
 </div>
-{% endblock %}
-{# {% block cours %}{% endblock %} #}
- {% block categories %}
-<div class="component">
+
+ <div class="component">
 <h3 class="section-title">Le mentorat chez Crowdedu Africa</h3>
 <p class="p_text">
 Crowdedu Africa est la plateforme d'éducation en ligne leader en Europe.
@@ -295,8 +286,6 @@ Nous recherchons aujourd'hui des mentors dans de multiples
   Si vous êtes top et que vous aimez partager votre savoir-faire, rejoignez-nous 
   ! Notre révolution de l'éducation vous attend.</p>
 </div>
-{% endblock %} 
-{% block share %}
 
 <div class="container">
   <h2 style="text-align:center;">Devenez Formateur</h2>
@@ -315,6 +304,15 @@ Nous recherchons aujourd'hui des mentors dans de multiples
     </tbody>
   </table>
 </div>
+<br>
 
 {% endblock %}
+{% block tabs %}{% endblock %}
+{% block barrier %}{% endblock %}
+{% block categories %}{% endblock %}
+{% block fonctionnalites %}{% endblock %}
+{% block campagne %}{% endblock %}
+{% block share %}{% endblock %}
+{% block temoignages %}{% endblock %}
+{% block footer %}{% endblock %}
 

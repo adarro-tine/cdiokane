@@ -7,6 +7,7 @@ use App\Repository\CommandeRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -18,15 +19,16 @@ class SecurityController extends AbstractController
     const EMAIL = 'email';
     const RESET_TOKEN = 'reset_token';
 
-    /**
-     * @Route("/login", name="login",methods={"GET","POST"})
-     */
-    public function login(Request $request, AuthenticationUtils $authenticationUtils,CommandeRepository $cr) {
     
+    /**
+     * @Route("/login", name="login")
+     */
+    public function login(Request $request, AuthenticationUtils $authenticationUtils) {
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();           
+        $lastUsername = $authenticationUtils->getLastUsername();
+
         return $this->render('security/index.html.twig', [
             'last_username' => $lastUsername,
             'error' => $error,
@@ -118,5 +120,8 @@ class SecurityController extends AbstractController
          {
             return $this->render("security/email_reset_password.html.twig");
          }
+
+
+    
 
 }

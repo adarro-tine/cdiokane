@@ -24,10 +24,7 @@ class Categorie
      * @ORM\OneToMany(targetEntity="App\Entity\Cours", mappedBy="categorie")
      */
     private $cours;
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\AddCours", mappedBy="categorie")
-     */
-    private $addcours;
+    
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\SousCategorie", mappedBy="categorie")
      */
@@ -137,25 +134,7 @@ class Categorie
       return $this;
    }
 
-    /**
-     * Get the value of addcours
-     */ 
-    public function getAddcours()
-    {
-        return $this->addcours;
-    }
-
-    /**
-     * Set the value of addcours
-     *
-     * @return  self
-     */ 
-    public function setAddcours($addcours)
-    {
-        $this->addcours = $addcours;
-
-        return $this;
-    }
+   
 
     /**
      * Get the value of souscategorie

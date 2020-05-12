@@ -103,11 +103,12 @@ class CoursController extends Controller
      * @Route("/categories/{slug}", name="page_produitsByCategory")
      * 
      */
-    public function findOneCoursCategorie($slug,CoursRepository $cr, Request $request, Categorie $categorie, CategorieRepository $cateRepo,SousCategorieRepository $scr,CampagneRepository $campagnerepository,CommentaireRepository $comrepo)
+    public function findOneCoursCategorie($slug,CoursRepository $cr, Request $request, Categorie $categorie, CategorieRepository $cateRepo,SousCategorieRepository $scr,CampagneRepository $campagnerepository,CommentaireRepository $comrepo,CoursRepository $courRepo)
     {    
         $categorielib = $cateRepo->find($categorie);
         $tousLesCategories = $cateRepo->findAll();
         $souscategories = $scr->findAll();
+        $cours=$courRepo->findAll();
         $campagnes = $campagnerepository->findAll();
         $commentaires = $comrepo->findAll();
         $findcours = $cr->produitsByCategorie($categorie);
@@ -123,7 +124,8 @@ class CoursController extends Controller
             'categories'=>$tousLesCategories,
             'souscategories'=>$souscategories,
             'commentaires'=>$commentaires,
-            'campagnes'=>$campagnes]);
+            'campagnes'=>$campagnes,
+            'cours'=>$cours]);
     }
     /**
      * @Route("/sous-categorie/{slug}", name="souscategorie")

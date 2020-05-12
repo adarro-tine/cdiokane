@@ -92,7 +92,7 @@ class DonController extends AbstractController
             $invoice = new \Paydunya\Checkout\CheckoutInvoice();
             $invoice->addItem($name,$qt,$somme,$somme);
             $invoice->setTotalAmount($somme);
-            $invoice->setReturnUrl("http://127.0.0.1:8000");
+            //$invoice->setReturnUrl("http://127.0.0.1:8000");
              if($invoice->getStatus() == "completed"){
              $em = $this->getDoctrine()->getManager();
              $em->persist($donateur);

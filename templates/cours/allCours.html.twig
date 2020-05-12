@@ -63,9 +63,9 @@
 					  <li class="menu_item" style="margin-top:-15px;"><a href="{{path('security_logout')}}" style="text-decoration:none;">Déconnexion</a></li>
 
 										{% else %}
-<li><a href="#TaskListDialog" role="button" class="btn" data-toggle="modal">S'inscrire</a></li>
+<li><a href="{{path('registration')}}">S'inscrire</a></li>
 
-<li><a href="#TaskListDialog" role="button" class="btn" data-toggle="modal" >Se connecter</a></li>
+<li><a href="{{path('login')}}">Se connecter</a></li>
 										{% endif %}
 					    </ul>
 								 </li>
@@ -82,7 +82,7 @@
 		</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 text-right" style="margin-left:125px;margin-bottom:7px;postion:fixed;">
+					<div class="col-lg-12 text-right" style="margin-left:130px;margin-bottom:7px;postion:fixed;">
 						
 						
 					<nav class="navbar newnav">
@@ -115,7 +115,7 @@
 			<li class="limenu" ><a href="{{path('poste')}}"  id="FORMATEURS" class="active activelien">Formateurs</a>
 			</li>
 			{% else %}
-			<li class="limenu"><a href="#TaskListDialog" role="button" id="cformateur" data-toggle="modal" style="color:#053651;text-decoration:none;">Formateurs</a>
+			<li class="limenu"><a href="{{path('login')}}"  id="cformateur" style="color:#053651;text-decoration:none;">Formateurs</a>
 			</li>
             {% endif %}
 			
@@ -163,7 +163,7 @@
 	<div class="row">
 					{% for campagne in campagnes %}
                 
-					{%  if campagne.id < 12 %}
+					{%  if campagne.id < 4 %}
 			<div class="col-lg-4 cole" style="padding:20px;">
 					<div class="card rower  mk" style="width:350px;overflow:hidden;">
 					<a href="{{path('campagneUser',{'slug':campagne.slug})}}">

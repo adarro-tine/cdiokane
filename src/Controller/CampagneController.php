@@ -49,10 +49,10 @@ class CampagneController extends Controller
                $campagne->setVideo($video);
                $campagne->setSlug($chaineAleatoire);
                $campagne->setDate(new \DateTime());
-               $campagne->setFacebook("http://127.0.0.1:8000/campagne/user/".$chaineAleatoire);
-               $campagne->setTwitter("http://127.0.0.1:8000/campagne/user/".$chaineAleatoire);
-               $campagne->setLinkedin("http://127.0.0.1:8000/campagne/user/".$chaineAleatoire);
-               $campagne->setInstagram("http://127.0.0.1:8000/campagne/user/".$chaineAleatoire);
+               $campagne->setFacebook("http://crowdeduafrica.com/campagne/user/".$chaineAleatoire);
+               $campagne->setTwitter("http://crowdeduafrica.com/campagne/user/".$chaineAleatoire);
+               $campagne->setLinkedin("http://crowdeduafrica.com/campagne/user/".$chaineAleatoire);
+               $campagne->setInstagram("http://crowdeduafrica.com/campagne/user/".$chaineAleatoire);
                $campagne->setUser($user);
                $em = $this->getDoctrine()->getManager();
                $em->persist($campagne);

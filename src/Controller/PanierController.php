@@ -6,7 +6,6 @@ use App\Entity\Cours;
 use App\Entity\Projet;
 use App\Entity\Chapitre;
 use App\Entity\Commande;
-use App\Form\ProjetType;
 use App\Form\CommandeType;
 use App\Repository\CoursRepository;
 use App\Repository\CampagneRepository;
@@ -123,110 +122,7 @@ class PanierController extends AbstractController
         return $commande;
     }
 
-     /**
-     * @Route("/valider", name="valider_commande",methods={"GET","POST"})
-     *  @IsGranted("ROLE_USER")
-     */
-
-    /*
-     public function validerCommande(Request $request,CategorieRepository $cr,SousCategorieRepository $scr,CampagneRepository $campagne,CommentaireRepository $comrepo):Response
-    {     
-              require('../vendor/autoload.php');
-			  require('../configuration.php');
-			  $entityManager = $this->getDoctrine()->getManager();
-			   $session = $request->getSession();
-			  if(!$session->has(self::PANIER)){$session->set(self::PANIER,array());}
-			   $panier = $session->get(self::PANIER);
-			  $produits = $entityManager->getRepository(Cours::class)->findArray(array_keys($panier)); 
-               $user = $this->getUser();
-               $categories = $cr->findAll();
-               $souscategories = $scr->findAll();
-              $campagnes = $campagne->findAll();
-              $commentaires = $comrepo->findAll();
-			   $commande = new Commande();
-			   $total = 0;
-			   $com = array($panier);
-			   foreach($produits as $produit)
-			   {  
-				   $cours = $produit;     
-			   }
-
-               $invoice = new \Paydunya\Checkout\CheckoutInvoice();
-               
-			   $form = $this->createForm(CommandeType::class,$commande);
-			   $form->handleRequest($request);
-			   if ($form->isSubmitted() && $form->isValid()) { 
-				   foreach($produits as $produit)
-				   {
-					   $prix = ($produit->getPrix() * $panier[$produit->getId()]) ;
-					   $total += $prix;  
-					   $nom = $produit->getTitreCours();     
-					   $com['produit'][$produit->getTitreCours()] = array(
-					   'prix' => round($produit->getPrix()));
-					   $slug = $produit->getSlug();
-				   
-				   }
-					$qt = count($produits);
-				   $com['prix'] = round($total,2); 
-                   $invoice = new \Paydunya\Checkout\CheckoutInvoice();
-                   
-				   $invoice->addItem($nom,$qt,$prix,$prix);
-                   $invoice->setTotalAmount($total);
-                
-				      
-				   if($invoice->create()) {
-                    header("Location: ".$invoice->getInvoiceUrl());  
-                   
-                    dump($invoice->getInvoiceUrl());
-                    die(); 
-                         $token = $invoice->token;
-                         if ($invoice->confirm($token)) {
-                           
-                           // if($invoice->status == "completed"){
-                               if($invoice->getTotalAmount() == $total ){
-                              
-                            $commande->setUser($user);
-                            $commande->setCours($cours);
-                            $commande->setCommande($this->facture());
-                            $commande->setDate(new \DateTime());
-                            $commande->setSubvention(false);
-                            $commande->setStatut(2);
-                            $em = $this->getDoctrine()->getManager();
-                            $em->persist($commande);
-                            $em->flush();
-                            $invoice->setReturnUrl("http://127.0.0.1:8000/chapitres/".$slug);
-
-                            }
-                               
-                               else{
-                            echo $invoice->getStatus();
-                            echo $invoice->response_text;
-                            echo $invoice->response_code;
-                            }
-                         
-                        }}
-                                    
-					   }else{
-						 echo $invoice->response_text;
-                       }
-                       
-                    
-                        
-			foreach ($produits as $value) {
-				$value->setImage(base64_encode(stream_get_contents($value->getImage())));
-			}
-           
-           
-
-        return $this->render('panier/finaliser_commande.html.twig',['form' => $form->createView(),
-        'produits'=>$produits,self::PANIER => $session->get(self::PANIER),
-        'total'=>$total,
-        'categories'=>$categories,
-        'souscategories'=>$souscategories,
-        'campagnes'=>$campagnes,
-        'commentaires'=>$comrepo
-        ]);
-    }*/
+     
 
      /**
      * @Route("/valider", name="valider_commande",methods={"POST","GET"})
@@ -239,6 +135,8 @@ class PanierController extends AbstractController
           require('../configuration.php');
           $entityManager = $this->getDoctrine()->getManager();
           $session = $request->getSession(); 
+          $invoice = new \Paydunya\Checkout\CheckoutInvoice();
+
            $categories = $cr->findAll();
                $souscategories = $scr->findAll();
               $campagnes = $campagne->findAll();
@@ -280,9 +178,9 @@ class PanierController extends AbstractController
                    $invoice->setTotalAmount($total);
                   
                    if($invoice->create()) {
-                       header("Location: ".$invoice->getInvoiceUrl());
+                     header("Location: ".$invoice->getInvoiceUrl());
                         
-                           if($invoice->getStatus() == "pending"){
+                           if($invoice->getStatus() == "completed"){
                             $commande->setUser($user);
                             $commande->setCours($cours);
                             $commande->setCommande($this->facture());
@@ -292,30 +190,21 @@ class PanierController extends AbstractController
                             $em = $this->getDoctrine()->getManager();
                             $em->persist($commande);
                             $em->flush();    
-                        
                     }
                         dump($invoice->getInvoiceUrl());
-                        die();             
-                       }else{
-                        
-                           if($invoice->getStatus() == "pending"){
-                            $commande->setUser($user);
-                            $commande->setCours($cours);
-                            $commande->setCommande($this->facture());
-                            $commande->setDate(new \DateTime());
-                            $commande->setSubvention(false);
-                            $commande->setStatut(2);
-                            $em = $this->getDoctrine()->getManager();
-                            $em->persist($commande);
-                            $em->flush();    
-                        }
-                         echo $invoice->response_text;
+                        //die();             
                        }
-                       $invoice->setReturnUrl("http://127.0.0.1:8000/chapitres/".$slug);    
+                       
+                    else{
+                        echo $invoice->response_text;
+                        }
+                       }
+                       //dump($invoice->getStatus());
+                       //die();
+                      // $invoice->setReturnUrl("http://127.0.0.1:8000/chapitres/".$slug);    
 
                       /* dump($invoice->getStatus());
                        die();*/
-             }    
            
            
         foreach ($produits as $value) {
@@ -329,8 +218,8 @@ class PanierController extends AbstractController
         'campagnes'=>$campagnes,
         'commentaires'=>$commentaires
         ]);
-    }
-
+    
+}
     /**
      * @Route("/supprimer/{id}", name="page_supprimerPanier")
      */

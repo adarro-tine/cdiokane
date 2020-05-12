@@ -7,7 +7,7 @@
 {% block barrier %} {% endblock %}
 {% block fonctionnalites %} {% endblock %}
 {% block campagne %}
-<div class="container" style="margin-top:100px;">
+<div class="container" style="margin-top:100px;margin-bottom:50px;">
 <h2 style="font-size: 1.5rem;font-weight: 900;line-height: 2rem;margin-left:10px;margin-top:135px;">la liste des campagnes</h2>
 
 
@@ -40,7 +40,7 @@
 		<div style="width:100%;height:120px;border-top:1px solid gainsboro;">
 		<p style="padding-left:10px;	font-family: ubuntu;
 ">{{campagne.motivation|slice(0,50)}}...</p>
-				<a href="{{path('campagneUser',{'slug':campagne.slug})}}" class="btn" style="margin-top:35px;width:100%;background-color:#96bf31;color:white;">Voir le projet</a>
+				<a href="{{path('campagneUser',{'slug':campagne.slug})}}" class="btn" style="margin-top:15px;width:100%;background-color:#96bf31;color:white;">Voir le projet</a>
 
 		</div>
 

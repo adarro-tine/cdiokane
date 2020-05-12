@@ -75,10 +75,7 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $photo;
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\AddCours", mappedBy="user")
-     */
-    private $addcours;
+    
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -292,25 +289,7 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * Get the value of addcours
-     */ 
-    public function getAddcours()
-    {
-        return $this->addcours;
-    }
-
-    /**
-     * Set the value of addcours
-     *
-     * @return  self
-     */ 
-    public function setAddcours($addcours)
-    {
-        $this->addcours = $addcours;
-
-        return $this;
-    }
+   
 
     public function getSlug(): ?string
     {

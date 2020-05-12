@@ -34,7 +34,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/registration' => [[['_route' => 'registration', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
             '/edit/photo/profil' => [[['_route' => 'edit_photo', '_controller' => 'App\\Controller\\RegistrationController::editPhoto'], null, null, null, false, false, null]],
             '/tabs' => [[['_route' => 'tabs', '_controller' => 'App\\Controller\\RegistrationController::tabs'], null, null, null, false, false, null]],
-            '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
             '/logout' => [[['_route' => 'security_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
             '/forgotten_password' => [[['_route' => 'app_forgotten_password', '_controller' => 'App\\Controller\\SecurityController::forgottenPassword'], null, null, null, false, false, null]],
             '/email' => [[['_route' => 'email', '_controller' => 'App\\Controller\\SecurityController::test'], null, null, null, false, false, null]],

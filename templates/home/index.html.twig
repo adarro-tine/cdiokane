@@ -159,7 +159,7 @@ height:auto; background-position:fixed;
 		font-size: 18px;
 		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
 ">
-    <a href="#TaskListDialog" role="button" data-toggle="modal" style="color:white;text-decoration:none;">Démarrer une campagne</a>
+    <a href="{{path('login')}}" style="color:white;text-decoration:none;">Démarrer une campagne</a>
     		
 
     </h4>
@@ -239,14 +239,6 @@ font-weight:bold;">No Barrier For Education.</h1>
         <div class="erreur" id="erreure" style="display:none;color:black;">Vous n'avez pas rempli correctement les champs du formulaire</div>
 
 				<br><br>
-        <div class="tab-pane active" id="tab1">
-				
-			{{ render(controller('App\\Controller\\SecurityController::login'))}} 
-
-        </div>
-        <div class="tab-pane" id="tab2">
-		{{ render(controller('App\\Controller\\RegistrationController::register'))}} 
-        </div>
 			
 				</div>
         </div>
@@ -289,16 +281,14 @@ font-weight:bold;">No Barrier For Education.</h1>
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!" class="fl">Accueil</a>
+            <a href="" class="fl">Accueil</a>
+          </li>
+          
+          <li>
+            <a href="{{path('poste')}}" class="fl">Formateurs</a>
           </li>
           <li>
-            <a href="#!" class="fl">Cours</a>
-          </li>
-          <li>
-            <a href="#!" class="fl">Formateurs</a>
-          </li>
-          <li>
-          <a href="#" class="fl">Contact</a>
+          <a href="{{path('contact')}}" class="fl">Contact</a>
           </li>
           
         </ul>
@@ -322,7 +312,7 @@ font-weight:bold;">No Barrier For Education.</h1>
 {#<i class="fab fa-facebook-f"></i>#}
         <ul class="list-unstyled">
           <li>
-<a href="#" class="lf"><i class="fab fa-facebook-f" style="color:white; "></i>  Facebook</a></li>
+<a href="https://web.facebook.com/crowdedu?_rdc=1&_rdr" class="lf"><i class="fab fa-facebook-f" style="color:white; "></i>  Facebook</a></li>
           <li >
 <a href="#" class="lf"><i class="fab fa-linkedin-in" style="color:white;"></i>  Linkedin</a></li>
           <li>
@@ -387,8 +377,8 @@ immeuble SAMASSA | SICAP KARACK
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="background-color:#96bf31;color:white;font-size:15px;">© 2018 Copyright :
-     Abdoulaye Tine
+  <div class="footer-copyright text-center py-3" style="background-color:#96bf31;color:white;font-size:15px;">© 2020 Copyright :
+     Crowdedu
   </div>
   <!-- Copyright -->
 
@@ -408,27 +398,7 @@ immeuble SAMASSA | SICAP KARACK
 
 <script>
  $(document).ready(function() {
-  // debut
-    var $nom = $('#nom'),
-        $prenom = $('#prenom'),
-        $username = $('#username'),
-        $email = $('#email'),
-        $mdp = $("#mdp"),
-        $confirmation = $("#confirmation")
-        $envoi = $('#envoyer'),
-        $erreur = $('#erreure'),
-        $champ = $('.champ');
-        $("#msg").hide();
-        $champ.keyup(function(){
-        if($(this).val().length < 5){ // si la chaîne de caractères est inférieure à 5
-      //  $("#msg").text("Inscription incorrect").slideDown("slow");
-        $("#msg").html('<center><span class="alert alert-danger">Veuillez saisir au moins 5 caractères</span></center>').slideDown("slow");
-
-         }
-         else{
-          $("#msg").hide();
-         }
-          });
+  /
          
   // fin
   

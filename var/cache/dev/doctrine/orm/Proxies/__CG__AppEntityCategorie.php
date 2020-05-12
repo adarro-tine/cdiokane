@@ -31,20 +31,22 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
     public $__isInitialized__ = false;
 
     /**
-     * @var array properties to be lazy loaded, with keys being the property
-     *            names and values being their default values
+     * @var array<string, null> properties to be lazy loaded, indexed by property name
+     */
+    public static $lazyPropertiesNames = array (
+);
+
+    /**
+     * @var array<string, mixed> default values of properties to be lazy loaded, with keys being the property names
      *
      * @see \Doctrine\Common\Proxy\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = [];
+    public static $lazyPropertiesDefaults = array (
+);
 
 
 
-    /**
-     * @param \Closure $initializer
-     * @param \Closure $cloner
-     */
-    public function __construct($initializer = null, $cloner = null)
+    public function __construct(?\Closure $initializer = null, ?\Closure $cloner = null)
     {
 
         $this->__initializer__ = $initializer;
@@ -64,10 +66,10 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'addcours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'imgC', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'poste'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'imgC', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'poste'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'addcours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'imgC', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'poste'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'imgC', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Categorie' . "\0" . 'poste'];
     }
 
     /**
@@ -82,7 +84,7 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
 
                 $existingProperties = get_object_vars($proxy);
 
-                foreach ($proxy->__getLazyProperties() as $property => $defaultValue) {
+                foreach ($proxy::$lazyPropertiesDefaults as $property => $defaultValue) {
                     if ( ! array_key_exists($property, $existingProperties)) {
                         $proxy->$property = $defaultValue;
                     }
@@ -165,6 +167,7 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
     /**
      * {@inheritDoc}
      * @internal generated method: use only when explicitly handling proxy specific loading logic
+     * @deprecated no longer in use - generated code now relies on internal components rather than generated public API
      * @static
      */
     public function __getLazyProperties()
@@ -296,28 +299,6 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPoste', [$poste]);
 
         return parent::setPoste($poste);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAddcours()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAddcours', []);
-
-        return parent::getAddcours();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setAddcours($addcours)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAddcours', [$addcours]);
-
-        return parent::setAddcours($addcours);
     }
 
     /**

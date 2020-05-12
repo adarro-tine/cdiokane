@@ -31,20 +31,22 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public $__isInitialized__ = false;
 
     /**
-     * @var array properties to be lazy loaded, with keys being the property
-     *            names and values being their default values
+     * @var array<string, null> properties to be lazy loaded, indexed by property name
+     */
+    public static $lazyPropertiesNames = array (
+);
+
+    /**
+     * @var array<string, mixed> default values of properties to be lazy loaded, with keys being the property names
      *
      * @see \Doctrine\Common\Proxy\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = [];
+    public static $lazyPropertiesDefaults = array (
+);
 
 
 
-    /**
-     * @param \Closure $initializer
-     * @param \Closure $cloner
-     */
-    public function __construct($initializer = null, $cloner = null)
+    public function __construct(?\Closure $initializer = null, ?\Closure $cloner = null)
     {
 
         $this->__initializer__ = $initializer;
@@ -64,10 +66,10 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'App\\Entity\\User' . "\0" . 'resetToken', '' . "\0" . 'App\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\User' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\User' . "\0" . 'addcours', '' . "\0" . 'App\\Entity\\User' . "\0" . 'slug'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'App\\Entity\\User' . "\0" . 'resetToken', '' . "\0" . 'App\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\User' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\User' . "\0" . 'slug'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'App\\Entity\\User' . "\0" . 'resetToken', '' . "\0" . 'App\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\User' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\User' . "\0" . 'addcours', '' . "\0" . 'App\\Entity\\User' . "\0" . 'slug'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'isActive', '' . "\0" . 'App\\Entity\\User' . "\0" . 'resetToken', '' . "\0" . 'App\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\User' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\User' . "\0" . 'slug'];
     }
 
     /**
@@ -82,7 +84,7 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
 
                 $existingProperties = get_object_vars($proxy);
 
-                foreach ($proxy->__getLazyProperties() as $property => $defaultValue) {
+                foreach ($proxy::$lazyPropertiesDefaults as $property => $defaultValue) {
                     if ( ! array_key_exists($property, $existingProperties)) {
                         $proxy->$property = $defaultValue;
                     }
@@ -165,6 +167,7 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      * @internal generated method: use only when explicitly handling proxy specific loading logic
+     * @deprecated no longer in use - generated code now relies on internal components rather than generated public API
      * @static
      */
     public function __getLazyProperties()
@@ -450,28 +453,6 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoto', [$photo]);
 
         return parent::setPhoto($photo);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAddcours()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAddcours', []);
-
-        return parent::getAddcours();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setAddcours($addcours)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAddcours', [$addcours]);
-
-        return parent::setAddcours($addcours);
     }
 
     /**

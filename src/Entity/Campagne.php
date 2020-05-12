@@ -77,10 +77,6 @@ class Campagne
    */
   private $cours;
 
-  /**
-   * @ORM\Column(type="string", length=255)
-   */
-  private $parcoursEdu;
 
   /**
    * @ORM\Column(type="text")
@@ -106,6 +102,11 @@ class Campagne
      * @ORM\Column(type="string", length=255)
      */
     private $video;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $parcoursEdu;
  
 
     public function getId(): ?int
@@ -313,18 +314,7 @@ class Campagne
 
     
 
-    public function getParcoursEdu(): ?string
-    {
-        return $this->parcoursEdu;
-    }
-
-    public function setParcoursEdu(string $parcoursEdu): self
-    {
-        $this->parcoursEdu = $parcoursEdu;
-
-        return $this;
-    }
-
+    
     
 
     
@@ -429,6 +419,18 @@ class Campagne
   public function setVideo(string $video): self
   {
       $this->video = $video;
+
+      return $this;
+  }
+
+  public function getParcoursEdu(): ?string
+  {
+      return $this->parcoursEdu;
+  }
+
+  public function setParcoursEdu(string $parcoursEdu): self
+  {
+      $this->parcoursEdu = $parcoursEdu;
 
       return $this;
   }

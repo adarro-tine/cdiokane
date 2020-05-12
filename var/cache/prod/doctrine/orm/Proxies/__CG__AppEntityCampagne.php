@@ -31,20 +31,22 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
     public $__isInitialized__ = false;
 
     /**
-     * @var array properties to be lazy loaded, with keys being the property
-     *            names and values being their default values
+     * @var array<string, null> properties to be lazy loaded, indexed by property name
+     */
+    public static $lazyPropertiesNames = array (
+);
+
+    /**
+     * @var array<string, mixed> default values of properties to be lazy loaded, with keys being the property names
      *
      * @see \Doctrine\Common\Proxy\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = [];
+    public static $lazyPropertiesDefaults = array (
+);
 
 
 
-    /**
-     * @param \Closure $initializer
-     * @param \Closure $cloner
-     */
-    public function __construct($initializer = null, $cloner = null)
+    public function __construct(?\Closure $initializer = null, ?\Closure $cloner = null)
     {
 
         $this->__initializer__ = $initializer;
@@ -64,10 +66,10 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'pays', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'linkedin', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'parcoursEdu', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'attentes', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'motivation', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'perspective'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'pays', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'linkedin', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'attentes', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'motivation', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'perspective', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'donateur', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'video', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'parcoursEdu'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'pays', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'linkedin', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'parcoursEdu', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'attentes', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'motivation', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'perspective'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'pays', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'linkedin', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'cours', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'attentes', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'motivation', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'perspective', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'donateur', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'video', '' . "\0" . 'App\\Entity\\Campagne' . "\0" . 'parcoursEdu'];
     }
 
     /**
@@ -82,7 +84,7 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
 
                 $existingProperties = get_object_vars($proxy);
 
-                foreach ($proxy->__getLazyProperties() as $property => $defaultValue) {
+                foreach ($proxy::$lazyPropertiesDefaults as $property => $defaultValue) {
                     if ( ! array_key_exists($property, $existingProperties)) {
                         $proxy->$property = $defaultValue;
                     }
@@ -165,6 +167,7 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      * @internal generated method: use only when explicitly handling proxy specific loading logic
+     * @deprecated no longer in use - generated code now relies on internal components rather than generated public API
      * @static
      */
     public function __getLazyProperties()
@@ -433,50 +436,6 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getParcoursEdu(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getParcoursEdu', []);
-
-        return parent::getParcoursEdu();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setParcoursEdu(string $parcoursEdu): \App\Entity\Campagne
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setParcoursEdu', [$parcoursEdu]);
-
-        return parent::setParcoursEdu($parcoursEdu);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getMotivation(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMotivation', []);
-
-        return parent::getMotivation();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setMotivation(string $motivation): \App\Entity\Campagne
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMotivation', [$motivation]);
-
-        return parent::setMotivation($motivation);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getPerspective(): ?string
     {
 
@@ -538,6 +497,94 @@ class Campagne extends \App\Entity\Campagne implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUser', [$user]);
 
         return parent::setUser($user);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDonateur()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDonateur', []);
+
+        return parent::getDonateur();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDonateur($donateur)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDonateur', [$donateur]);
+
+        return parent::setDonateur($donateur);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getMotivation()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMotivation', []);
+
+        return parent::getMotivation();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setMotivation($motivation)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMotivation', [$motivation]);
+
+        return parent::setMotivation($motivation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVideo(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVideo', []);
+
+        return parent::getVideo();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVideo(string $video): \App\Entity\Campagne
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVideo', [$video]);
+
+        return parent::setVideo($video);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getParcoursEdu(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getParcoursEdu', []);
+
+        return parent::getParcoursEdu();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setParcoursEdu(string $parcoursEdu): \App\Entity\Campagne
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setParcoursEdu', [$parcoursEdu]);
+
+        return parent::setParcoursEdu($parcoursEdu);
     }
 
 }

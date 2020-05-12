@@ -28,7 +28,7 @@ security:
                 # Le nom de la route où se trouve le formulaire de connexion
                 # Si un utilisateur tente d'acceder à une page protégée sans en avoir les droits
                 # il sera redirigé sur cette page
-                login_path: cours
+                login_path: login
                 # Securisation des formulaires
                 csrf_token_generator: security.csrf.token_manager
                 # La page par defaut apres une connexion reussie

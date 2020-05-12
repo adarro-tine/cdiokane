@@ -146,7 +146,8 @@ a, a:active, a:focus, a:hover {
         </div>
         </li>
         {% for categorie in categories %}
-        	<li class="cat-item cat-item-34" data-slug="technology"><a href="{{ path('page_produitsByCategory',{'slug':categorie.slug})}}" title="1500+ students enrolled" style="color:#053651;">{{categorie.libelle}}<span>3</span></a>
+        	<li class="cat-item cat-item-34" data-slug="technology"><a href="{{ path('page_produitsByCategory',{'slug':categorie.slug})}}" title="1500+ students enrolled" style="color:#053651;">{{categorie.libelle}}<span>
+</span></a>
         </li>
         {% endfor %}
         </ul>

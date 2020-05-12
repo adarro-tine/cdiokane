@@ -22,36 +22,42 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
 {
-    /**
-     * @Route("/registration", name="registration")
+   
+     /**
+     * @Route("/registration",name="registration")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
-    {
-        $user = new User();
-        $form = $this->createForm(UserType::class, $user);
-        $form->handleRequest($request);
-        $errors = [];
-         if ($form->isSubmitted() && $form->isValid()) { 
-            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
-            $user->setIsActive(true);
-            $user->setRoles(['ROLE_USER']);
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->flush();
-            $this->addFlash('success', 'Votre compte à bien été enregistré.');
-            return $this->redirectToRoute('registration');
-         }
-        return $this->render( 
-            'registration/index.html.twig',
-            array('form' => $form->createView())
-        );
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+      // 1) build the form
+      $user = new User();
+      $form = $this->createForm(UserType::class, $user);
+       $form->handleRequest($request);
     
+      if ($form->isSubmitted() && $form->isValid()) {
+        $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+              $longueurMax = strlen($caracteres);
+             $chaineAleatoire = '';
+            for ($i = 0; $i < 10; $i++)
+           {
+         $chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+           } 
+          $password = $passwordEncoder->encodePassword($user, $user->getPassword());
+          $user->setPassword($password);
+          $user->setIsActive(true);
+          $user->setRoles(['ROLE_USER']);
+          $entityManager = $this->getDoctrine()->getManager();
+          $user->setSlug($chaineAleatoire);
+          $entityManager->persist($user);
+          $entityManager->flush();
+          $this->addFlash('success', 'Votre compte à bien été enregistré.');
+         return $this->redirectToRoute('cours');
+      }
+      return  $this->render('registration/index.html.twig', ['form' => $form->createView(), 'mainNavRegistration' => true, 'title' => 'Inscription']);
     }
 
     /**
      * @Route("/edit/{slug}/user" , name="edit" ,methods={"GET","POST"})
      */
+
     public function editAction( Request $request,User $personne,$slug, UserRepository $userrepo,CategorieRepository $cr,SousCategorieRepository $scr,CampagneRepository $campagnerepository)
     {
       $personne = $userrepo->findOneBy(['slug'=>$slug]);

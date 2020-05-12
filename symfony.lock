@@ -83,6 +83,9 @@
     "knplabs/knp-paginator-bundle": {
         "version": "v4.0.0"
     },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.0.3"
+    },
     "nikic/php-parser": {
         "version": "v4.2.0"
     },
@@ -94,6 +97,9 @@
     },
     "paydunya/paydunya": {
         "version": "1.0.6"
+    },
+    "php": {
+        "version": "7.2"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -134,6 +140,15 @@
     "swiftmailer/swiftmailer": {
         "version": "v6.2.0"
     },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "410b9325a37ef86f1e47262c61738f6202202bca"
+        }
+    },
     "symfony/asset": {
         "version": "v4.2.3"
     },
@@ -165,7 +180,7 @@
         "version": "v4.2.3"
     },
     "symfony/dotenv": {
-        "version": "v4.2.3"
+        "version": "v4.2.12"
     },
     "symfony/event-dispatcher": {
         "version": "v4.2.3"
