@@ -204,6 +204,6 @@ class __TwigTemplate_f7eaf390d80732440041c4f0979391bf2b268e31ec6633f3dbb450a7990
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

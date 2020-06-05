@@ -5,6 +5,15 @@
 .ici{
    border:1px solid gainsboro;
 }
+.password + .unmask {
+  position:absolute;
+  right: 68px; top: 7px;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
+}
 </style>
 
   <div class="container-scroller">
@@ -34,16 +43,18 @@
                 <div class="container alert alert-danger" role="alert">
                     {{ flash_message }}
                 </div>
+                
             {% endfor %}
         {% endblock %}
 
    
-            <div class="auto-form-wrapper" style="width:400px;margin-left:130px;height:500px;padding-bottom:150px;">
+            <div class="auto-form-wrapper" style="width:400px;margin-left:130px;">
                          <div class="text-block text-left my-3">
                         {{form(form)}}
-
+          
                   <span class="text-small font-weight-semibold">Vous avez un compte ?</span>
-                  <a href="{{path('login')}}" class="text-black text-small">Se connecter</a>
+                  <a href="{{path('login')}}" class="text-black text-small">Se connecter</a><br>
+                 <center> <a href="{{path('cours')}}" class="text-black text-small">Accueil</a></center>
                 </div>
             </div>
           </div>

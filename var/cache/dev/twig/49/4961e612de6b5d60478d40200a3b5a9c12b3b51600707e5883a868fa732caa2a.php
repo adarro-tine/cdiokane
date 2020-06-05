@@ -134,6 +134,6 @@ class __TwigTemplate_0b7014799ad3098e808874d4eec9cc4a4c344766384be8fba4605ecce85
     </span>
     {{ title }}
 </a>
-", "@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig", "/var/www/html/CROWDEDU/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v3_sortable_link.html.twig");
+", "@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig", "/home/coumba/Bureau/cdiokane/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v3_sortable_link.html.twig");
     }
 }

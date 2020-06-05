@@ -106,64 +106,59 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 \t\t\t\t\t\t\t\t\t\tSe connecter
 \t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-angle-down\"></i>
 \t\t\t\t\t\t\t\t\t</a>
-
-
 \t\t\t\t\t\t\t\t\t<ul class=\"account_selection\" style=\"padding: 8px 0 16px 0;width:230px;box-shadow:0 4px 16px rgba(20,23,28,0.25);margin-top:-17px;
 \">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 33
+        // line 31
         echo "\t\t\t\t\t\t\t\t\t\t";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 34
+            // line 32
             echo "
 \t\t\t\t\t\t\t\t\t\t<li style=\"display:flex;margin-left:30px;\">
 <img src=\"";
-            // line 36
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "photo", [], "any", false, false, false, 36))), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34), "photo", [], "any", false, false, false, 34))), "html", null, true);
             echo "\" height=\"120px\" width=\"120px\" id=\"image\" style=\"margin-left:10px;border-radius:38px;\">
 </li>
 <br><br>
-\t\t\t\t\t  <li style=\"margin-top:-90px;\" class=\"menu_item\">";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "prenom", [], "any", false, false, false, 39), "html", null, true);
+\t\t\t\t\t<li style=\"margin-top:-90px;\" class=\"menu_item\">";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 37, $this->source); })()), "user", [], "any", false, false, false, 37), "prenom", [], "any", false, false, false, 37), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 37, $this->source); })()), "user", [], "any", false, false, false, 37), "nom", [], "any", false, false, false, 37), "html", null, true);
             echo "</li>
-\t\t\t\t\t  <li class=\"menu_item\" style=\"margin-top:-15px;\">";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40), "email", [], "any", false, false, false, 40), "html", null, true);
+\t\t\t\t\t<li class=\"menu_item\" style=\"margin-top:-15px;\">";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38), "email", [], "any", false, false, false, 38), "html", null, true);
             echo "</li>
                   <li class=\"menu_item\" style=\"margin-top:-70px;\"><a href=\"";
-            // line 41
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41), "slug", [], "any", false, false, false, 41)]), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "slug", [], "any", false, false, false, 39)]), "html", null, true);
             echo "\" style=\"text-decoration:none;\" >Compte </a></li>
-\t\t\t\t\t  <li class=\"menu_item\" style=\"margin-top:-15px;\"><a href=\"";
-            // line 42
+\t\t\t\t\t<li class=\"menu_item\" style=\"margin-top:-15px;\"><a href=\"";
+            // line 40
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
             echo "\" style=\"text-decoration:none;\">Déconnexion</a></li>
 
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 45
+            // line 43
             echo "<li><a href=\"#TaskListDialog\" role=\"button\" class=\"btn\" data-toggle=\"modal\">S'inscrire</a></li>
 
 <li><a href=\"#TaskListDialog\" role=\"button\" class=\"btn\" data-toggle=\"modal\" >Se connecter</a></li>
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 49
+        // line 47
         echo "\t\t\t\t\t    </ul>
 \t\t\t\t\t\t\t\t </li>
                 
 </ul>  
-
 </div>
-
-
 </div>
 <div class=\"main_nav_container\" style=\"background-color:#f5f5f5;height:auto;height:70px;padding:0;\">
 \t\t<div class=\"logo_container\">
 \t\t\t\t\t\t\t<a href=\"";
-        // line 60
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours");
         echo "\"> <img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo_crowdedu.png"), "html", null, true);
@@ -183,7 +178,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 68
+    // line 63
     public function block_temoignages($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -202,7 +197,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 69
+    // line 64
     public function block_barrier($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -221,7 +216,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 70
+    // line 65
     public function block_fonctionnalites($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -240,7 +235,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 71
+    // line 66
     public function block_campagne($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -259,7 +254,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 72
+    // line 67
     public function block_background($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -269,22 +264,39 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "background"));
 
-        // line 73
+        // line 68
         echo "<div style=\"width:1400px;height:1100px;background-color:white;padding-top:114px;\">
 <div style=\"width:646px;height:995px;margin-left:350px;margin-top:5px;background-color:white;border:1px solid gainsboro;padding-top:-4x²0px;\"><br/>
 ";
-        // line 76
+        // line 71
         echo "  
 <form method=\"POST\" enctype=\"multipart/form-data\"  id=\"demo1-upload\">
     
       <div class=\"col-lg-9 col-md-1 col-sm-19 col-xs-19\"  style=\"padding-left:15px; padding-right:15px;margin-left:75px; padding-bottom:15px;\">
             ";
-        // line 80
+        // line 75
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 80, $this->source); })()), "session", [], "any", false, false, false, 80), "flashbag", [], "any", false, false, false, 80), "get", [0 => "success"], "method", false, false, false, 80));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "session", [], "any", false, false, false, 75), "flashbag", [], "any", false, false, false, 75), "get", [0 => "success"], "method", false, false, false, 75));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 76
+            echo "                <div class=\"alert alert-success\" role=\"alert\">
+                    ";
+            // line 77
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 80
+        echo "            ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 80, $this->source); })()), "session", [], "any", false, false, false, 80), "flashbag", [], "any", false, false, false, 80), "get", [0 => "danger"], "method", false, false, false, 80));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 81
-            echo "                <div class=\"alert alert-success\" role=\"alert\">
+            echo "                <div class=\"alert alert-danger\" role=\"alert\">
                     ";
             // line 82
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -296,23 +308,6 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 85
-        echo "            ";
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "session", [], "any", false, false, false, 85), "flashbag", [], "any", false, false, false, 85), "get", [0 => "danger"], "method", false, false, false, 85));
-        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 86
-            echo "                <div class=\"alert alert-danger\" role=\"alert\">
-                    ";
-            // line 87
-            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
-            echo "
-                </div>
-            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 90
         echo "            
 \t\t<br/></br/>\t
             \t<label>Téléphone :</label>
@@ -347,22 +342,22 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
                   <option value=\"none\" selected=\"\" disabled=\"\">
                          Selectionnez la formation</option>
                         ";
-        // line 123
+        // line 118
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) || array_key_exists("cours", $context) ? $context["cours"] : (function () { throw new RuntimeError('Variable "cours" does not exist.', 123, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) || array_key_exists("cours", $context) ? $context["cours"] : (function () { throw new RuntimeError('Variable "cours" does not exist.', 118, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 124
+            // line 119
             echo "                    <option value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 124), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 119), "html", null, true);
             echo "\" required>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 124), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 119), "html", null, true);
             echo "</option>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 126
+        // line 121
         echo "                </select>
             </div>
 \t\t\t\t <label>Attentes :</label>
@@ -372,35 +367,35 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 </div>
 \t\t\t
             
-\t\t\t\t\t\t\t <label>Motivation :</label>
+\t\t\t\t\t\t\t<label>Motivation :</label>
 
-              <div class=\"form-group res-mg-t-15\">
-                    <textarea name=\"motivation\"  placeholder=\"\" rows=\"2\" placeholder=\"Montrer nous votre motivation\" class=\"form-control caret\" required>
-\t\t\t\t\t</textarea>
-                      </div>
-\t\t\t\t\t  \t\t\t\t <label>Perspective :</label>
+\t\t\t<div class=\"form-group res-mg-t-15\">
+\t\t\t\t<textarea name=\"motivation\"  placeholder=\"\" rows=\"2\" placeholder=\"Montrer nous votre motivation\" class=\"form-control caret\" required>
+\t\t\t\t</textarea>
+\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<label>Perspective :</label>
 
-\t\t\t\t\t  <div class=\"form-group\">
+\t\t\t\t\t<div class=\"form-group\">
 <input name=\"perspective\" id=\"perspective\" type=\"text\"    class=\"form-control caret\" required  placeholder=\"Entrer vos perspectives\">
 </div>
 <label>Lien de votre vidéo :</label>
 
-\t\t\t\t\t  <div class=\"form-group\">
+\t\t\t\t\t<div class=\"form-group\">
 <input name=\"video\" id=\"myUrl\" type=\"text\"    class=\"form-control caret\" value=\"\" required >
 </div>
-              
-                  <div class=\"card-footer text-muted\" style=\"padding-top:5px;\"><br><br>
-        <center>
+\t\t\t
+\t\t\t\t<div class=\"card-footer text-muted\" style=\"padding-top:5px;\"><br><br>
+\t<center>
 <div class=\"row\">
-                         <div class=\"col-lg-12\" style=\"margin-top:-25px;\">
- <input type=\"submit\" name=\"ajouter\" class=\"btn  waves-effect waves-light\" style=\"width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;\"  value=\"Enregistrer\" />
-                                                    
-                        </div>
-                                                </div>          </center>        
-        </div>
-                </div>
-               
-                 
+\t\t\t\t\t\t<div class=\"col-lg-12\" style=\"margin-top:-25px;\">
+<input type=\"submit\" name=\"ajouter\" class=\"btn  waves-effect waves-light\" style=\"width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;\"  value=\"Enregistrer\" />
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</div>          </center>        
+\t</div>
+\t\t\t</div>
+\t\t\t
+\t\t\t\t
             
       </div>
       </form>
@@ -420,7 +415,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 175
+    // line 170
     public function block_section($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -438,7 +433,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 177
+    // line 172
     public function block_categories($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -456,7 +451,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 179
+    // line 174
     public function block_cat($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -474,7 +469,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 181
+    // line 176
     public function block_cours($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -492,7 +487,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 183
+    // line 178
     public function block_deal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -502,7 +497,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "deal"));
 
-        // line 184
+        // line 179
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -512,7 +507,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 185
+    // line 180
     public function block_meilleurs_ventes($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -530,7 +525,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 187
+    // line 182
     public function block_options($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -548,7 +543,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 189
+    // line 184
     public function block_latest($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -566,7 +561,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 191
+    // line 186
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -584,7 +579,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     }
 
-    // line 193
+    // line 188
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -594,34 +589,34 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
 
-        // line 194
+        // line 189
         echo "
 <script src=\"";
-        // line 195
+        // line 190
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 196
+        // line 191
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap4/popper.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 197
+        // line 192
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap4/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 198
+        // line 193
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/Isotope/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 199
+        // line 194
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 200
+        // line 195
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 201
+        // line 196
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -652,7 +647,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 
     public function getDebugInfo()
     {
-        return array (  625 => 201,  621 => 200,  617 => 199,  613 => 198,  609 => 197,  605 => 196,  601 => 195,  598 => 194,  588 => 193,  570 => 191,  552 => 189,  534 => 187,  516 => 185,  506 => 184,  496 => 183,  478 => 181,  460 => 179,  442 => 177,  424 => 175,  366 => 126,  355 => 124,  351 => 123,  316 => 90,  307 => 87,  304 => 86,  299 => 85,  290 => 82,  287 => 81,  283 => 80,  277 => 76,  273 => 73,  263 => 72,  244 => 71,  225 => 70,  206 => 69,  187 => 68,  167 => 60,  154 => 49,  148 => 45,  142 => 42,  138 => 41,  134 => 40,  128 => 39,  122 => 36,  118 => 34,  115 => 33,  98 => 17,  83 => 3,  73 => 2,  50 => 1,);
+        return array (  620 => 196,  616 => 195,  612 => 194,  608 => 193,  604 => 192,  600 => 191,  596 => 190,  593 => 189,  583 => 188,  565 => 186,  547 => 184,  529 => 182,  511 => 180,  501 => 179,  491 => 178,  473 => 176,  455 => 174,  437 => 172,  419 => 170,  361 => 121,  350 => 119,  346 => 118,  311 => 85,  302 => 82,  299 => 81,  294 => 80,  285 => 77,  282 => 76,  278 => 75,  272 => 71,  268 => 68,  258 => 67,  239 => 66,  220 => 65,  201 => 64,  182 => 63,  162 => 55,  152 => 47,  146 => 43,  140 => 40,  136 => 39,  132 => 38,  126 => 37,  120 => 34,  116 => 32,  113 => 31,  98 => 17,  83 => 3,  73 => 2,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -684,8 +679,6 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 \t\t\t\t\t\t\t\t\t\tSe connecter
 \t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-angle-down\"></i>
 \t\t\t\t\t\t\t\t\t</a>
-
-
 \t\t\t\t\t\t\t\t\t<ul class=\"account_selection\" style=\"padding: 8px 0 16px 0;width:230px;box-shadow:0 4px 16px rgba(20,23,28,0.25);margin-top:-17px;
 \">
 \t\t\t\t\t\t\t\t\t\t{#{% if app.user != null %}#}
@@ -695,10 +688,10 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 <img src=\"{{ asset('uploads/' ~ app.user.photo) }}\" height=\"120px\" width=\"120px\" id=\"image\" style=\"margin-left:10px;border-radius:38px;\">
 </li>
 <br><br>
-\t\t\t\t\t  <li style=\"margin-top:-90px;\" class=\"menu_item\">{{app.user.prenom}} {{app.user.nom}}</li>
-\t\t\t\t\t  <li class=\"menu_item\" style=\"margin-top:-15px;\">{{app.user.email}}</li>
+\t\t\t\t\t<li style=\"margin-top:-90px;\" class=\"menu_item\">{{app.user.prenom}} {{app.user.nom}}</li>
+\t\t\t\t\t<li class=\"menu_item\" style=\"margin-top:-15px;\">{{app.user.email}}</li>
                   <li class=\"menu_item\" style=\"margin-top:-70px;\"><a href=\"{{path('edit',{'slug':app.user.slug})}}\" style=\"text-decoration:none;\" >Compte </a></li>
-\t\t\t\t\t  <li class=\"menu_item\" style=\"margin-top:-15px;\"><a href=\"{{path('security_logout')}}\" style=\"text-decoration:none;\">Déconnexion</a></li>
+\t\t\t\t\t<li class=\"menu_item\" style=\"margin-top:-15px;\"><a href=\"{{path('security_logout')}}\" style=\"text-decoration:none;\">Déconnexion</a></li>
 
 \t\t\t\t\t\t\t\t\t\t{% else %}
 <li><a href=\"#TaskListDialog\" role=\"button\" class=\"btn\" data-toggle=\"modal\">S'inscrire</a></li>
@@ -709,10 +702,7 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 \t\t\t\t\t\t\t\t </li>
                 
 </ul>  
-
 </div>
-
-
 </div>
 <div class=\"main_nav_container\" style=\"background-color:#f5f5f5;height:auto;height:70px;padding:0;\">
 \t\t<div class=\"logo_container\">
@@ -791,35 +781,35 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 </div>
 \t\t\t
             
-\t\t\t\t\t\t\t <label>Motivation :</label>
+\t\t\t\t\t\t\t<label>Motivation :</label>
 
-              <div class=\"form-group res-mg-t-15\">
-                    <textarea name=\"motivation\"  placeholder=\"\" rows=\"2\" placeholder=\"Montrer nous votre motivation\" class=\"form-control caret\" required>
-\t\t\t\t\t</textarea>
-                      </div>
-\t\t\t\t\t  \t\t\t\t <label>Perspective :</label>
+\t\t\t<div class=\"form-group res-mg-t-15\">
+\t\t\t\t<textarea name=\"motivation\"  placeholder=\"\" rows=\"2\" placeholder=\"Montrer nous votre motivation\" class=\"form-control caret\" required>
+\t\t\t\t</textarea>
+\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<label>Perspective :</label>
 
-\t\t\t\t\t  <div class=\"form-group\">
+\t\t\t\t\t<div class=\"form-group\">
 <input name=\"perspective\" id=\"perspective\" type=\"text\"    class=\"form-control caret\" required  placeholder=\"Entrer vos perspectives\">
 </div>
 <label>Lien de votre vidéo :</label>
 
-\t\t\t\t\t  <div class=\"form-group\">
+\t\t\t\t\t<div class=\"form-group\">
 <input name=\"video\" id=\"myUrl\" type=\"text\"    class=\"form-control caret\" value=\"\" required >
 </div>
-              
-                  <div class=\"card-footer text-muted\" style=\"padding-top:5px;\"><br><br>
-        <center>
+\t\t\t
+\t\t\t\t<div class=\"card-footer text-muted\" style=\"padding-top:5px;\"><br><br>
+\t<center>
 <div class=\"row\">
-                         <div class=\"col-lg-12\" style=\"margin-top:-25px;\">
- <input type=\"submit\" name=\"ajouter\" class=\"btn  waves-effect waves-light\" style=\"width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;\"  value=\"Enregistrer\" />
-                                                    
-                        </div>
-                                                </div>          </center>        
-        </div>
-                </div>
-               
-                 
+\t\t\t\t\t\t<div class=\"col-lg-12\" style=\"margin-top:-25px;\">
+<input type=\"submit\" name=\"ajouter\" class=\"btn  waves-effect waves-light\" style=\"width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;\"  value=\"Enregistrer\" />
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</div>          </center>        
+\t</div>
+\t\t\t</div>
+\t\t\t
+\t\t\t\t
             
       </div>
       </form>
@@ -867,6 +857,6 @@ class __TwigTemplate_8367819d1d799b655d1fd3b008e7477f18b2f43cb6cc70a0d28fc8d47a0
 </script>
 {% endblock %}
 
-", "campagne/index.html.twig", "/var/www/html/CROWDEDU/templates/campagne/index.html.twig");
+", "campagne/index.html.twig", "/home/coumba/Bureau/cdiokane/templates/campagne/index.html.twig");
     }
 }

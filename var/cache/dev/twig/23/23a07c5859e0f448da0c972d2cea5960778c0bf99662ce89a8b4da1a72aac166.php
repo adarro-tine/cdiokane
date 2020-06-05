@@ -1006,6 +1006,6 @@ class __TwigTemplate_3249cd26ef0371351abfca057b2a3568d566e9ec2f8fa94be919920d9c4
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

@@ -701,6 +701,6 @@ a, a:active, a:focus, a:hover {
 {{catecour.titreCours}}
 <img src=\"data:image/png;base64,{{ catecour.image }}\" width=\"300\" height=\"500\" alt=\"\">
 {% endfor %} #}
-", "cours/courBycategorie.html.twig", "/var/www/html/CROWDEDU/templates/cours/courBycategorie.html.twig");
+", "cours/courBycategorie.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/courBycategorie.html.twig");
     }
 }

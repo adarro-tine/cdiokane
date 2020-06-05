@@ -63,6 +63,6 @@ class __TwigTemplate_911454bd72375accc83ada4af89785734f9e24802f56596043e0bcd13fe
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/var/www/html/CROWDEDU/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/home/coumba/Bureau/cdiokane/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
     }
 }

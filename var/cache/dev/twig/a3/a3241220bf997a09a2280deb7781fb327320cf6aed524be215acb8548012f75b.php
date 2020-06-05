@@ -326,6 +326,6 @@ class __TwigTemplate_e6f1c56f046c828df79b90c00d98d1281b8a48710e4049766f3951a859e
         </ul>
     </nav>
 {% endif %}
-", "@KnpPaginator/Pagination/bulma_pagination.html.twig", "/var/www/html/CROWDEDU/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/bulma_pagination.html.twig");
+", "@KnpPaginator/Pagination/bulma_pagination.html.twig", "/home/coumba/Bureau/cdiokane/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/bulma_pagination.html.twig");
     }
 }

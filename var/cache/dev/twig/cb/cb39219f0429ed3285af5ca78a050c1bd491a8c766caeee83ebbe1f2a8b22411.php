@@ -524,6 +524,6 @@ class __TwigTemplate_0aaaf7835c27e69256aa3eaeb3538c7194f52947b528f24d858a2654eef
       
 
     
-", "poste/poste_inscription.html.twig", "/var/www/html/CROWDEDU/templates/poste/poste_inscription.html.twig");
+", "poste/poste_inscription.html.twig", "/home/coumba/Bureau/cdiokane/templates/poste/poste_inscription.html.twig");
     }
 }

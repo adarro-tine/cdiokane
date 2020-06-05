@@ -326,6 +326,6 @@ class __TwigTemplate_aeadfbdad70809ae402ece3c74af2d6c60f86171efee5aa9ec47e4f45b8
 {% endblock %}
 {% block cat %}
 {% endblock %}
-", "cours/search.html.twig", "/var/www/html/CROWDEDU/templates/cours/search.html.twig");
+", "cours/search.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/search.html.twig");
     }
 }

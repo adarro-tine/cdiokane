@@ -63,6 +63,6 @@ class __TwigTemplate_76d06c94d2f45440676ae379ea7cce56863ba9b85a2815818e9d97b532b
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>
-", "@Framework/Form/container_attributes.html.php", "/var/www/html/CROWDEDU/vendor/symfony/framework-bundle/Resources/views/Form/container_attributes.html.php");
+", "@Framework/Form/container_attributes.html.php", "/home/coumba/Bureau/cdiokane/vendor/symfony/framework-bundle/Resources/views/Form/container_attributes.html.php");
     }
 }

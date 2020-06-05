@@ -2,10 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Cours;
+
 use App\Entity\Campagne;
-use App\Form\CampagneType;
-use App\Service\FileUploader;
 use App\Repository\CoursRepository;
 use App\Repository\CampagneRepository;
 use App\Repository\CategorieRepository;
@@ -14,7 +12,6 @@ use App\Repository\SousCategorieRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class CampagneController extends Controller
 {
@@ -85,12 +82,10 @@ class CampagneController extends Controller
         $request->query->getInt('page', 1),
         6
     );
-      foreach ($campagnepagination as $value) {
-        $value->setPhoto(base64_encode(stream_get_contents($value->getPhoto())));
-    }
+     
     return $this->render('campagne/all.html.twig',['categories'=>$categories,
                                                     'souscategories'=>$souscategories,
-                                                     'campagnes'=>$campagnepagination]);
+                                                    'campagnes'=>$campagnepagination]);
   }
 
   /**
@@ -100,7 +95,6 @@ class CampagneController extends Controller
     $categories = $cr->findAll();
     $souscategories = $scr->findAll();
     $campagneUser = $campagneRepository->find($campagne);
-    $campagneUser->setPhoto(base64_encode(stream_get_contents($campagneUser->getPhoto()))); 
     return $this->render("campagne/campagneUser.html.twig",['categories'=>$categories,
                                                             'souscategories'=>$souscategories,
                                                             'campagne'=>$campagneUser]);
@@ -115,9 +109,9 @@ class CampagneController extends Controller
       $souscategories = $scr->findAll();
       $commentaires = $comrepo->findAll();
       $campagnes = $campagnerepo->findAll();
-      return $this->render('campagne/demarrerCampagne.html.twig',['commentaires'=>$commentaires,
-                                                             'categories'=>$categories,
-                                                             'souscategories'=>$souscategories,
-                                                             'campagnes'=>$campagnes]);
+    return $this->render('campagne/demarrerCampagne.html.twig',['commentaires'=>$commentaires,
+                                                            'categories'=>$categories,
+                                                            'souscategories'=>$souscategories,
+                                                            'campagnes'=>$campagnes]);
     }
 }

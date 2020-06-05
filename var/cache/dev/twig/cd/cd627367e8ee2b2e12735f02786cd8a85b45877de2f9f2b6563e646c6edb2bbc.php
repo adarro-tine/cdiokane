@@ -1828,6 +1828,6 @@ class __TwigTemplate_56909a2fd634b6a02631552c06906b6b6400e4917eaf87b3b1eb1178714
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/var/www/html/CROWDEDU/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/coumba/Bureau/cdiokane/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

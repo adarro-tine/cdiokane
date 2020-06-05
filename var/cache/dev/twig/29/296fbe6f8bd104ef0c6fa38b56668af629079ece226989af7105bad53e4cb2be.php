@@ -188,6 +188,6 @@ class __TwigTemplate_62ecc09e18d561ea3c549dbc0b2101dbb7cf6b82c69ba3454a1b17dfbc5
     </div>
 {% endblock %}
 </body>
-</html>", "security/forgotten_password.html.twig", "/var/www/html/CROWDEDU/templates/security/forgotten_password.html.twig");
+</html>", "security/forgotten_password.html.twig", "/home/coumba/Bureau/cdiokane/templates/security/forgotten_password.html.twig");
     }
 }

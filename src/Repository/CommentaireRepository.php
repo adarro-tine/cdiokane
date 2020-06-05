@@ -47,4 +47,14 @@ class CommentaireRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    function campagneUser($user){
+        return $this->createQueryBuilder('c')
+        ->where('c.user = :user')
+        ->andWhere('c.visibilite= 1' || 'c.visibilte = 0')
+        ->setParameter('user', $user)
+        ->orderBy('c.id', 'ASC')
+        ->getQuery()
+        ->getResult();   
+    }
 }

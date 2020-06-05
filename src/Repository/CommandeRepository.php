@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Commande;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Component\Serializer\Annotation\DiscriminatorMap;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -11,6 +12,11 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  * @method Commande|null findOneBy(array $criteria, array $orderBy = null)
  * @method Commande[]    findAll()
  * @method Commande[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ */
+/**
+ * @DiscriminatorMap(typeProperty="type", mapping={
+ *    "user="App\Repository\UserRepository",
+ * })
  */
 class CommandeRepository extends ServiceEntityRepository
 {

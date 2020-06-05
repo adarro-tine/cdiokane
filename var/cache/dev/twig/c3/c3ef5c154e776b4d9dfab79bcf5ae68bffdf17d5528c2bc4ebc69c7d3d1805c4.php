@@ -63,6 +63,6 @@ class __TwigTemplate_11ec25fd905aa7d182177a79acca16ce7fcf482a38a85c9782f84283f88
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'number']) ?>
-", "@Framework/Form/integer_widget.html.php", "/var/www/html/CROWDEDU/vendor/symfony/framework-bundle/Resources/views/Form/integer_widget.html.php");
+", "@Framework/Form/integer_widget.html.php", "/home/coumba/Bureau/cdiokane/vendor/symfony/framework-bundle/Resources/views/Form/integer_widget.html.php");
     }
 }

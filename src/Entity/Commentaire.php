@@ -28,13 +28,8 @@ class Commentaire
      * @ORM\Column(type="string", length=255,nullable=true)
      */
     private $nom;
-    
-   
-
-   
-
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string")
      */
     private $photo;
 
@@ -55,21 +50,6 @@ class Commentaire
         return $this;
     }
 
-   
-
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto($photo): self
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
-  
 
     /**
      * Get the value of prenom
@@ -107,6 +87,26 @@ class Commentaire
     public function setNom($nom)
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of photo
+     */ 
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * Set the value of photo
+     *
+     * @return  self
+     */ 
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
 
         return $this;
     }

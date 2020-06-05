@@ -177,8 +177,9 @@ class __TwigTemplate_2c6eef34fd60a2a45127924e2de8217e218d5a6115284940b105d09a9e9
         echo ")</h1>
     <div style=\"filter: drop-shadow(0 0f 0.75rem gainsboro);\">
     <section style=\"width:700px;height:400px;padding-top:30px;\">
-    <img src=\"data:image/png;base64,";
+    <img src=\"";
         // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/"), "html", null, true);
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["campagne"]) || array_key_exists("campagne", $context) ? $context["campagne"] : (function () { throw new RuntimeError('Variable "campagne" does not exist.', 15, $this->source); })()), "photo", [], "any", false, false, false, 15), "html", null, true);
         echo "\" width=\"680\" height=\"350\" alt=\"\" ><br><br>
         <h6 style=\"text-align:center;\">";
@@ -327,7 +328,7 @@ class __TwigTemplate_2c6eef34fd60a2a45127924e2de8217e218d5a6115284940b105d09a9e9
 
     public function getDebugInfo()
     {
-        return array (  288 => 68,  284 => 67,  280 => 66,  270 => 59,  266 => 57,  256 => 56,  235 => 45,  229 => 42,  216 => 32,  208 => 28,  205 => 26,  193 => 19,  186 => 16,  182 => 15,  174 => 12,  171 => 11,  161 => 10,  142 => 8,  123 => 7,  104 => 6,  93 => 4,  83 => 3,  64 => 2,  41 => 1,);
+        return array (  289 => 68,  285 => 67,  281 => 66,  271 => 59,  267 => 57,  257 => 56,  236 => 45,  230 => 42,  217 => 32,  209 => 28,  206 => 26,  194 => 19,  187 => 16,  182 => 15,  174 => 12,  171 => 11,  161 => 10,  142 => 8,  123 => 7,  104 => 6,  93 => 4,  83 => 3,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -346,7 +347,7 @@ class __TwigTemplate_2c6eef34fd60a2a45127924e2de8217e218d5a6115284940b105d09a9e9
 \t<h1 style=\"font-weight: 700;margin-left:-2px;margin-top:135px;color:#053651;font-family:'Roboto',sans-serif\">{{campagne.cours.titreCours}} ({{campagne.cours.universite.nom}})</h1>
     <div style=\"filter: drop-shadow(0 0f 0.75rem gainsboro);\">
     <section style=\"width:700px;height:400px;padding-top:30px;\">
-    <img src=\"data:image/png;base64,{{ campagne.photo }}\" width=\"680\" height=\"350\" alt=\"\" ><br><br>
+    <img src=\"{{ asset('uploads/')}}{{ campagne.photo }}\" width=\"680\" height=\"350\" alt=\"\" ><br><br>
         <h6 style=\"text-align:center;\">{{campagne.user.prenom}} {{campagne.user.nom}} organise cette collecte de fonds pour payer sa formation</h6><br>
         <div style=\"width:310px;height:50px;margin-bottom:100px;border-top:1px solid #96bf31;border-bottom:1px solid #96bf31;margin-left:170px;\">
         {#<p>Date de création: {{campagne.date}}</p>#}
@@ -421,6 +422,6 @@ class __TwigTemplate_2c6eef34fd60a2a45127924e2de8217e218d5a6115284940b105d09a9e9
 
    {% endblock %}
  
-", "campagne/campagneUser.html.twig", "/var/www/html/CROWDEDU/templates/campagne/campagneUser.html.twig");
+", "campagne/campagneUser.html.twig", "/home/coumba/Bureau/cdiokane/templates/campagne/campagneUser.html.twig");
     }
 }

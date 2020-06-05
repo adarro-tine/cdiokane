@@ -66,10 +66,10 @@ class Cours extends \App\Entity\Cours implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'titreCours', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'petitDescription', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'exigence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'etiquette', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'visibilite', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'categorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'chapitres', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'duree', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'universite'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'titreCours', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'exigence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'etiquette', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'categorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'chapitres', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'duree', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'universite', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'competence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'visibilite'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'titreCours', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'petitDescription', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'exigence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'etiquette', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'visibilite', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'categorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'chapitres', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'duree', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'universite'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'titreCours', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'exigence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'etiquette', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'categorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'souscategorie', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'chapitres', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'slug', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'duree', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'universite', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'competence', '' . "\0" . 'App\\Entity\\Cours' . "\0" . 'visibilite'];
     }
 
     /**
@@ -216,28 +216,6 @@ class Cours extends \App\Entity\Cours implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getPetitDescription(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPetitDescription', []);
-
-        return parent::getPetitDescription();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPetitDescription(string $petitDescription): \App\Entity\Cours
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPetitDescription', [$petitDescription]);
-
-        return parent::setPetitDescription($petitDescription);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getDescription(): ?string
     {
 
@@ -321,28 +299,6 @@ class Cours extends \App\Entity\Cours implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEtiquette', [$etiquette]);
 
         return parent::setEtiquette($etiquette);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getVisibilite(): ?bool
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVisibilite', []);
-
-        return parent::getVisibilite();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setVisibilite(bool $visibilite): \App\Entity\Cours
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVisibilite', [$visibilite]);
-
-        return parent::setVisibilite($visibilite);
     }
 
     /**
@@ -447,28 +403,6 @@ class Cours extends \App\Entity\Cours implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getImage()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImage', []);
-
-        return parent::getImage();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setImage($image)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImage', [$image]);
-
-        return parent::setImage($image);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getSouscategorie()
     {
 
@@ -508,6 +442,94 @@ class Cours extends \App\Entity\Cours implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUniversite', [$universite]);
 
         return parent::setUniversite($universite);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImage()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImage', []);
+
+        return parent::getImage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImage($image)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImage', [$image]);
+
+        return parent::setImage($image);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSlug($slug)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', [$slug]);
+
+        return parent::setSlug($slug);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCompetence(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompetence', []);
+
+        return parent::getCompetence();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCompetence(string $competence): \App\Entity\Cours
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCompetence', [$competence]);
+
+        return parent::setCompetence($competence);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVisibilite(): ?int
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVisibilite', []);
+
+        return parent::getVisibilite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVisibilite(int $visibilite): \App\Entity\Cours
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVisibilite', [$visibilite]);
+
+        return parent::setVisibilite($visibilite);
     }
 
 }

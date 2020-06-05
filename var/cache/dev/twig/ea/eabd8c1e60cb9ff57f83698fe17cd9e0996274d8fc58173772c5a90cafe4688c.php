@@ -1127,6 +1127,6 @@ class __TwigTemplate_20ed719d182e48639b6480ef9cec8378b4130f57b8894d8acdb733ffe0d
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

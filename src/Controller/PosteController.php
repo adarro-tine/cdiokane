@@ -2,25 +2,20 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+
 use App\Entity\Poste;
-use App\Entity\AddCours;
 use App\Entity\Formateur;
-use App\Form\AddCoursType;
 use App\Form\FormateurType;
 use App\Service\FileUploader;
 use App\Repository\PosteRepository;
 use App\Repository\CampagneRepository;
 use App\Repository\CategorieRepository;
-use App\Repository\FormateurRepository;
 use App\Repository\CommentaireRepository;
 use App\Repository\SousCategorieRepository;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class PosteController extends AbstractController

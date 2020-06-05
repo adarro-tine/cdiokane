@@ -125,6 +125,6 @@ class __TwigTemplate_4096e74bf99330591be69254da544fcddd3a6713ee59c13832ee9f8db02
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
+", "@Twig/Exception/error.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
     }
 }

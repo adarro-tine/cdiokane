@@ -275,8 +275,9 @@ span{
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("page_supprimerPanier", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 161)]), "html", null, true);
             echo "\" id=\"a\"><i class=\"delete\">×</i></a></td>
 
-                    <td><img src=\"data:image/png;base64,";
+                    <td><img src=\"";
             // line 163
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 163), "html", null, true);
             echo "\" width=\"40\" height=\"40\" alt=\"\">  
 \t\t\t\t\t</td> 
@@ -493,7 +494,7 @@ span{
 
     public function getDebugInfo()
     {
-        return array (  467 => 221,  449 => 220,  431 => 219,  413 => 218,  395 => 217,  377 => 216,  352 => 200,  345 => 197,  338 => 194,  336 => 193,  327 => 187,  320 => 183,  307 => 172,  301 => 171,  299 => 170,  293 => 167,  289 => 166,  285 => 165,  280 => 163,  275 => 161,  269 => 159,  265 => 158,  250 => 145,  241 => 142,  238 => 141,  234 => 140,  231 => 139,  221 => 138,  78 => 4,  68 => 3,  57 => 1,  55 => 2,  42 => 1,);
+        return array (  468 => 221,  450 => 220,  432 => 219,  414 => 218,  396 => 217,  378 => 216,  353 => 200,  346 => 197,  339 => 194,  337 => 193,  328 => 187,  321 => 183,  308 => 172,  302 => 171,  300 => 170,  294 => 167,  290 => 166,  286 => 165,  280 => 163,  275 => 161,  269 => 159,  265 => 158,  250 => 145,  241 => 142,  238 => 141,  234 => 140,  231 => 139,  221 => 138,  78 => 4,  68 => 3,  57 => 1,  55 => 2,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -660,7 +661,7 @@ span{
                 <tr>
                     <td><a href=\"{{ path('page_supprimerPanier',{'id':produit.id}) }}\" id=\"a\"><i class=\"delete\">×</i></a></td>
 
-                    <td><img src=\"data:image/png;base64,{{ produit.image }}\" width=\"40\" height=\"40\" alt=\"\">  
+                    <td><img src=\"{{ asset('uploads/')}}{{ produit.image }}\" width=\"40\" height=\"40\" alt=\"\">  
 \t\t\t\t\t</td> 
                     <td>{{produit.titreCours}}</td>
                     <td>{{produit.prix}} FCFA</td>
@@ -731,6 +732,6 @@ span{
 \t
 
 \t
-    ", "panier/panier.html.twig", "/var/www/html/CROWDEDU/templates/panier/panier.html.twig");
+    ", "panier/panier.html.twig", "/home/coumba/Bureau/cdiokane/templates/panier/panier.html.twig");
     }
 }

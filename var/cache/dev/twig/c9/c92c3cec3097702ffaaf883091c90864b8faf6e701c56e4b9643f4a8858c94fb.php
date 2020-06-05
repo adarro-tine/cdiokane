@@ -61,6 +61,6 @@ class __TwigTemplate_9a8650316774afc0942fd6b542e3289f801e45024f7d5445b8c7667c50d
 
     public function getSourceContext()
     {
-        return new Source("bonjourrrrrrrrrrrrrr", "front/index.html.twig", "/var/www/html/CROWDEDU/templates/front/index.html.twig");
+        return new Source("bonjourrrrrrrrrrrrrr", "front/index.html.twig", "/home/coumba/Bureau/cdiokane/templates/front/index.html.twig");
     }
 }

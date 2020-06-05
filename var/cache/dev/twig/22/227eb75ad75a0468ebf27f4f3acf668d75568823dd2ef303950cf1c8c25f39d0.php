@@ -155,6 +155,6 @@ class __TwigTemplate_c126a4ae93035c53cb704102522467fb90653e5f24f16acd4f2bfd365e9
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
 }

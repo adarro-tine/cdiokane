@@ -1,0 +1,88 @@
+{% extends 'cours/allCours.html.twig' %}
+{% block categories %}{% endblock %}
+{% block temoignages %}{% endblock %}
+{% block background %}
+<div  style="background-color:#006DA4;background-size:contain;
+height:auto; background-position:fixed;
+     background-repeat: no-repeat;margin-top:65px;width:100%;">
+     <div style="padding:150px;margin-left:-70px;">
+    <h2 id="cours_en_video" style="color:#ffffff !important">Suivez votre formation en ligne</h2>
+    <div style="position: absolute;
+		width: 575px;
+		height: 1px;
+		left: 140px;
+		top: 230px;
+        margin-right:10px;
+        background:linear-gradient(90deg);
+        color:#ffffff !important">
+        </div>
+    </div>
+     </div>
+</div>
+</div>
+{% endblock %}
+{% block fonctionnalites %}
+<div class="container" style="margin-top:100px;margin-bottom:50px;">
+<h2 style="font-size: 1.5rem;font-weight: 900;line-height: 2rem;margin-left:10px;margin-top:135px;">Formations gratuites</h2>
+	<div class="row">
+					{% for parcourgratuit in parcourgratuit %}
+			<div class="col-lg-4 cole" style="padding:20px;">
+					<div class="card rower  mk" style="width:250px;overflow:hidden;">
+					<a href="#">
+						<img src="{{ asset('uploads/')}}{{ parcourgratuit.image}}" width="250" height="200" alt="" id="image">
+					</a>
+					<div class="card-body" style="">
+                <h5 class="card-title titre" style="text-align:center;white-space: nowrap;
+                    font-family: ubuntu;
+                    font-style: normal;
+                    font-weight: normal;">
+                    <a href="#" style="text-decoration:none;color: #053651;
+                    display: block;
+                    font-weight: 900;">{{parcourgratuit.titreCours}}</a></a></h5><br>
+                    <h5 style="text-align:center;white-space: nowrap;
+                    font-family: ubuntu;
+                    font-style: normal;
+                    font-weight: normal;color:#053651;">{{parcourgratuit.prix}} FCFA</h5>
+                <a href="{{ path('parcour',{'slug':parcourgratuit.slug})}}" class="btn" style=";width:100%;background-color:#96bf31;color:white;">Voir le parcous</a>
+            </div>
+        </div>
+        </div>
+        
+            {% endfor %}
+</div>
+{% endblock %}
+{# {% block barrier %}{% endblock %} #}
+{% block campagne %}
+<div class="container" style="margin-top:100px;margin-bottom:50px;">
+<h2 style="font-size: 1.5rem;font-weight: 900;line-height: 2rem;margin-left:10px;margin-top:135px;">Obtenez votre diplôme</h2>
+	<div class="row">
+					{% for formation in formation %}
+			<div class="col-lg-4 cole" style="padding:20px;">
+					<div class="card rower  mk" style="width:250px;overflow:hidden;">
+					<a href="#">
+						<img src="{{ asset('uploads/')}}{{ formation.image}}" width="250" height="200" alt="" id="image">
+					</a>
+					<div class="card-body" style="">
+                        <h5 class="card-title titre" style="text-align:center;white-space: nowrap;
+                        font-family: ubuntu;
+                        font-style: normal;
+                        font-weight: normal;">
+                        <a href="#" style="text-decoration:none;color: #053651;
+                        display: block;
+                        font-weight: 900;">{{formation.titreCours}}</a></a></h5><br>
+                        <h5 style="text-align:center;white-space: nowrap;
+                        font-family: ubuntu;
+                        font-style: normal;
+                        font-weight: normal;color:#053651;">{{formation.prix}} FCFA</h5>
+                <a href="{{ path('parcour',{'slug':formation.slug})}}" class="btn" style=";width:100%;background-color:#96bf31;color:white;">Voir le parcous</a>
+            </div>
+        </div>
+        </div>
+        </div>
+            {% endfor %}
+            
+</div>
+</div>
+{% endblock %}
+{% block share %}{% endblock %}
+{% block tabs %}{% endblock %}

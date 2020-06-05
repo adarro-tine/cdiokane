@@ -67,6 +67,6 @@ class __TwigTemplate_8266e8f243e126ab5e0e6dee908868f56d1b4a1a36ce97dd804c1135ff8
         return new Source("<div>
     <?php echo \$view['form']->widget(\$form) ?>
 </div>
-", "@Framework/Form/button_row.html.php", "/var/www/html/CROWDEDU/vendor/symfony/framework-bundle/Resources/views/Form/button_row.html.php");
+", "@Framework/Form/button_row.html.php", "/home/coumba/Bureau/cdiokane/vendor/symfony/framework-bundle/Resources/views/Form/button_row.html.php");
     }
 }

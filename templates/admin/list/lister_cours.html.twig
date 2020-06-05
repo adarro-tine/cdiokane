@@ -1,0 +1,66 @@
+
+  {% extends 'admin.html.twig' %}
+  {% block row %}
+     <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            <a type="button"  href="{{path('add_cour')}}"id="addToTable" class="btn btn-primary waves-effect waves-light">Ajouter <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+                                            <th>Titre</th>
+                                            <th>Université</th>
+                                            <th>Categorie</th>
+                                            <th>Sou-categorie</th>
+                                            <th>Prix</th>
+                                            <th>Durée</th>
+                                            <th>Visibilité</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                
+                                {% for cour in cour %}
+                                    <tr>
+                                    <td>{{cour.titreCours}} </td>
+                                    <td>{{cour.universite.nom}}</td>
+                                    <td>{{cour.categorie.libelle}}</td>
+                                    <td>{{cour.souscategorie.nom}} </td> 
+                                        <td>{{cour.prix}}<i>Fcfa</i> </td> 
+                                        <td>{{cour.duree}} </td> 
+                                    <td> 
+                                        {% if cour.visibilite == 0 %}
+                                            <i>Gratuit</i>
+                                                {% elseif cour.visibilite == 1 %}
+                                                <i>Certifié</i>
+                                                {% elseif cour.visibilite == 2 %}
+                                                <i>Diplomé</i>
+                                                {% endif %}
+                                        </td> 
+                                                        <td class="actions">
+                                                        {# <td>{{ user.cour|length }}</td> #}
+                                            <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                            <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
+                                            <a href="{{ path('modifier_cour', {'id': cour.id}) }}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                            <a href="{{ path('delete_cour',{'id':cour.id}) }}" class="on-default remove-row"><i class="fa fa-trash-o"></i></a> 
+                                        </td>
+                                        </tr>
+                                        
+                                    {% endfor %}
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end: page -->
+
+                    </div> <!-- end Panel -->
+
+{% endblock %}

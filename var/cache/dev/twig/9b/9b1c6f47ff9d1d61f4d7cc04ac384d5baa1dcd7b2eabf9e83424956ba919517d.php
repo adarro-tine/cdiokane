@@ -108,6 +108,6 @@ class __TwigTemplate_f2db8bf8f10d71a291c09cf88c9227f28fac7db4cc88db36d771509a1f4
     </exception>
 {% endfor %}
 </error>
-", "@Twig/Exception/exception.xml.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "@Twig/Exception/exception.xml.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }

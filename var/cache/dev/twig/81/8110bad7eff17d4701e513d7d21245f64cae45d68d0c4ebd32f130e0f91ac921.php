@@ -29,6 +29,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
         $this->blocks = [
             'entete' => [$this, 'block_entete'],
             'content' => [$this, 'block_content'],
+            'row' => [$this, 'block_row'],
         ];
     }
 
@@ -88,9 +89,18 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
         // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/css/responsive.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
+                <!-- include libraries(jQuery, bootstrap) -->
+        <script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
+        ";
+        // line 26
+        echo "        <script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js\"></script>
+
+        <!-- include summernote css/js-->
+        <link href=\"summernote.css\" rel=\"stylesheet\">
+        <script src=\"summernote.js\"></script>
 
         <script src=\"";
-        // line 24
+        // line 32
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/modernizr.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -105,9 +115,9 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
     </head>
 
         ";
-        // line 36
+        // line 44
         $this->displayBlock('entete', $context, $blocks);
-        // line 320
+        // line 329
         echo "
 
 
@@ -115,8 +125,14 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
             <!-- Start right Content here -->
             <!-- ============================================================== --> 
             ";
-        // line 326
+        // line 335
         $this->displayBlock('content', $context, $blocks);
+        // line 352
+        echo "                        <!-- Start Widget -->
+                        <!--Widget-4 -->
+                        ";
+        // line 354
+        $this->displayBlock('row', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -125,7 +141,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
 
     }
 
-    // line 36
+    // line 44
     public function block_entete($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -135,7 +151,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "entete"));
 
-        // line 37
+        // line 45
         echo "
     <body class=\"fixed-left\">
         <!-- Begin page -->
@@ -146,8 +162,15 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                 <!-- LOGO -->
                 <div class=\"topbar-left\">
                     <div class=\"text-center\">
-                        <a href=\"index.html\" class=\"logo\"><i class=\"md md-terrain\"></i> <span>Crowdedu Africa </span></a>
-                    </div>
+                  <a href=\"";
+        // line 55
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours");
+        echo "\" >  <img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo_crowdedu.png"), "html", null, true);
+        echo "\" width=\"150\" height=\"50\" /></a>
+                        ";
+        // line 57
+        echo "                    </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
                 <div class=\"navbar navbar-default\" role=\"navigation\">
@@ -173,56 +196,56 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                     </a>
                                     <ul class=\"dropdown-menu dropdown-menu-lg\">
                                         <li class=\"text-center notifi-title\">Notification</li>
-                                        <li class=\"list-group\">
-                                           <!-- list item-->
-                                           <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-user-plus fa-2x text-info\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">New user registered</div>
-                                                    <p class=\"m-0\">
-                                                       <small>You have 10 unread messages</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                           </a>
-                                           <!-- list item-->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-diamond fa-2x text-primary\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">New settings</div>
-                                                    <p class=\"m-0\">
-                                                       <small>There are new settings available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                            <!-- list item-->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-bell-o fa-2x text-danger\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">Updates</div>
-                                                    <p class=\"m-0\">
-                                                       <small>There are
-                                                          <span class=\"text-primary\">2</span> new updates available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                           <!-- last list item -->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <small>See all notifications</small>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <li class=\"list-group\">
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-user-plus fa-2x text-info\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">New user registered</div>
+                                                <p class=\"m-0\">
+                                                    <small>You have 10 unread messages</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-diamond fa-2x text-primary\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">New settings</div>
+                                                <p class=\"m-0\">
+                                                    <small>There are new settings available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-bell-o fa-2x text-danger\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">Updates</div>
+                                                <p class=\"m-0\">
+                                                    <small>There are
+                                                        <span class=\"text-primary\">2</span> new updates available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- last list item -->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <small>See all notifications</small>
+                                        </a>
+                                    </li>
+                                </ul>
                                 </li>
                                 <li class=\"hidden-xs\">
                                     <a href=\"#\" id=\"btn-fullscreen\" class=\"waves-effect waves-light\"><i class=\"md md-crop-free\"></i></a>
@@ -232,8 +255,8 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                 </li>
                                 <li class=\"dropdown\">
                                     <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"";
-        // line 132
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 132, $this->source); })()), "user", [], "any", false, false, false, 132), "photo", [], "any", false, false, false, 132))), "html", null, true);
+        // line 141
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 141, $this->source); })()), "user", [], "any", false, false, false, 141), "photo", [], "any", false, false, false, 141))), "html", null, true);
         echo "\" alt=\"user-img\" class=\"img-circle\"> </a>          
                                     <ul class=\"dropdown-menu\">
                                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile</a></li>
@@ -258,18 +281,18 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                     <div class=\"user-details\">
                         <div class=\"pull-left\">
                             <img src=\"";
-        // line 155
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 155, $this->source); })()), "user", [], "any", false, false, false, 155), "photo", [], "any", false, false, false, 155))), "html", null, true);
+        // line 164
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 164, $this->source); })()), "user", [], "any", false, false, false, 164), "photo", [], "any", false, false, false, 164))), "html", null, true);
         echo "\" alt=\"\" class=\"thumb-md img-circle\">
                             
                         </div>
                         <div class=\"user-info\">
                             <div class=\"dropdown\">
                                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">";
-        // line 160
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 160, $this->source); })()), "user", [], "any", false, false, false, 160), "prenom", [], "any", false, false, false, 160), "html", null, true);
+        // line 169
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 169, $this->source); })()), "user", [], "any", false, false, false, 169), "prenom", [], "any", false, false, false, 169), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 160, $this->source); })()), "user", [], "any", false, false, false, 160), "nom", [], "any", false, false, false, 160), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 169, $this->source); })()), "user", [], "any", false, false, false, 169), "nom", [], "any", false, false, false, 169), "html", null, true);
         echo "<span class=\"caret\"></span></a>
                                 <ul class=\"dropdown-menu\">
                                     <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile<div class=\"ripple-wrapper\"></div></a></li>
@@ -286,11 +309,17 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                     <div id=\"sidebar-menu\">
                         <ul>
                             <li>
-                                <a href=\"index.html\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Dashboard </span></a>
+                                <a href=\"";
+        // line 185
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo "\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-mail\"></i><span> Mail </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 189
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_cour");
+        echo "\" class=\"waves-effect\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i><span> Cours </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"mail-inbox.html\">Inbox</a></li>
                                     <li><a href=\"mail-compose.html\">Compose Mail</a></li>
@@ -299,11 +328,17 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li>
-                                <a href=\"calendar.html\" class=\"waves-effect\"><i class=\"md md-event\"></i><span> Calendar </span></a>
+                                <a href=\"";
+        // line 198
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_categorie_cour");
+        echo "\" class=\"waves-effect\"><i class=\"fa fa-paragraph\" aria-hidden=\"true\"></i><span> Categorie</span></a>
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-palette\"></i> <span> Elements </span> <span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 202
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_chapitre");
+        echo "\" class=\"waves-effect\"><i class=\"fa fa-file\" aria-hidden=\"true\"></i> <span> Chapitre</span> <span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"ui-typography.html\">Typography</a></li>
                                     <li><a href=\"ui-buttons.html\">Buttons</a></li>
@@ -319,7 +354,10 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-invert-colors-on\"></i><span> Components </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 218
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_commande");
+        echo "\" class=\"waves-effect\"><i class=\"md md-invert-colors-on\"></i><span> Commandes </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"components-grid.html\">Grid</a></li>
                                     <li><a href=\"components-portlets.html\">Portlets</a></li>
@@ -332,7 +370,10 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-redeem\"></i> <span> Icons </span> <span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 231
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_commentaire");
+        echo "\" class=\"waves-effect\"><i class=\"md md-redeem\"></i> <span> Commentaires </span> <span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"icons-material.html\">Material Design</a></li>
                                     <li><a href=\"icons-ion.html\">Ion Icons</a></li>
@@ -341,7 +382,10 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
                             
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-now-widgets\"></i><span> Forms </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 240
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_university");
+        echo "\" class=\"waves-effect\"><i class=\"fa fa-university\" aria-hidden=\"true\"></i><span> Université </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"form-elements.html\">General Elements</a></li>
                                     <li><a href=\"form-validation.html\">Form Validation</a></li>
@@ -355,77 +399,30 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-list\"></i><span> Tables </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"";
+        // line 254
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("list_campagne");
+        echo "\" class=\"waves-effect\"><i class=\"md md-view-list\"></i><span> Campagnes</span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"tables-basic.html\">Basic Tables</a></li>
-                                    <li><a href=\"";
-        // line 248
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_users");
-        echo "\">Data Table</a></li>
+                                    <li><a href=\"#\">Data Table</a></li>
                                     <li><a href=\"tables-editable.html\">Editable Table</a></li>
                                     <li><a href=\"tables-responsive.html\">Responsive Table</a></li>
                                 </ul>
                             </li>
 
-                            <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-poll\"></i><span> Charts </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
-                                <ul class=\"list-unstyled\">
-                                    <li><a href=\"charts-morris.html\">Morris Chart</a></li>
-                                    <li><a href=\"charts-chartjs.html\">Chartjs</a></li>
-                                    <li><a href=\"charts-flot.html\">Flot Chart</a></li>
-                                    <li><a href=\"charts-peity.html\">Peity Charts</a></li>
-                                    <li><a href=\"charts-sparkline.html\">Sparkline Charts</a></li>
-                                    <li><a href=\"charts-radial.html\">Radial charts</a></li>
-                                    <li><a href=\"charts-other.html\">Other Chart</a></li>
-                                </ul>
-                            </li>
-
-                            <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-place\"></i><span> Maps </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
-                                <ul class=\"list-unstyled\">
-                                    <li><a href=\"maps-google.html\"> Google Map</a></li>
-                                    <li><a href=\"maps-vector.html\"> Vector Map</a></li>
-                                </ul>
-                            </li>
-
-                            <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-pages\"></i><span> Pages </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
-                                <ul class=\"list-unstyled\">
-                                    <li><a href=\"pages-profile.html\">Profile</a></li>
-                                    <li><a href=\"pages-timeline.html\">Timeline</a></li>
-                                    <li><a href=\"pages-invoice.html\">Invoice</a></li>
-                                    <li><a href=\"pages-email-template.html\">Email template</a></li>
-                                    <li><a href=\"pages-contact.html\">Contact-list</a></li>
-                                    <li><a href=\"pages-login.html\">Login</a></li>
-                                    <li><a href=\"pages-register.html\">Register</a></li>
-                                    <li><a href=\"pages-recoverpw.html\">Recover Password</a></li>
-                                    <li><a href=\"pages-lock-screen.html\">Lock Screen</a></li>
-                                    <li><a href=\"pages-blank.html\">Blank Page</a></li>
-                                    <li><a href=\"pages-maintenance.html\">Maintenance</a></li>
-                                    <li><a href=\"pages-coming-soon.html\">Coming-soon</a></li>
-                                    <li><a href=\"pages-404.html\">404 Error</a></li>
-                                    <li><a href=\"pages-404_alt.html\">404 alt</a></li>
-                                    <li><a href=\"pages-500.html\">500 Error</a></li>
-                                </ul>
-                            </li>
-
-                            <li class=\"has_sub\">
-                                <a href=\"javascript:void(0);\" class=\"waves-effect\"><i class=\"md md-share\"></i><span>Multi Level </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
-                                <ul>
-                                    <li class=\"has_sub\">
-                                        <a href=\"javascript:void(0);\" class=\"waves-effect\"><span>Menu Level 1.1</span> <span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
-                                        <ul style=\"\">
-                                            <li><a href=\"javascript:void(0);\"><span>Menu Level 2.1</span></a></li>
-                                            <li><a href=\"javascript:void(0);\"><span>Menu Level 2.2</span></a></li>
-                                            <li><a href=\"javascript:void(0);\"><span>Menu Level 2.3</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href=\"javascript:void(0);\"><span>Menu Level 1.2</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                            ";
+        // line 275
+        echo "
+                            ";
+        // line 283
+        echo "
+                            ";
+        // line 304
+        echo "
+                            ";
+        // line 321
+        echo "                        </ul>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"clearfix\"></div>
@@ -441,7 +438,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
 
     }
 
-    // line 326
+    // line 335
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -460,16 +457,33 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                         <!-- Page-Title -->
                         <div class=\"row\">
                             <div class=\"col-sm-12\">
-                                <h4 class=\"pull-left page-title\">Welcome !</h4>
+                                <h4 class=\"pull-left page-title\">Bienvenu !</h4>
                                 <ol class=\"breadcrumb pull-right\">
-                                    <li><a href=\"#\">Moltran</a></li>
-                                    <li class=\"active\">Dashboard</li>
+                                    <li><a href=\"#\">Accueil</a></li>
+                                    <li class=\"active\">Tableau de Bord</li>
                                 </ol>
                             </div>
                         </div>
+                             ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
-                        <!-- Start Widget -->
-                        <!--Widget-4 -->
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 354
+    public function block_row($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "row"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "row"));
+
+        echo " 
                         <div class=\"row\">
                             <div class=\"col-sm-6 col-lg-3\">
                                 <div class=\"mini-stat clearfix bx-shadow bg-white\">
@@ -647,7 +661,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 521
+        // line 531
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-1.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Chadengle</p>
@@ -658,7 +672,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 529
+        // line 539
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-2.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Tomaslau</p>
@@ -669,7 +683,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 537
+        // line 547
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-3.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Stillnotdavid</p>
@@ -680,7 +694,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 545
+        // line 555
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-4.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Kurafire</p>
@@ -691,7 +705,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 553
+        // line 563
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Shahedk</p>
@@ -702,7 +716,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 561
+        // line 571
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-6.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Adhamdannaway</p>
@@ -713,7 +727,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 569
+        // line 579
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-8.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Arashasghari</p>
@@ -724,7 +738,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                             <a href=\"#\">
                                                 <div class=\"inbox-item\">
                                                     <div class=\"inbox-item-img\"><img src=\"";
-        // line 577
+        // line 587
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-9.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                                     <p class=\"inbox-item-author\">Joshaustin</p>
@@ -749,7 +763,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                                 <li class=\"clearfix\">
                                                     <div class=\"chat-avatar\">
                                                         <img src=\"";
-        // line 599
+        // line 609
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/avatar-1.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                                         <i>10:00</i>
@@ -766,7 +780,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                                 <li class=\"clearfix odd\">mol
                                                     <div class=\"chat-avatar\">
                                                         <img src=\"";
-        // line 613
+        // line 623
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" alt=\"Female\">
                                                         <i>10:01</i>
@@ -783,7 +797,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                                 <li class=\"clearfix\">
                                                     <div class=\"chat-avatar\">
                                                         <img src=\"";
-        // line 627
+        // line 637
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/avatar-1.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                                         <i>10:01</i>
@@ -800,7 +814,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                                 <li class=\"clearfix odd\">
                                                     <div class=\"chat-avatar\">
                                                         <img src=\"";
-        // line 641
+        // line 651
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                                         <i>10:02</i>
@@ -886,7 +900,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 724
+        // line 734
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-1.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -899,7 +913,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 734
+        // line 744
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-2.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -912,7 +926,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 744
+        // line 754
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-3.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -925,7 +939,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 754
+        // line 764
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-4.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -938,7 +952,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 764
+        // line 774
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -951,7 +965,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 774
+        // line 784
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-6.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -964,7 +978,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 784
+        // line 794
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-7.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -977,7 +991,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 794
+        // line 804
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-8.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -990,7 +1004,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 804
+        // line 814
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-9.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -1003,7 +1017,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             <a href=\"#\">
                                 <div class=\"avatar\">
                                     <img src=\"";
-        // line 814
+        // line 824
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/images/users/avatar-10.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -1029,123 +1043,123 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
 
         <!-- jQuery  -->
         <script src=\"";
-        // line 837
+        // line 847
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 838
+        // line 848
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 839
+        // line 849
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/detect.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 840
+        // line 850
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/fastclick.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 841
+        // line 851
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.slimscroll.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 842
+        // line 852
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.blockUI.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 843
+        // line 853
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/waves.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 844
+        // line 854
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/wow.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 845
+        // line 855
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.nicescroll.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 846
+        // line 856
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.scrollTo.min.js"), "html", null, true);
         echo "\"></script>
 
         <script src=\"";
-        // line 848
+        // line 858
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/js/jquery.app.js"), "html", null, true);
         echo "\"></script>
         
         <!-- jQuery  -->
         <script src=\"";
-        // line 851
+        // line 861
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/moment/moment.js"), "html", null, true);
         echo "\"></script>
         
         <!-- jQuery  -->
         <script src=\"";
-        // line 854
+        // line 864
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/waypoints/lib/jquery.waypoints.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 855
+        // line 865
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/counterup/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
         
         <!-- jQuery  -->
         <script src=\"";
-        // line 858
+        // line 868
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/sweetalert/dist/sweetalert.min.js"), "html", null, true);
         echo "\"></script>
         
         
         <!-- flot Chart -->
         <script src=\"";
-        // line 862
+        // line 872
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 863
+        // line 873
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.time.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 864
+        // line 874
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.tooltip.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 865
+        // line 875
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.resize.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 866
+        // line 876
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.pie.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 867
+        // line 877
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.selection.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 868
+        // line 878
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.stack.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 869
+        // line 879
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/plugins/flot-chart/jquery.flot.crosshair.js"), "html", null, true);
         echo "\"></script>
 
         <!-- jQuery  -->
         <script src=\"";
-        // line 872
+        // line 882
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/pages/jquery.todo.js"), "html", null, true);
         echo "\"></script>
         
         <!-- jQuery  -->
         <script src=\"";
-        // line 875
+        // line 885
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/pages/jquery.chat.js"), "html", null, true);
         echo "\"></script>
         
         <!-- jQuery  -->
         <script src=\"";
-        // line 878
+        // line 888
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("moltran/pages/jquery.dashboard.js"), "html", null, true);
         echo "\"></script>
         
@@ -1186,7 +1200,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
 
     public function getDebugInfo()
     {
-        return array (  1149 => 878,  1143 => 875,  1137 => 872,  1131 => 869,  1127 => 868,  1123 => 867,  1119 => 866,  1115 => 865,  1111 => 864,  1107 => 863,  1103 => 862,  1096 => 858,  1090 => 855,  1086 => 854,  1080 => 851,  1074 => 848,  1069 => 846,  1065 => 845,  1061 => 844,  1057 => 843,  1053 => 842,  1049 => 841,  1045 => 840,  1041 => 839,  1037 => 838,  1033 => 837,  1007 => 814,  994 => 804,  981 => 794,  968 => 784,  955 => 774,  942 => 764,  929 => 754,  916 => 744,  903 => 734,  890 => 724,  804 => 641,  787 => 627,  770 => 613,  753 => 599,  728 => 577,  717 => 569,  706 => 561,  695 => 553,  684 => 545,  673 => 537,  662 => 529,  651 => 521,  445 => 326,  363 => 248,  270 => 160,  262 => 155,  236 => 132,  139 => 37,  129 => 36,  119 => 326,  111 => 320,  109 => 36,  94 => 24,  89 => 22,  85 => 21,  81 => 20,  77 => 19,  73 => 18,  69 => 17,  65 => 16,  60 => 14,  45 => 1,);
+        return array (  1163 => 888,  1157 => 885,  1151 => 882,  1145 => 879,  1141 => 878,  1137 => 877,  1133 => 876,  1129 => 875,  1125 => 874,  1121 => 873,  1117 => 872,  1110 => 868,  1104 => 865,  1100 => 864,  1094 => 861,  1088 => 858,  1083 => 856,  1079 => 855,  1075 => 854,  1071 => 853,  1067 => 852,  1063 => 851,  1059 => 850,  1055 => 849,  1051 => 848,  1047 => 847,  1021 => 824,  1008 => 814,  995 => 804,  982 => 794,  969 => 784,  956 => 774,  943 => 764,  930 => 754,  917 => 744,  904 => 734,  818 => 651,  801 => 637,  784 => 623,  767 => 609,  742 => 587,  731 => 579,  720 => 571,  709 => 563,  698 => 555,  687 => 547,  676 => 539,  665 => 531,  477 => 354,  442 => 335,  425 => 321,  422 => 304,  419 => 283,  416 => 275,  404 => 254,  387 => 240,  375 => 231,  359 => 218,  340 => 202,  333 => 198,  321 => 189,  314 => 185,  293 => 169,  285 => 164,  259 => 141,  173 => 57,  167 => 55,  155 => 45,  145 => 44,  135 => 354,  131 => 352,  129 => 335,  121 => 329,  119 => 44,  104 => 32,  96 => 26,  90 => 22,  86 => 21,  82 => 20,  78 => 19,  74 => 18,  70 => 17,  66 => 16,  61 => 14,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -1213,6 +1227,14 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
         <link href=\"{{asset('moltran/css/pages.css')}}\" rel=\"stylesheet\" type=\"text/css\">
         <link href=\"{{asset('moltran/css/menu.css')}}\" rel=\"stylesheet\" type=\"text/css\">
         <link href=\"{{asset('moltran/css/responsive.css')}}\" rel=\"stylesheet\" type=\"text/css\">
+                <!-- include libraries(jQuery, bootstrap) -->
+        <script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
+        {# <link rel=\"stylesheet\" href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css\" /> #}
+        <script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js\"></script>
+
+        <!-- include summernote css/js-->
+        <link href=\"summernote.css\" rel=\"stylesheet\">
+        <script src=\"summernote.js\"></script>
 
         <script src=\"{{asset('moltran/js/modernizr.min.js')}}\"></script>
 
@@ -1237,7 +1259,8 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                 <!-- LOGO -->
                 <div class=\"topbar-left\">
                     <div class=\"text-center\">
-                        <a href=\"index.html\" class=\"logo\"><i class=\"md md-terrain\"></i> <span>Crowdedu Africa </span></a>
+                  <a href=\"{{path('cours')}}\" >  <img src=\"{{asset('img/logo_crowdedu.png')}}\" width=\"150\" height=\"50\" /></a>
+                        {# <a href=\"{{path('cours')}}\" ><i class=\"md md-terrain\"></i> <span>Crowdedu Africa </span></a> #}
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -1264,56 +1287,56 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                     </a>
                                     <ul class=\"dropdown-menu dropdown-menu-lg\">
                                         <li class=\"text-center notifi-title\">Notification</li>
-                                        <li class=\"list-group\">
-                                           <!-- list item-->
-                                           <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-user-plus fa-2x text-info\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">New user registered</div>
-                                                    <p class=\"m-0\">
-                                                       <small>You have 10 unread messages</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                           </a>
-                                           <!-- list item-->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-diamond fa-2x text-primary\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">New settings</div>
-                                                    <p class=\"m-0\">
-                                                       <small>There are new settings available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                            <!-- list item-->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <div class=\"media\">
-                                                 <div class=\"media-left\">
-                                                    <em class=\"fa fa-bell-o fa-2x text-danger\"></em>
-                                                 </div>
-                                                 <div class=\"media-body clearfix\">
-                                                    <div class=\"media-heading\">Updates</div>
-                                                    <p class=\"m-0\">
-                                                       <small>There are
-                                                          <span class=\"text-primary\">2</span> new updates available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                           <!-- last list item -->
-                                            <a href=\"javascript:void(0);\" class=\"list-group-item\">
-                                              <small>See all notifications</small>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <li class=\"list-group\">
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-user-plus fa-2x text-info\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">New user registered</div>
+                                                <p class=\"m-0\">
+                                                    <small>You have 10 unread messages</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-diamond fa-2x text-primary\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">New settings</div>
+                                                <p class=\"m-0\">
+                                                    <small>There are new settings available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <div class=\"media\">
+                                                <div class=\"media-left\">
+                                                <em class=\"fa fa-bell-o fa-2x text-danger\"></em>
+                                                </div>
+                                                <div class=\"media-body clearfix\">
+                                                <div class=\"media-heading\">Updates</div>
+                                                <p class=\"m-0\">
+                                                    <small>There are
+                                                        <span class=\"text-primary\">2</span> new updates available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- last list item -->
+                                        <a href=\"javascript:void(0);\" class=\"list-group-item\">
+                                            <small>See all notifications</small>
+                                        </a>
+                                    </li>
+                                </ul>
                                 </li>
                                 <li class=\"hidden-xs\">
                                     <a href=\"#\" id=\"btn-fullscreen\" class=\"waves-effect waves-light\"><i class=\"md md-crop-free\"></i></a>
@@ -1366,11 +1389,11 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                     <div id=\"sidebar-menu\">
                         <ul>
                             <li>
-                                <a href=\"index.html\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Dashboard </span></a>
+                                <a href=\"{{path('admin')}}\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-mail\"></i><span> Mail </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_cour')}}\" class=\"waves-effect\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i><span> Cours </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"mail-inbox.html\">Inbox</a></li>
                                     <li><a href=\"mail-compose.html\">Compose Mail</a></li>
@@ -1379,11 +1402,11 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li>
-                                <a href=\"calendar.html\" class=\"waves-effect\"><i class=\"md md-event\"></i><span> Calendar </span></a>
+                                <a href=\"{{path('list_categorie_cour')}}\" class=\"waves-effect\"><i class=\"fa fa-paragraph\" aria-hidden=\"true\"></i><span> Categorie</span></a>
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-palette\"></i> <span> Elements </span> <span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_chapitre')}}\" class=\"waves-effect\"><i class=\"fa fa-file\" aria-hidden=\"true\"></i> <span> Chapitre</span> <span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"ui-typography.html\">Typography</a></li>
                                     <li><a href=\"ui-buttons.html\">Buttons</a></li>
@@ -1399,7 +1422,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-invert-colors-on\"></i><span> Components </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_commande')}}\" class=\"waves-effect\"><i class=\"md md-invert-colors-on\"></i><span> Commandes </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"components-grid.html\">Grid</a></li>
                                     <li><a href=\"components-portlets.html\">Portlets</a></li>
@@ -1412,7 +1435,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-redeem\"></i> <span> Icons </span> <span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_commentaire')}}\" class=\"waves-effect\"><i class=\"md md-redeem\"></i> <span> Commentaires </span> <span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"icons-material.html\">Material Design</a></li>
                                     <li><a href=\"icons-ion.html\">Ion Icons</a></li>
@@ -1421,7 +1444,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
                             
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-now-widgets\"></i><span> Forms </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_university')}}\" class=\"waves-effect\"><i class=\"fa fa-university\" aria-hidden=\"true\"></i><span> Université </span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"form-elements.html\">General Elements</a></li>
                                     <li><a href=\"form-validation.html\">Form Validation</a></li>
@@ -1435,16 +1458,16 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                             </li>
 
                             <li class=\"has_sub\">
-                                <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-list\"></i><span> Tables </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                                <a href=\"{{path('list_campagne')}}\" class=\"waves-effect\"><i class=\"md md-view-list\"></i><span> Campagnes</span><span class=\"pull-right\"></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"tables-basic.html\">Basic Tables</a></li>
-                                    <li><a href=\"{{path('admin_users')}}\">Data Table</a></li>
+                                    <li><a href=\"#\">Data Table</a></li>
                                     <li><a href=\"tables-editable.html\">Editable Table</a></li>
                                     <li><a href=\"tables-responsive.html\">Responsive Table</a></li>
                                 </ul>
                             </li>
 
-                            <li class=\"has_sub\">
+                            {# <li class=\"has_sub\">
                                 <a href=\"#\" class=\"waves-effect\"><i class=\"md md-poll\"></i><span> Charts </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"charts-morris.html\">Morris Chart</a></li>
@@ -1455,17 +1478,17 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                     <li><a href=\"charts-radial.html\">Radial charts</a></li>
                                     <li><a href=\"charts-other.html\">Other Chart</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class=\"has_sub\">
+                            {# <li class=\"has_sub\">
                                 <a href=\"#\" class=\"waves-effect\"><i class=\"md md-place\"></i><span> Maps </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"maps-google.html\"> Google Map</a></li>
                                     <li><a href=\"maps-vector.html\"> Vector Map</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class=\"has_sub\">
+                            {# <li class=\"has_sub\">
                                 <a href=\"#\" class=\"waves-effect\"><i class=\"md md-pages\"></i><span> Pages </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                                 <ul class=\"list-unstyled\">
                                     <li><a href=\"pages-profile.html\">Profile</a></li>
@@ -1484,9 +1507,9 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                     <li><a href=\"pages-404_alt.html\">404 alt</a></li>
                                     <li><a href=\"pages-500.html\">500 Error</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class=\"has_sub\">
+                            {# <li class=\"has_sub\">
                                 <a href=\"javascript:void(0);\" class=\"waves-effect\"><i class=\"md md-share\"></i><span>Multi Level </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                                 <ul>
                                     <li class=\"has_sub\">
@@ -1501,7 +1524,7 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                                         <a href=\"javascript:void(0);\"><span>Menu Level 1.2</span></a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> #}
                         </ul>
                         <div class=\"clearfix\"></div>
                     </div>
@@ -1525,16 +1548,17 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
                         <!-- Page-Title -->
                         <div class=\"row\">
                             <div class=\"col-sm-12\">
-                                <h4 class=\"pull-left page-title\">Welcome !</h4>
+                                <h4 class=\"pull-left page-title\">Bienvenu !</h4>
                                 <ol class=\"breadcrumb pull-right\">
-                                    <li><a href=\"#\">Moltran</a></li>
-                                    <li class=\"active\">Dashboard</li>
+                                    <li><a href=\"#\">Accueil</a></li>
+                                    <li class=\"active\">Tableau de Bord</li>
                                 </ol>
                             </div>
                         </div>
-
+                             {% endblock %}
                         <!-- Start Widget -->
                         <!--Widget-4 -->
+                        {% block row %} 
                         <div class=\"row\">
                             <div class=\"col-sm-6 col-lg-3\">
                                 <div class=\"mini-stat clearfix bx-shadow bg-white\">
@@ -2087,6 +2111,6 @@ class __TwigTemplate_9a54d4527813bbb0fef17a9bfcab48435b0550d81809693fd9a15e9bb81
 
 </html>
                     {% endblock %}
-", "admin.html.twig", "/var/www/html/CROWDEDU/templates/admin.html.twig");
+", "admin.html.twig", "/home/coumba/Bureau/cdiokane/templates/admin.html.twig");
     }
 }

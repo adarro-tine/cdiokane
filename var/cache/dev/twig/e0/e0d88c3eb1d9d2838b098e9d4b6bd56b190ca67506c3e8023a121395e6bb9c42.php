@@ -189,6 +189,6 @@ class __TwigTemplate_e9b7a6be78abda517520e058aabb4173e5c03c7d3cbe9f25dfc8c875c73
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }

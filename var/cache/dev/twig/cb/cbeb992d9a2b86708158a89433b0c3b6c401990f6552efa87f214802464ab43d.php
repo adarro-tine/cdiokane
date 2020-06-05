@@ -208,6 +208,6 @@ class __TwigTemplate_3a58824e109ccf1aa2ac4af05472d2e41e427c06a7dab97bf9eb900166f
         {% endblock %}
     </body>
 </html>
-", "home/base.html.twig", "/var/www/html/CROWDEDU/templates/home/base.html.twig");
+", "home/base.html.twig", "/home/coumba/Bureau/cdiokane/templates/home/base.html.twig");
     }
 }

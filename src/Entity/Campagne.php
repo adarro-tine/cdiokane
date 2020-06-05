@@ -17,7 +17,7 @@ class Campagne
     private $id;
 
     /**
-     * @ORM\Column(type="blob", nullable=true)
+     * @ORM\Column(type="string", nullable=true)
      */
     private $photo;
 
@@ -63,15 +63,12 @@ class Campagne
      */
     private $instagram;
     
-
-  /**
-   * @ORM\ManyToOne(targetEntity="App\Entity\User", cascade={"persist"})
-   */
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="users")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
+     */
   private $user;
-    
-    
-   
-
+ 
   /**
    * @ORM\ManyToOne(targetEntity="App\Entity\Cours", cascade={"persist"})
    */
@@ -127,13 +124,6 @@ class Campagne
 
         return $this;
     }
-
-   
-
-   
-
- 
-
     /**
      * Get the value of date
      */ 
@@ -213,37 +203,6 @@ class Campagne
 
         return $this;
     }
-
-    /**
-     * Get the value of photo
-     */ 
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
-     * Set the value of photo
-     *
-     * @return  self
-     */ 
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
- 
-
-
-
-
-  
-
- 
-
-
   /**
    * Get the value of cours
    */ 
@@ -311,13 +270,6 @@ class Campagne
 
       return $this;
   }
-
-    
-
-    
-    
-
-    
 
     public function getPerspective(): ?string
     {
@@ -434,4 +386,24 @@ class Campagne
 
       return $this;
   }
+
+    /**
+     * Get the value of photo
+     */ 
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * Set the value of photo
+     *
+     * @return  self
+     */ 
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
 }

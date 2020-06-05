@@ -100,7 +100,7 @@ body
 	height:300px;
 	position:absolute;
 	display:none;
-	background-color:#096ea2;
+	background-color:	;
 }
 
 
@@ -1892,7 +1892,7 @@ section
 		color:#96bf31;
 
 	}
-	#cformateur{
+	#FORMATION{
 		left: 798px;
 		top: 105px;
 		width: 115px;
@@ -1907,7 +1907,7 @@ section
 		text-decoration:none;
 
 	}
-	#cformateur:hover{
+	#FORMATION:hover{
 		font-weight: bold;
 		color:#96bf31;
 
@@ -1933,6 +1933,24 @@ section
 		font-weight: bold;
 		color:#96bf31;
 
+	}
+	#CROWDFUNDING {
+		overflow: visible;
+		width: 160px;
+		white-space: nowrap;
+		margin-right:3px;
+		font-family: ubuntu;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		text-transform:none;
+		color: #053651;
+		text-decoration:none;
+
+	}
+	#CROWDFUNDING:hover{
+		font-weight: bold;
+		color:#96bf31;
 	}
     #Financement_Participatif {
 		

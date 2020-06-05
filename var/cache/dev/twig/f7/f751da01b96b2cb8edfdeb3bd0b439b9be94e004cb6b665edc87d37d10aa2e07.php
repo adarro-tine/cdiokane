@@ -782,6 +782,6 @@ $context["cours"], "etat", [], "any", false, false, false, 161) == false)) {
 \t\t
 \t\t});
 \t\t</script>
-\t{% endblock %}", "cours/mesCoursSlug.html.twig", "/var/www/html/CROWDEDU/templates/cours/mesCoursSlug.html.twig");
+\t{% endblock %}", "cours/mesCoursSlug.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/mesCoursSlug.html.twig");
     }
 }

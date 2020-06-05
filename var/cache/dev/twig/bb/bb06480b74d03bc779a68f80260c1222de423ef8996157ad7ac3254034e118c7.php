@@ -92,51 +92,48 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo_crowdedu.png"), "html", null, true);
         echo "\" width=\"75%\" height=\"auto\"/></a>
 \t\t</div>
-\t\t\t
-\t\t\t\t\t\t
 \t\t\t</div>
-
     <div>
     <h1 style=\"margin-top:90px;font-family:'Roboto',sans-serif;margin-left:100px;\">Mes cours</h1>
     <div style=\"width:100%;height:370px;margin:0 auto;border-bottom:1px solid gainsboro;border-top:1px solid gainsboro;margin-bottom:200px;\">
     <div class=\"row\" style=\"margin:0 auto;padding-top:30px;margin-left:100px;\">
           
                 ";
-        // line 36
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 36, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 33, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 37
+            // line 34
             echo "                ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) || array_key_exists("cours", $context) ? $context["cours"] : (function () { throw new RuntimeError('Variable "cours" does not exist.', 37, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["cours"]) || array_key_exists("cours", $context) ? $context["cours"] : (function () { throw new RuntimeError('Variable "cours" does not exist.', 34, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-                // line 38
+                // line 35
                 echo "                ";
-                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "cours", [], "any", false, false, false, 38), "titreCours", [], "any", false, false, false, 38) == twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 38))) {
-                    // line 39
+                if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "cours", [], "any", false, false, false, 35), "titreCours", [], "any", false, false, false, 35) == twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 35))) {
+                    // line 36
                     echo "                ";
-                    if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "user", [], "any", false, false, false, 39), "email", [], "any", false, false, false, 39) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "email", [], "any", false, false, false, 39))) {
-                        // line 40
+                    if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "user", [], "any", false, false, false, 36), "email", [], "any", false, false, false, 36) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "email", [], "any", false, false, false, 36))) {
+                        // line 37
                         echo "                ";
-                        if ((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 40) == 2)) {
-                            // line 41
+                        if ((twig_get_attribute($this->env, $this->source, $context["commande"], "statut", [], "any", false, false, false, 37) == 2)) {
+                            // line 38
                             echo "
                 <div class=\"card col-lg-3 \" style=\"width:200px\">
                 <a href=\"";
-                            // line 43
-                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mes-cours-slug", ["slug" => twig_get_attribute($this->env, $this->source, $context["c"], "slug", [], "any", false, false, false, 43)]), "html", null, true);
+                            // line 40
+                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mes-cours-slug", ["slug" => twig_get_attribute($this->env, $this->source, $context["c"], "slug", [], "any", false, false, false, 40)]), "html", null, true);
                             echo "\" class=\"a_image\">
-      <img class=\"card-img-top\" src=\"data:image/png;base64,";
-                            // line 44
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "image", [], "any", false, false, false, 44), "html", null, true);
+      <img class=\"card-img-top\" src=\"";
+                            // line 41
+                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/"), "html", null, true);
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "image", [], "any", false, false, false, 41), "html", null, true);
                             echo "\" alt=\"Card image\">
       </a>
-      
     <div class=\"card-body\">
     <h4 class=\"card-title\" style=\"font-size:15px;font-weight:600;\">";
-                            // line 48
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 48), "html", null, true);
+                            // line 44
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "titreCours", [], "any", false, false, false, 44), "html", null, true);
                             echo "</h4>
     <div class=\"rating\">
 \t<div class=\"stars\">
@@ -148,31 +145,31 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
 \t</div>
 </div>
     <h6 class=\"card-text\" style=\"margin-top:20px;text-align:center;\">";
-                            // line 58
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "cours", [], "any", false, false, false, 58), "prix", [], "any", false, false, false, 58), "html", null, true);
+                            // line 54
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commande"], "cours", [], "any", false, false, false, 54), "prix", [], "any", false, false, false, 54), "html", null, true);
                             echo " FCFA</h6>
   </div>
 </div>           ";
                         }
-                        // line 61
-                        echo "                 ";
+                        // line 57
+                        echo "                ";
                     }
-                    // line 62
-                    echo "\t\t\t\t";
+                    // line 58
+                    echo "              ";
                 }
-                // line 63
-                echo "               ";
+                // line 59
+                echo "              ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 64
+            // line 60
             echo "                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 61
         echo "    </div>
     </div>
         </body>
@@ -197,7 +194,7 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
 
     public function getDebugInfo()
     {
-        return array (  176 => 65,  170 => 64,  164 => 63,  161 => 62,  158 => 61,  152 => 58,  139 => 48,  132 => 44,  128 => 43,  124 => 41,  121 => 40,  118 => 39,  115 => 38,  110 => 37,  106 => 36,  90 => 25,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  53 => 6,  49 => 5,  43 => 1,);
+        return array (  173 => 61,  167 => 60,  161 => 59,  158 => 58,  155 => 57,  149 => 54,  136 => 44,  129 => 41,  125 => 40,  121 => 38,  118 => 37,  115 => 36,  112 => 35,  107 => 34,  103 => 33,  90 => 25,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  53 => 6,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -228,10 +225,7 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
 \t\t<div class=\"logo_container\">
 \t\t\t\t\t\t\t<a href=\"{{path('cours')}}\"> <img src=\"{{asset('img/logo_crowdedu.png')}}\" width=\"75%\" height=\"auto\"/></a>
 \t\t</div>
-\t\t\t
-\t\t\t\t\t\t
 \t\t\t</div>
-
     <div>
     <h1 style=\"margin-top:90px;font-family:'Roboto',sans-serif;margin-left:100px;\">Mes cours</h1>
     <div style=\"width:100%;height:370px;margin:0 auto;border-bottom:1px solid gainsboro;border-top:1px solid gainsboro;margin-bottom:200px;\">
@@ -245,9 +239,8 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
 
                 <div class=\"card col-lg-3 \" style=\"width:200px\">
                 <a href=\"{{path('mes-cours-slug',{'slug':c.slug} )}}\" class=\"a_image\">
-      <img class=\"card-img-top\" src=\"data:image/png;base64,{{ c.image }}\" alt=\"Card image\">
+      <img class=\"card-img-top\" src=\"{{asset('uploads/')}}{{ c.image }}\" alt=\"Card image\">
       </a>
-      
     <div class=\"card-body\">
     <h4 class=\"card-title\" style=\"font-size:15px;font-weight:600;\">{{c.titreCours}}</h4>
     <div class=\"rating\">
@@ -262,13 +255,13 @@ class __TwigTemplate_8056c8973c7a0c19384d41e164e1d7485cbe20f7d56caa875a40c0b0e83
     <h6 class=\"card-text\" style=\"margin-top:20px;text-align:center;\">{{ commande.cours.prix }} FCFA</h6>
   </div>
 </div>           {% endif %}
-                 {% endif %}
-\t\t\t\t{% endif %}
-               {% endfor %}
+                {% endif %}
+              {% endif %}
+              {% endfor %}
                 {% endfor %}
     </div>
     </div>
         </body>
-</html>", "cours/mesCours.html.twig", "/var/www/html/CROWDEDU/templates/cours/mesCours.html.twig");
+</html>", "cours/mesCours.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/mesCours.html.twig");
     }
 }

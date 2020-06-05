@@ -227,6 +227,6 @@ class __TwigTemplate_eac245e530cf98d3dcc2ef9c54309506f29d269d5c0e246f760bbed22ab
         </div>
     </form>
 </div>
-", "@WebProfiler/Profiler/search.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/search.html.twig");
+", "@WebProfiler/Profiler/search.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/search.html.twig");
     }
 }

@@ -20,6 +20,14 @@
         <link href="{{asset('moltran/css/pages.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('moltran/css/menu.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('moltran/css/responsive.css')}}" rel="stylesheet" type="text/css">
+                <!-- include libraries(jQuery, bootstrap) -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        {# <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" /> #}
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- include summernote css/js-->
+        <link href="summernote.css" rel="stylesheet">
+        <script src="summernote.js"></script>
 
         <script src="{{asset('moltran/js/modernizr.min.js')}}"></script>
 
@@ -44,7 +52,8 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>Crowdedu Africa </span></a>
+                  <a href="{{path('cours')}}" >  <img src="{{asset('img/logo_crowdedu.png')}}" width="150" height="50" /></a>
+                        {# <a href="{{path('cours')}}" ><i class="md md-terrain"></i> <span>Crowdedu Africa </span></a> #}
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -71,56 +80,56 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-lg">
                                         <li class="text-center notifi-title">Notification</li>
-                                        <li class="list-group">
-                                           <!-- list item-->
-                                           <a href="javascript:void(0);" class="list-group-item">
-                                              <div class="media">
-                                                 <div class="media-left">
-                                                    <em class="fa fa-user-plus fa-2x text-info"></em>
-                                                 </div>
-                                                 <div class="media-body clearfix">
-                                                    <div class="media-heading">New user registered</div>
-                                                    <p class="m-0">
-                                                       <small>You have 10 unread messages</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                           </a>
-                                           <!-- list item-->
-                                            <a href="javascript:void(0);" class="list-group-item">
-                                              <div class="media">
-                                                 <div class="media-left">
-                                                    <em class="fa fa-diamond fa-2x text-primary"></em>
-                                                 </div>
-                                                 <div class="media-body clearfix">
-                                                    <div class="media-heading">New settings</div>
-                                                    <p class="m-0">
-                                                       <small>There are new settings available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                            <!-- list item-->
-                                            <a href="javascript:void(0);" class="list-group-item">
-                                              <div class="media">
-                                                 <div class="media-left">
-                                                    <em class="fa fa-bell-o fa-2x text-danger"></em>
-                                                 </div>
-                                                 <div class="media-body clearfix">
-                                                    <div class="media-heading">Updates</div>
-                                                    <p class="m-0">
-                                                       <small>There are
-                                                          <span class="text-primary">2</span> new updates available</small>
-                                                    </p>
-                                                 </div>
-                                              </div>
-                                            </a>
-                                           <!-- last list item -->
-                                            <a href="javascript:void(0);" class="list-group-item">
-                                              <small>See all notifications</small>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <li class="list-group">
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                <em class="fa fa-user-plus fa-2x text-info"></em>
+                                                </div>
+                                                <div class="media-body clearfix">
+                                                <div class="media-heading">New user registered</div>
+                                                <p class="m-0">
+                                                    <small>You have 10 unread messages</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                <em class="fa fa-diamond fa-2x text-primary"></em>
+                                                </div>
+                                                <div class="media-body clearfix">
+                                                <div class="media-heading">New settings</div>
+                                                <p class="m-0">
+                                                    <small>There are new settings available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- list item-->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                <em class="fa fa-bell-o fa-2x text-danger"></em>
+                                                </div>
+                                                <div class="media-body clearfix">
+                                                <div class="media-heading">Updates</div>
+                                                <p class="m-0">
+                                                    <small>There are
+                                                        <span class="text-primary">2</span> new updates available</small>
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- last list item -->
+                                        <a href="javascript:void(0);" class="list-group-item">
+                                            <small>See all notifications</small>
+                                        </a>
+                                    </li>
+                                </ul>
                                 </li>
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
@@ -134,7 +143,7 @@
                                         <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
                                         <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
                                         <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
-                                        <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
+                                        <li><a href="{{path('security_logout')}}"><i class="md md-settings-power"></i> Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -173,11 +182,11 @@
                     <div id="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="index.html" class="waves-effect"><i class="md md-home"></i><span> Dashboard </span></a>
+                                <a href="{{path('admin')}}" class="waves-effect"><i class="md md-home"></i><span> Tableau de bord </span></a>
                             </li>
 
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-mail"></i><span> Mail </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_cour')}}" class="waves-effect"><i class="fa fa-book" aria-hidden="true"></i><span> Cours </span><span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="mail-inbox.html">Inbox</a></li>
                                     <li><a href="mail-compose.html">Compose Mail</a></li>
@@ -186,11 +195,11 @@
                             </li>
 
                             <li>
-                                <a href="calendar.html" class="waves-effect"><i class="md md-event"></i><span> Calendar </span></a>
+                                <a href="{{path('list_categorie_cour')}}" class="waves-effect"><i class="fa fa-paragraph" aria-hidden="true"></i><span> Categorie</span></a>
                             </li>
 
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-palette"></i> <span> Elements </span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_chapitre')}}" class="waves-effect"><i class="fa fa-file" aria-hidden="true"></i> <span> Chapitre</span> <span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="ui-typography.html">Typography</a></li>
                                     <li><a href="ui-buttons.html">Buttons</a></li>
@@ -206,7 +215,7 @@
                             </li>
 
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-invert-colors-on"></i><span> Components </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_commande')}}" class="waves-effect"><i class="md md-invert-colors-on"></i><span> Commandes </span><span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="components-grid.html">Grid</a></li>
                                     <li><a href="components-portlets.html">Portlets</a></li>
@@ -219,7 +228,7 @@
                             </li>
 
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-redeem"></i> <span> Icons </span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_commentaire')}}" class="waves-effect"><i class="md md-redeem"></i> <span> Commentaires </span> <span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="icons-material.html">Material Design</a></li>
                                     <li><a href="icons-ion.html">Ion Icons</a></li>
@@ -228,7 +237,7 @@
                             </li>
                             
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-now-widgets"></i><span> Forms </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_university')}}" class="waves-effect"><i class="fa fa-university" aria-hidden="true"></i><span> Université </span><span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="form-elements.html">General Elements</a></li>
                                     <li><a href="form-validation.html">Form Validation</a></li>
@@ -242,16 +251,16 @@
                             </li>
 
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="md md-view-list"></i><span> Tables </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <a href="{{path('list_campagne')}}" class="waves-effect"><i class="md md-view-list"></i><span> Campagnes</span><span class="pull-right"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="tables-basic.html">Basic Tables</a></li>
-                                    <li><a href="{{path('admin_users')}}">Data Table</a></li>
+                                    <li><a href="#">Data Table</a></li>
                                     <li><a href="tables-editable.html">Editable Table</a></li>
                                     <li><a href="tables-responsive.html">Responsive Table</a></li>
                                 </ul>
                             </li>
 
-                            <li class="has_sub">
+                            {# <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="md md-poll"></i><span> Charts </span><span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="charts-morris.html">Morris Chart</a></li>
@@ -262,17 +271,17 @@
                                     <li><a href="charts-radial.html">Radial charts</a></li>
                                     <li><a href="charts-other.html">Other Chart</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class="has_sub">
+                            {# <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="md md-place"></i><span> Maps </span><span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="maps-google.html"> Google Map</a></li>
                                     <li><a href="maps-vector.html"> Vector Map</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class="has_sub">
+                            {# <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="md md-pages"></i><span> Pages </span><span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="pages-profile.html">Profile</a></li>
@@ -291,9 +300,9 @@
                                     <li><a href="pages-404_alt.html">404 alt</a></li>
                                     <li><a href="pages-500.html">500 Error</a></li>
                                 </ul>
-                            </li>
+                            </li> #}
 
-                            <li class="has_sub">
+                            {# <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="md md-share"></i><span>Multi Level </span><span class="pull-right"><i class="md md-add"></i></span></a>
                                 <ul>
                                     <li class="has_sub">
@@ -308,7 +317,7 @@
                                         <a href="javascript:void(0);"><span>Menu Level 1.2</span></a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> #}
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -332,16 +341,17 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="pull-left page-title">Welcome !</h4>
+                                <h4 class="pull-left page-title">Bienvenu !</h4>
                                 <ol class="breadcrumb pull-right">
-                                    <li><a href="#">Moltran</a></li>
-                                    <li class="active">Dashboard</li>
+                                    <li><a href="#">Accueil</a></li>
+                                    <li class="active">Tableau de Bord</li>
                                 </ol>
                             </div>
                         </div>
-
+                             {% endblock %}
                         <!-- Start Widget -->
                         <!--Widget-4 -->
+                        {% block row %} 
                         <div class="row">
                             <div class="col-sm-6 col-lg-3">
                                 <div class="mini-stat clearfix bx-shadow bg-white">

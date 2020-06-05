@@ -31,8 +31,6 @@ class DonController extends AbstractController
        $souscategories = $scr->findAll();
        $campagnes = $campagnerepository->findAll();
        $commentaires = $comre->findAll();
-       //$entityManager = $this->getDoctrine()->getManager();
-       //$dons = $entityManager->getRepository(Donate::class)->findAll();
        $donate = new Donate();
        $form = $this->createForm(DonateType::class,$donate);
        $form->handleRequest($request);
@@ -52,7 +50,6 @@ class DonController extends AbstractController
             if($invoice->create()) {
                  header("Location: ".$invoice->getInvoiceUrl());
                  dump($invoice->getInvoiceUrl());
-                 die();              
             }else{
                   echo $invoice->response_text;
         }

@@ -104,6 +104,6 @@ class __TwigTemplate_8d39e9d751ac41dd3fe2ee5267117580cb3addbc5ecc8311eae6dc0f34a
   {{ include('@Twig/Exception/trace.txt.twig', { trace: trace }, with_context = false) }}
 {% endfor %}
 {% endif %}
-", "@Twig/Exception/traces.txt.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
+", "@Twig/Exception/traces.txt.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
     }
 }

@@ -141,7 +141,7 @@ a, a:active, a:focus, a:hover {
         <li style="margin-left:17px;">
         La liste des sous-catégories</li>
         {% for sc in souscategories %}
-        	<li class="cat-item cat-item-34" data-slug="technology"><a href="{{ path('souscategorie',{'slug':sc.slug})}}" title="1500+ students enrolled">{{sc.nom}}<span></span></a>
+        <li class="cat-item cat-item-34" data-slug="technology"><a href="{{ path('souscategorie',{'slug':sc.slug})}}" title="1500+ students enrolled">{{sc.nom}}<span></span></a>
         </li>
         {% endfor %}
         </ul>

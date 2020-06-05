@@ -171,6 +171,6 @@ class __TwigTemplate_95e110cf395de7c80ddf0b028533222e09cee8a54f7e7ab593fdb556e7e
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/var/www/html/CROWDEDU/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/home/coumba/Bureau/cdiokane/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

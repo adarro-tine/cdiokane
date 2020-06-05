@@ -60,5 +60,15 @@ class CoursRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult();   
             }
+            function courCommande($commande){
+                return $this->createQueryBuilder('c')
+                ->where('c.commande = :commande')
+                ->andWhere('c.visibilite= 1' || 'c.visibilte = 0')
+                ->setParameter('commande', $commande)
+                ->orderBy('c.id', 'ASC')
+                ->getQuery()
+                ->getResult();   
+            }
+            
             
 }

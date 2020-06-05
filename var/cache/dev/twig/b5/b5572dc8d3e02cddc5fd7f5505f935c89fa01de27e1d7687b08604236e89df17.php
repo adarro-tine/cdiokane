@@ -119,6 +119,6 @@ class __TwigTemplate_e980951d9620ccc8e1fef3d8e00990ca97c45a8aeb33b8afefa88953d87
             </a>
         </li>
     </ul>
-</div> ", "panier/index.html.twig", "/var/www/html/CROWDEDU/templates/panier/index.html.twig");
+</div> ", "panier/index.html.twig", "/home/coumba/Bureau/cdiokane/templates/panier/index.html.twig");
     }
 }

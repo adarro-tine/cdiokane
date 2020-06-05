@@ -79,6 +79,6 @@ class __TwigTemplate_68e9d9e25b271ea8042125afeadc8d04b7937de76252a8b7ebb571ee22b
 <body>
 {{ 'Hello'|trans }} {{name}}
 </body>
-</html>", "cours/translation.html.twig", "/var/www/html/CROWDEDU/templates/cours/translation.html.twig");
+</html>", "cours/translation.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/translation.html.twig");
     }
 }

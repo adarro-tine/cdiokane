@@ -81,6 +81,6 @@ Nous vous reviendrons le plus rapidement possible.</div>
 </div style=\"padding-bottom:15px;\">
 Votre inscription  a été soumis avec succès.
 Nous vous reviendrons le plus rapidement possible.</div>
-    ", "poste/email.html.twig", "/var/www/html/CROWDEDU/templates/poste/email.html.twig");
+    ", "poste/email.html.twig", "/home/coumba/Bureau/cdiokane/templates/poste/email.html.twig");
     }
 }

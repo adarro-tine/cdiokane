@@ -92,6 +92,6 @@ class __TwigTemplate_ef5c590f5f726fce37be75b443d698acba8681eab549b6ea1961c7fc97f
 <img src=\"data:image/png;base64,{{ pro.image }}\" width=\"200\" height=\"150\" alt=\"\">
 </div>
 {% endfor %}
-", "cours/resultatrecherche.html.twig", "/var/www/html/CROWDEDU/templates/cours/resultatrecherche.html.twig");
+", "cours/resultatrecherche.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/resultatrecherche.html.twig");
     }
 }

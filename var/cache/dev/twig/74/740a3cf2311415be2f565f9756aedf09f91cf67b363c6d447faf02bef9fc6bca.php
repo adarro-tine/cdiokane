@@ -135,6 +135,6 @@ class __TwigTemplate_8fb40d1f63e562b53a4363d0e67cc928c215f4f60f355a37c836a5ff217
 .exception-message-wrapper .container {
     min-height: auto;
 }
-", "@WebProfiler/Collector/exception.css.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
+", "@WebProfiler/Collector/exception.css.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
     }
 }

@@ -70,6 +70,15 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
 .ici{
    border:1px solid gainsboro;
 }
+.password + .unmask {
+  position:absolute;
+  right: 68px; top: 7px;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
+}
 </style>
 
   <div class=\"container-scroller\">
@@ -80,23 +89,27 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
             <h2 class=\"text-center mb-12\" style=\"color:white;\">Inscription</h2>
                  
   ";
-        // line 17
+        // line 26
         $this->displayBlock('flash', $context, $blocks);
-        // line 39
+        // line 49
         echo "
    
-            <div class=\"auto-form-wrapper\" style=\"width:400px;margin-left:130px;height:500px;padding-bottom:150px;\">
+            <div class=\"auto-form-wrapper\" style=\"width:400px;margin-left:130px;\">
                          <div class=\"text-block text-left my-3\">
                         ";
-        // line 43
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form');
+        // line 53
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 53, $this->source); })()), 'form');
         echo "
-
+          
                   <span class=\"text-small font-weight-semibold\">Vous avez un compte ?</span>
                   <a href=\"";
-        // line 46
+        // line 56
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-        echo "\" class=\"text-black text-small\">Se connecter</a>
+        echo "\" class=\"text-black text-small\">Se connecter</a><br>
+                 <center> <a href=\"";
+        // line 57
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours");
+        echo "\" class=\"text-black text-small\">Accueil</a></center>
                 </div>
             </div>
           </div>
@@ -116,7 +129,7 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
 
     }
 
-    // line 17
+    // line 26
     public function block_flash($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -126,15 +139,15 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "flash"));
 
-        // line 18
+        // line 27
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "session", [], "any", false, false, false, 18), "flashbag", [], "any", false, false, false, 18), "get", [0 => "success"], "method", false, false, false, 18));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "session", [], "any", false, false, false, 27), "flashbag", [], "any", false, false, false, 27), "get", [0 => "success"], "method", false, false, false, 27));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 19
+            // line 28
             echo "                <div class=\"container alert alert-success\" role=\"alert\">
                     ";
-            // line 20
+            // line 29
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
                 </div>
@@ -143,15 +156,15 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
+        // line 32
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "session", [], "any", false, false, false, 23), "flashbag", [], "any", false, false, false, 23), "get", [0 => "info"], "method", false, false, false, 23));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "session", [], "any", false, false, false, 32), "flashbag", [], "any", false, false, false, 32), "get", [0 => "info"], "method", false, false, false, 32));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 24
+            // line 33
             echo "                <div class=\"container alert alert-info\" role=\"alert\">
                     ";
-            // line 25
+            // line 34
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
                 </div>
@@ -160,15 +173,15 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
+        // line 37
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "session", [], "any", false, false, false, 28), "flashbag", [], "any", false, false, false, 28), "get", [0 => "warning"], "method", false, false, false, 28));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 37, $this->source); })()), "session", [], "any", false, false, false, 37), "flashbag", [], "any", false, false, false, 37), "get", [0 => "warning"], "method", false, false, false, 37));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 29
+            // line 38
             echo "                <div class=\"container alert alert-warning\" role=\"alert\">
                     ";
-            // line 30
+            // line 39
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
                 </div>
@@ -177,24 +190,25 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 42
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "session", [], "any", false, false, false, 33), "flashbag", [], "any", false, false, false, 33), "get", [0 => "danger"], "method", false, false, false, 33));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 42, $this->source); })()), "session", [], "any", false, false, false, 42), "flashbag", [], "any", false, false, false, 42), "get", [0 => "danger"], "method", false, false, false, 42));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 34
+            // line 43
             echo "                <div class=\"container alert alert-danger\" role=\"alert\">
                     ";
-            // line 35
+            // line 44
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
                 </div>
+                
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 48
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -216,7 +230,7 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
 
     public function getDebugInfo()
     {
-        return array (  198 => 38,  189 => 35,  186 => 34,  181 => 33,  172 => 30,  169 => 29,  164 => 28,  155 => 25,  152 => 24,  147 => 23,  138 => 20,  135 => 19,  130 => 18,  120 => 17,  98 => 46,  92 => 43,  86 => 39,  84 => 17,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  212 => 48,  202 => 44,  199 => 43,  194 => 42,  185 => 39,  182 => 38,  177 => 37,  168 => 34,  165 => 33,  160 => 32,  151 => 29,  148 => 28,  143 => 27,  133 => 26,  111 => 57,  107 => 56,  101 => 53,  95 => 49,  93 => 26,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -227,6 +241,15 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
 <style>
 .ici{
    border:1px solid gainsboro;
+}
+.password + .unmask {
+  position:absolute;
+  right: 68px; top: 7px;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: #aaa;
+  border-radius: 50%;
 }
 </style>
 
@@ -257,16 +280,18 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
                 <div class=\"container alert alert-danger\" role=\"alert\">
                     {{ flash_message }}
                 </div>
+                
             {% endfor %}
         {% endblock %}
 
    
-            <div class=\"auto-form-wrapper\" style=\"width:400px;margin-left:130px;height:500px;padding-bottom:150px;\">
+            <div class=\"auto-form-wrapper\" style=\"width:400px;margin-left:130px;\">
                          <div class=\"text-block text-left my-3\">
                         {{form(form)}}
-
+          
                   <span class=\"text-small font-weight-semibold\">Vous avez un compte ?</span>
-                  <a href=\"{{path('login')}}\" class=\"text-black text-small\">Se connecter</a>
+                  <a href=\"{{path('login')}}\" class=\"text-black text-small\">Se connecter</a><br>
+                 <center> <a href=\"{{path('cours')}}\" class=\"text-black text-small\">Accueil</a></center>
                 </div>
             </div>
           </div>
@@ -277,6 +302,6 @@ class __TwigTemplate_3fa8ccdbfcfb41061ad4c94900274c64cc61ad531905659d0dd724d25b4
     <!-- page-body-wrapper ends -->
   </div>
 
-{% endblock %}", "registration/index.html.twig", "/var/www/html/CROWDEDU/templates/registration/index.html.twig");
+{% endblock %}", "registration/index.html.twig", "/home/coumba/Bureau/cdiokane/templates/registration/index.html.twig");
     }
 }

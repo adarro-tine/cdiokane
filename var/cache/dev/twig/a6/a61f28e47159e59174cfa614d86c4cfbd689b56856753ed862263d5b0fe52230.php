@@ -59,6 +59,6 @@ class __TwigTemplate_22af4adedef745d951e5702b32e3d14ef495b091bb03af486f41f4b4698
 
     public function getSourceContext()
     {
-        return new Source("", "@Framework/Form/button_label.html.php", "/var/www/html/CROWDEDU/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
+        return new Source("", "@Framework/Form/button_label.html.php", "/home/coumba/Bureau/cdiokane/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
     }
 }

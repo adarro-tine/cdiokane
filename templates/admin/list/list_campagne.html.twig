@@ -1,0 +1,59 @@
+
+  {% extends 'admin.html.twig' %}
+  {% block row %}
+     <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            {# <a type="button"  href="{{path('add_commande')}}"id="addToTable" class="btn btn-primary waves-effect waves-light">Ajouter <i class="fa fa-plus"></i></a> #}
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Prénom</th>
+                                            <th>Adresse</th>
+                                            <th>Pays</th>
+                                            <th>Ville</th>
+                                            <th>Téléphone</th>
+                                             <th>Cour</th>
+                                              {# <th>statut</th> #}
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                
+                                {% for campagne in campagne %}
+                                    <tr>
+                                <td>{{campagne.user.nom}} </td>
+                                        <td>{{campagne.user.prenom}} </td>
+                                            <td>{{campagne.telephone}} </td>
+                                                <td>{{campagne.pays}} </td>
+                                                    <td>{{campagne.ville}} </td>
+                                                            <td>{{campagne.telephone}} </td>
+                                                               
+                                                                <td>{{campagne.cours.titreCours}} </td>
+                                                                    {# <td>{{campagne.statut}} </td> #}
+                                                            <td class="actions">
+                                                            {# <td>{{ user.cour|length }}</td> #}
+                                                {# <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                                <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a> #}
+                                                {# <a href="{{ path('modifier_campagne', {'id': campagne.id}) }}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>#}
+                                                <a href="{{ path('delete_campagne',{'id':campagne.id}) }}" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>  
+                                            </td>
+                                            </tr>
+                                           
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end: page -->
+
+                        </div> <!-- end Panel -->
+
+   {% endblock %}

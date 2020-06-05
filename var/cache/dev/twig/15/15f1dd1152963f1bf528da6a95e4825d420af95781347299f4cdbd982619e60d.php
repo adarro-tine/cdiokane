@@ -141,6 +141,6 @@ class __TwigTemplate_e69b8dcfd3ce72d8b8b2c35e541536b6293b6919d5740d14ec0cd37cb2e
     <button>{{ options.button }}</button>
 
 </form>
-", "@KnpPaginator/Pagination/filtration.html.twig", "/var/www/html/CROWDEDU/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/filtration.html.twig");
+", "@KnpPaginator/Pagination/filtration.html.twig", "/home/coumba/Bureau/cdiokane/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/filtration.html.twig");
     }
 }

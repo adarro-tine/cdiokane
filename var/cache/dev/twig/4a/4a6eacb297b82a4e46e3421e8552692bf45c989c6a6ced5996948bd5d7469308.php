@@ -198,6 +198,6 @@ class __TwigTemplate_ecb0e2f37df4d4838a191463d7f34d8b6e999f7ffd1e1a5d4a836aa9f57
         </a>
     {% endif %}
 </div>
-", "@KnpPaginator/Pagination/semantic_ui_pagination.html.twig", "/var/www/html/CROWDEDU/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/semantic_ui_pagination.html.twig");
+", "@KnpPaginator/Pagination/semantic_ui_pagination.html.twig", "/home/coumba/Bureau/cdiokane/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/semantic_ui_pagination.html.twig");
     }
 }

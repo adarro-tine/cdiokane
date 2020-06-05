@@ -32,7 +32,7 @@ class Categorie
 
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string")
      */
     private $imgC;
 
@@ -66,18 +66,7 @@ class Categorie
         return $this;
     }
 
-    public function getImgC()
-    {
-        return $this->imgC;
-    }
-
-    public function setImgC($imgC): self
-    {
-        $this->imgC = $imgC;
-
-        return $this;
-    }
-
+   
     public function getSlug(): ?string
     {
         return $this->slug;
@@ -152,6 +141,28 @@ class Categorie
     public function setSouscategorie($souscategorie)
     {
         $this->souscategorie = $souscategorie;
+
+        return $this;
+    }
+
+    
+
+    /**
+     * Get the value of imgC
+     */ 
+    public function getImgC()
+    {
+        return $this->imgC;
+    }
+
+    /**
+     * Set the value of imgC
+     *
+     * @return  self
+     */ 
+    public function setImgC($imgC)
+    {
+        $this->imgC = $imgC;
 
         return $this;
     }

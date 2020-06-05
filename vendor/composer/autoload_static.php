@@ -50,6 +50,7 @@ class ComposerStaticInit23d1e717566c538324e5c5919b8006ed
             'Symfony\\Component\\Form\\' => 23,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
+            'Symfony\\Component\\ExpressionLanguage\\' => 37,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Dotenv\\' => 25,
             'Symfony\\Component\\DependencyInjection\\' => 38,
@@ -99,6 +100,7 @@ class ComposerStaticInit23d1e717566c538324e5c5919b8006ed
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
+            'EasyCorp\\Bundle\\EasyDeployBundle\\' => 33,
         ),
         'D' => 
         array (
@@ -241,6 +243,10 @@ class ComposerStaticInit23d1e717566c538324e5c5919b8006ed
         array (
             0 => __DIR__ . '/..' . '/symfony/filesystem',
         ),
+        'Symfony\\Component\\ExpressionLanguage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/expression-language',
+        ),
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
@@ -376,6 +382,10 @@ class ComposerStaticInit23d1e717566c538324e5c5919b8006ed
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
+        'EasyCorp\\Bundle\\EasyDeployBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/easycorp/easy-deploy-bundle/src',
         ),
         'Doctrine\\Persistence\\' => 
         array (

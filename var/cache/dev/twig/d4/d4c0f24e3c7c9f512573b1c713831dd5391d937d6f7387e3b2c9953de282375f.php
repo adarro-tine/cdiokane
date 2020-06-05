@@ -999,6 +999,6 @@ margin-top:60px;
       
 
     
-", "cours/addCours1.html.twig", "/var/www/html/CROWDEDU/templates/cours/addCours1.html.twig");
+", "cours/addCours1.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/addCours1.html.twig");
     }
 }

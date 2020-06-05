@@ -786,6 +786,6 @@ class __TwigTemplate_1dc573999910ba13f5f3868d7cbf4aa23836721df5b43c67788279c4b6d
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

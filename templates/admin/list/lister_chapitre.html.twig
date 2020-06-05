@@ -1,0 +1,59 @@
+
+  {% extends 'admin.html.twig' %}
+  {% block row %}
+     <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            <a type="button"  href="{{path('add_chapitre')}}"id="addToTable" class="btn btn-primary waves-effect waves-light">Ajouter <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+                                            <th>Libelle</th>
+                                            <th>Duration</th>
+                                             <th>Cour</th>
+                                              <th>Etat</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                
+                                {% for chapitre in chapitre %}
+                                    <tr>
+                                    <td>{{chapitre.titreChapitre}} </td>
+                                    <td>{{chapitre.duree | date ('d-m-Y')}} </td>
+                                    <td>{{chapitre.cour.titreCours}} </td>
+                                    {# <td><iframe width="100" height="50 "
+                                        src="{{ dump(chapitre.video)}}">
+                                        </iframe>
+                                </td> #}
+                                    <td>{% if chapitre.etat == 1 %}
+                                            Actif
+                                                {% elseif chapitre.etat == 0 %}
+                                                Inactif
+                                                {% endif %} </td>
+                                    {# <td> <img src="{{ asset('uploads/')}}{{ categorie.imgC}}" width="40" height="40""></td> #}
+
+                                                            <td class="actions">
+                                                            {# <td>{{ user.cour|length }}</td> #}
+                                                {# <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                                <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a> #}
+                                                <a href="{{ path('modifier_chapitre', {'id': chapitre.id}) }}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                                <a href="{{ path('delete_chapitre',{'id':chapitre.id}) }}" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>  
+                                            </td>
+                                            </tr>
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end: page -->
+
+                        </div> <!-- end Panel -->
+
+   {% endblock %}

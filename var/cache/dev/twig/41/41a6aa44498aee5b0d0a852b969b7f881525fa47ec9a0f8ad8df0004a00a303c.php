@@ -95,6 +95,6 @@ class __TwigTemplate_3a79fb5e86958d5c0d3a4115f50e127e87f12d7ca567f8e5f2a223b081f
             </trace>
 {% endfor %}
         </traces>
-", "@Twig/Exception/traces.xml.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
+", "@Twig/Exception/traces.xml.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
     }
 }

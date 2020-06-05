@@ -3,13 +3,15 @@ security:
         App\Entity\User: bcrypt
 
     role_hierarchy:
-        ROLE_ADMIN:       [ROLE_USER, ROLE_FORMATEUR]
+        ROLE_EDITOR: ROLE_USER
+        ROLE_ADMIN: ROLE_EDITOR
+        # ROLE_ADMIN:       [ROLE_USER, ROLE_FORMATEUR]
         ROLE_FORMATEUR:   ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
         database_users:
-            entity: { class: App\Entity\User, property: email }
+            entity: { class: App\Entity\User, property: username}
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -68,4 +70,4 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/etudiant, roles: ROLE_USER }
+        - { path: ^/profil, roles: ROLE_USER }

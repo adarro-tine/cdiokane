@@ -772,6 +772,6 @@ margin-top:60px;
 {% block section %}
 {% endblock %}
 {% block categories %}
-{% endblock %}", "cours/addCoursName.html.twig", "/var/www/html/CROWDEDU/templates/cours/addCoursName.html.twig");
+{% endblock %}", "cours/addCoursName.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/addCoursName.html.twig");
     }
 }

@@ -63,6 +63,6 @@ class __TwigTemplate_e2936e8d44778796e620c1d6bc472a92393571f10f81ef41df50de733b2
     {{ form_widget(form.recherche) }}
     <button type=\"submit\" class=\"btn\">Rechercher</button>
     {{ form_widget(form) }}
-</form>#}", "cours/page_rechercheTraitement.html.twig", "/var/www/html/CROWDEDU/templates/cours/page_rechercheTraitement.html.twig");
+</form>#}", "cours/page_rechercheTraitement.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/page_rechercheTraitement.html.twig");
     }
 }

@@ -2,8 +2,7 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,7 +31,7 @@ class Commande
      * @ORM\Column(type="string", length=255)
      */
     private $adresse;
-      /**
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $telephone;
@@ -66,16 +65,14 @@ class Commande
      */
     private $date;
 
-    /**
-     * @ORM\Column(type="array", nullable=true)
-     */
-    private $commande = [];
     
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Cursus", inversedBy="commandes",cascade={"persist"})
      */
    
     private $cursus;
+    
+     
 
     
     public function getId(): ?int
@@ -214,21 +211,6 @@ class Commande
 
         return $this;
     }
-
-    public function getCommande(): ?array
-    {
-        return $this->commande;
-    }
-
-    public function setCommande(?array $commande): self
-    {
-        $this->commande = $commande;
-
-        return $this;
-    }
-
-    
-
     /**
      * Get the value of cursus
      */ 
@@ -267,6 +249,8 @@ class Commande
         $this->cours = $cours;
 
         return $this;
-    }
+    }  
+     
+   
 }
 

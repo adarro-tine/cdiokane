@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -24,10 +22,7 @@ class Cours
      */
     private $titreCours;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $petitDescription;
+   
 
     /**
      * @ORM\Column(type="text")
@@ -49,10 +44,7 @@ class Cours
      */
     private $etiquette;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $visibilite;
+    
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="cours",cascade={"persist"})
@@ -69,7 +61,7 @@ class Cours
     private $chapitres;
     
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string")
      */
     private $image;
 
@@ -94,9 +86,15 @@ class Cours
      */
     private $universite;
 
-  
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $competence;
 
-  
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $visibilite;
 
     public function getId(): ?int
     {
@@ -114,19 +112,6 @@ class Cours
 
         return $this;
     }
-
-    public function getPetitDescription(): ?string
-    {
-        return $this->petitDescription;
-    }
-
-    public function setPetitDescription(string $petitDescription): self
-    {
-        $this->petitDescription = $petitDescription;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -174,20 +159,6 @@ class Cours
 
         return $this;
     }
-
-    public function getVisibilite(): ?bool
-    {
-        return $this->visibilite;
-    }
-
-    public function setVisibilite(bool $visibilite): self
-    {
-        $this->visibilite = $visibilite;
-
-        return $this;
-    }
-
-   
     public function getSlug()
     {
         return $this->slug;
@@ -268,26 +239,7 @@ class Cours
         return $this;
     }
 
-    /**
-     * Get the value of image
-     */ 
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
-     * Set the value of image
-     *
-     * @return  self
-     */ 
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
+   
     /**
      * Get the value of souscategorie
      */ 
@@ -327,4 +279,67 @@ class Cours
 
         return $this;
     }
+
+    /**
+     * Get the value of image
+     */ 
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set the value of image
+     *
+     * @return  self
+     */ 
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+    public function __toString(){
+        return $this->image;
+    }
+
+
+        /**
+         * Set the value of slug
+         *
+         * @return  self
+         */ 
+        public function setSlug($slug)
+        {
+                $this->slug = $slug;
+
+                return $this;
+        }
+
+        public function getCompetence(): ?string
+        {
+            return $this->competence;
+        }
+
+        public function setCompetence(string $competence): self
+        {
+            $this->competence = $competence;
+
+            return $this;
+        }
+
+        public function getVisibilite(): ?int
+        {
+            return $this->visibilite;
+        }
+
+        public function setVisibilite(int $visibilite): self
+        {
+            $this->visibilite = $visibilite;
+
+            return $this;
+        }
+    
+
+    
 }

@@ -46,4 +46,13 @@ class ChapitreRepository extends ServiceEntityRepository
         ;
     }
     */
+    function chapitreByCour($cour){
+        return $this->createQueryBuilder('ch')
+        ->where('ch.cour = :cour')
+        ->andWhere('ch.etat= 1')
+        ->setParameter('cour', $cour)
+        ->orderBy('ch.id', 'ASC')   
+        ->getQuery()
+        ->getResult();
+    }
 }

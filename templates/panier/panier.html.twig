@@ -160,7 +160,7 @@ span{
                 <tr>
                     <td><a href="{{ path('page_supprimerPanier',{'id':produit.id}) }}" id="a"><i class="delete">×</i></a></td>
 
-                    <td><img src="data:image/png;base64,{{ produit.image }}" width="40" height="40" alt="">  
+                    <td><img src="{{ asset('uploads/')}}{{ produit.image }}" width="40" height="40" alt="">  
 					</td> 
                     <td>{{produit.titreCours}}</td>
                     <td>{{produit.prix}} FCFA</td>

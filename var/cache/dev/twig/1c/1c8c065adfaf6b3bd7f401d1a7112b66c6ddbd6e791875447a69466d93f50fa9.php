@@ -895,6 +895,6 @@ Nous recherchons aujourd'hui des mentors dans de multiples
 {% block temoignages %}{% endblock %}
 {% block footer %}{% endblock %}
 
-", "poste/poste.html.twig", "/var/www/html/CROWDEDU/templates/poste/poste.html.twig");
+", "poste/poste.html.twig", "/home/coumba/Bureau/cdiokane/templates/poste/poste.html.twig");
     }
 }

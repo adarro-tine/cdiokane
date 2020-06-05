@@ -343,8 +343,9 @@ class __TwigTemplate_dfba02e681e5065fcf148ca5bbdeb522536df84c89e84090216be6242f8
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 116
             echo "                <tr>
-                    <td><img src=\"data:image/png;base64,";
+                    <td><img src=\"";
             // line 117
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 117), "html", null, true);
             echo "\" width=\"40\" height=\"40\" alt=\"\">  
 \t\t\t\t\t</td> 
@@ -427,7 +428,7 @@ class __TwigTemplate_dfba02e681e5065fcf148ca5bbdeb522536df84c89e84090216be6242f8
 
     public function getDebugInfo()
     {
-        return array (  406 => 149,  395 => 141,  388 => 137,  375 => 126,  369 => 125,  367 => 124,  361 => 121,  357 => 120,  353 => 119,  348 => 117,  345 => 116,  341 => 115,  327 => 103,  317 => 95,  311 => 92,  305 => 89,  299 => 86,  292 => 82,  288 => 80,  278 => 79,  202 => 12,  192 => 11,  174 => 9,  156 => 8,  138 => 7,  120 => 6,  102 => 5,  84 => 4,  66 => 3,  43 => 1,);
+        return array (  407 => 149,  396 => 141,  389 => 137,  376 => 126,  370 => 125,  368 => 124,  362 => 121,  358 => 120,  354 => 119,  348 => 117,  345 => 116,  341 => 115,  327 => 103,  317 => 95,  311 => 92,  305 => 89,  299 => 86,  292 => 82,  288 => 80,  278 => 79,  202 => 12,  192 => 11,  174 => 9,  156 => 8,  138 => 7,  120 => 6,  102 => 5,  84 => 4,  66 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -548,7 +549,7 @@ class __TwigTemplate_dfba02e681e5065fcf148ca5bbdeb522536df84c89e84090216be6242f8
                 <tbody class=\" tab\">
             {% for produit in produits %}
                 <tr>
-                    <td><img src=\"data:image/png;base64,{{ produit.image }}\" width=\"40\" height=\"40\" alt=\"\">  
+                    <td><img src=\"{{ asset('uploads/')}}{{ produit.image }}\" width=\"40\" height=\"40\" alt=\"\">  
 \t\t\t\t\t</td> 
                     <td>{{produit.titreCours}}</td>
                     <td>{{produit.prix}} FCFA</td>
@@ -582,6 +583,6 @@ class __TwigTemplate_dfba02e681e5065fcf148ca5bbdeb522536df84c89e84090216be6242f8
   </div>
  {{ form_end(form) }}
 
-{% endblock %}", "panier/finaliser_commande.html.twig", "/var/www/html/CROWDEDU/templates/panier/finaliser_commande.html.twig");
+{% endblock %}", "panier/finaliser_commande.html.twig", "/home/coumba/Bureau/cdiokane/templates/panier/finaliser_commande.html.twig");
     }
 }

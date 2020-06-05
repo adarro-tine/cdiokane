@@ -10,14 +10,13 @@ use App\Repository\CategorieRepository;
 use App\Repository\SousCategorieRepository;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 
 class RegistrationController extends AbstractController
@@ -26,7 +25,7 @@ class RegistrationController extends AbstractController
      /**
      * @Route("/registration",name="registration")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder,\Swift_Mailer $mailer,TokenGeneratorInterface $tokenGenerator) {
       // 1) build the form
       $user = new User();
       $form = $this->createForm(UserType::class, $user);
@@ -34,12 +33,12 @@ class RegistrationController extends AbstractController
     
       if ($form->isSubmitted() && $form->isValid()) {
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-              $longueurMax = strlen($caracteres);
-             $chaineAleatoire = '';
-            for ($i = 0; $i < 10; $i++)
-           {
-         $chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
-           } 
+            $longueurMax = strlen($caracteres);
+            $chaineAleatoire = '';
+          for ($i = 0; $i < 10; $i++)
+          {
+        $chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+          } 
           $password = $passwordEncoder->encodePassword($user, $user->getPassword());
           $user->setPassword($password);
           $user->setIsActive(true);
@@ -49,6 +48,25 @@ class RegistrationController extends AbstractController
           $entityManager->persist($user);
           $entityManager->flush();
           $this->addFlash('success', 'Votre compte à bien été enregistré.');
+          $token = $tokenGenerator->generateToken();
+          try{
+              $user->setResetToken($token);
+              $entityManager->flush();
+          }catch (\Exception $e) {
+              $this->addFlash('warning', $e->getMessage());
+              return $this->redirectToRoute('cours');
+          }
+
+          $url = $this->generateUrl('login', array('token' => $token), UrlGeneratorInterface::ABSOLUTE_URL);
+              $message = (new \Swift_Message('Confirmation  !'))
+              ->setFrom('crowdedu.edu@gmail.com')
+              ->setTo($user->getEmail())
+              ->setBody($this->renderView('registration/confirmation.html.twig',
+                                              array('url'=>$url,
+                                                      'prenom'=>$user->getPrenom(),'nom'=>$user->getNom())),'text/html');
+          $mailer->send($message);
+          $this->addFlash('success', 'Un mail de confirmation a été envoyé à votre compte ');
+
          return $this->redirectToRoute('cours');
       }
       return  $this->render('registration/index.html.twig', ['form' => $form->createView(), 'mainNavRegistration' => true, 'title' => 'Inscription']);

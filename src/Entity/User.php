@@ -184,7 +184,7 @@ class User implements UserInterface, \Serializable
         $this->cours = new \Doctrine\Common\Collections\ArrayCollection();        
             $this->isActive = true;
             // may not be needed, see section on salt below
-            $this->roles = array('ROLE_USER');
+            $this->roles = array();
         
     }
     /** @see \Serializable::serialize() */
@@ -208,10 +208,12 @@ class User implements UserInterface, \Serializable
                 $this->password,
                 $this->username,
                 $this->isActive,
+                
                 // see section on salt below
                 // $this->salt
                 ) = unserialize($serialized);
     }  
+    
     
     public function getSalt()
     {

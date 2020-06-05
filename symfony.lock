@@ -68,6 +68,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "easycorp/easy-deploy-bundle": {
+        "version": "v1.0.6"
+    },
     "egulias/email-validator": {
         "version": "2.1.11"
     },
@@ -184,6 +187,9 @@
     },
     "symfony/event-dispatcher": {
         "version": "v4.2.3"
+    },
+    "symfony/expression-language": {
+        "version": "v4.2.12"
     },
     "symfony/filesystem": {
         "version": "v4.2.3"

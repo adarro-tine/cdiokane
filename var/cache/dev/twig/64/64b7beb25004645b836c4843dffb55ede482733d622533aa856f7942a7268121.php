@@ -79,15 +79,32 @@ class __TwigTemplate_78b02a9a44feb5e2863e6ddcac2a584aeda1f9ba186e7684ca13508c6fc
         echo "\">
 </head>
    <body style=\"background-color:gainsboro;\">
-
-<div style=\"width:610px;height:250px;background-color:white;padding:60px;margin-left:200px;margin-top:40px;border-top:5px solid #96bf31;\">
+ ";
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "session", [], "any", false, false, false, 22), "flashbag", [], "any", false, false, false, 22), "get", [0 => "danger"], "method", false, false, false, 22));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 23
+            echo "                <div class=\"container alert alert-danger\" role=\"alert\">
+                    ";
+            // line 24
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 27
+        echo "<div style=\"width:610px;height:250px;background-color:white;padding:60px;margin-left:200px;margin-top:40px;border-top:5px solid #96bf31;\">
 <div style=\"margin-top:-45px;margin-right:70px;border-bottom:1px solid gainsboro;\">
 <img src=\"http://crowdeduafrica.com/wp-content/uploads/2018/10/Logo-CrowdEdu-Africa-1-1.png\" width=\"50%\" height=\"auto\"/>
 </div>
 <div style=\"padding:15px;font-family:'Roboto',sans-serif;font-size:16px;\">
 Bonjour ";
-        // line 28
-        echo twig_escape_filter($this->env, (isset($context["prenom"]) || array_key_exists("prenom", $context) ? $context["prenom"] : (function () { throw new RuntimeError('Variable "prenom" does not exist.', 28, $this->source); })()), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, (isset($context["prenom"]) || array_key_exists("prenom", $context) ? $context["prenom"] : (function () { throw new RuntimeError('Variable "prenom" does not exist.', 32, $this->source); })()), "html", null, true);
         echo ",
 
 Une réinitialisation du mot de passe de votre compte a été demandée.
@@ -97,8 +114,8 @@ Cliquez sur le bouton ci-dessous pour modifier votre mot de passe.<br/>
 Remarque : ce lien est valable pendant 24 heures. Après expiration de ce délai,
  vous devrez soumettre une nouvelle demande de réinitialisation de mot de passe.<br><br>
  <a href=\"";
-        // line 36
-        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 36, $this->source); })()), "html", null, true);
+        // line 40
+        echo twig_escape_filter($this->env, (isset($context["url"]) || array_key_exists("url", $context) ? $context["url"] : (function () { throw new RuntimeError('Variable "url" does not exist.', 40, $this->source); })()), "html", null, true);
         echo "\" class=\"btn\" style=\"background-color:#96bf31;height:50px;padding:12px;color:white;font-family:'Roboto',sans-serif;text-decoration:none;\">Changer votre mot de passe</a>
 </div>
 </div>
@@ -124,7 +141,7 @@ Remarque : ce lien est valable pendant 24 heures. Après expiration de ce délai
 
     public function getDebugInfo()
     {
-        return array (  101 => 36,  90 => 28,  78 => 19,  74 => 18,  70 => 17,  66 => 16,  62 => 15,  58 => 14,  54 => 13,  43 => 4,);
+        return array (  118 => 40,  107 => 32,  100 => 27,  91 => 24,  88 => 23,  84 => 22,  78 => 19,  74 => 18,  70 => 17,  66 => 16,  62 => 15,  58 => 14,  54 => 13,  43 => 4,);
     }
 
     public function getSourceContext()
@@ -150,7 +167,11 @@ Veuillez cliquez sur ce lien pour modifier votre mot de passe  <a href=\"{{url}}
 <link rel=\"stylesheet\" type=\"text/css\" href=\"{{asset('css/responsive.css')}}\">
 </head>
    <body style=\"background-color:gainsboro;\">
-
+ {% for flash_message in app.session.flashbag.get('danger') %}
+                <div class=\"container alert alert-danger\" role=\"alert\">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
 <div style=\"width:610px;height:250px;background-color:white;padding:60px;margin-left:200px;margin-top:40px;border-top:5px solid #96bf31;\">
 <div style=\"margin-top:-45px;margin-right:70px;border-bottom:1px solid gainsboro;\">
 <img src=\"http://crowdeduafrica.com/wp-content/uploads/2018/10/Logo-CrowdEdu-Africa-1-1.png\" width=\"50%\" height=\"auto\"/>
@@ -168,6 +189,6 @@ Remarque : ce lien est valable pendant 24 heures. Après expiration de ce délai
 </div>
 </div>
 </body>
-</html>", "security/email_reset_password.html.twig", "/var/www/html/CROWDEDU/templates/security/email_reset_password.html.twig");
+</html>", "security/email_reset_password.html.twig", "/home/coumba/Bureau/cdiokane/templates/security/email_reset_password.html.twig");
     }
 }

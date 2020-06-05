@@ -25,11 +25,6 @@ class Chapitre
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $duration;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $video;
 
      /**
@@ -37,16 +32,27 @@ class Chapitre
      */
     private $cour;
 
-     /**
-     * @Gedmo\Slug(fields={"titreChapitre"})
-     * @ORM\Column(length=128, unique=true)
-     */
-    private $slug;
+    
 
     /**
      * @ORM\Column(type="boolean")
      */
     private $etat;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $chapitre;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $duree;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
 
    
 
@@ -67,17 +73,7 @@ class Chapitre
         return $this;
     }
 
-    public function getDuration(): ?string
-    {
-        return $this->duration;
-    }
-
-    public function setDuration(string $duration): self
-    {
-        $this->duration = $duration;
-
-        return $this;
-    }
+    
 
     public function getVideo(): ?string
     {
@@ -104,7 +100,7 @@ class Chapitre
     }
 
     /**
-     * Set the value of cour
+     * Set the value of cour    
      *
      * @return  self
      */ 
@@ -138,4 +134,39 @@ class Chapitre
 
         return $this;
     }
+    public function __toString(){
+        return $this->cour;
+    }
+
+    public function getChapitre(): ?string
+    {
+        return $this->chapitre;
+    }
+
+    public function setChapitre(string $chapitre): self
+    {
+        $this->chapitre = $chapitre;
+
+        return $this;
+    }
+
+    public function getDuree(): ?\DateTimeInterface
+    {
+        return $this->duree;
+    }
+
+    public function setDuree(\DateTimeInterface $duree): self
+    {
+        $this->duree = $duree;
+
+        return $this;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
 }

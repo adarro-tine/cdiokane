@@ -3,11 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Repository\CommandeRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -51,9 +49,7 @@ class SecurityController extends AbstractController
     /**
      * @Route("/forgotten_password", name="app_forgotten_password")
      */
-    public function forgottenPassword(Request $request,\Swift_Mailer $mailer,TokenGeneratorInterface $tokenGenerator
-             
-                    ): Response
+    public function forgottenPassword(Request $request,\Swift_Mailer $mailer,TokenGeneratorInterface $tokenGenerator ): Response
     {
 
         if ($request->isMethod('POST')) {
@@ -77,13 +73,13 @@ class SecurityController extends AbstractController
                 ->setFrom('crowdedu.edu@gmail.com')
                 ->setTo($user->getEmail())
                 ->setBody($this->renderView('security/email_reset_password.html.twig',
-                                                   array('url' => $url,
-                                                          'prenom'=>$user->getPrenom())),'text/html');
+                                                array('url' => $url,
+                                                        'prenom'=>$user->getPrenom())),'text/html');
             $mailer->send($message);
             $this->addFlash('success', 'Un mail a été envoyé à votre compte pour la réinitialisation de votre mot de passe');
 
-
-            return $this->redirectToRoute('cours');
+            
+            // return $this->redirectToRoute('cours');
         }
 
         return $this->render('security/forgotten_password.html.twig');
@@ -112,16 +108,6 @@ class SecurityController extends AbstractController
         }
 
     }
-
-    /**
-     * @Route("/email",name="email")
-     */
-    public function test()
-         {
-            return $this->render("security/email_reset_password.html.twig");
-         }
-
-
     
 
 }

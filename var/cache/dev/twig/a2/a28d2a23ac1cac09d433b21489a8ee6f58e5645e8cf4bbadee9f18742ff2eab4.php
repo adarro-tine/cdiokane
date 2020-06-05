@@ -174,6 +174,6 @@ class __TwigTemplate_3e6b65075b702555ab4da9a346cb17d4967dbbf243c924340f713b2f1f0
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Profiler/open.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
+", "@WebProfiler/Profiler/open.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
     }
 }

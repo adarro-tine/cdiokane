@@ -25,8 +25,6 @@
 										Se connecter
 										<i class="fa fa-angle-down"></i>
 									</a>
-
-
 									<ul class="account_selection" style="padding: 8px 0 16px 0;width:230px;box-shadow:0 4px 16px rgba(20,23,28,0.25);margin-top:-17px;
 ">
 										{#{% if app.user != null %}#}
@@ -36,10 +34,10 @@
 <img src="{{ asset('uploads/' ~ app.user.photo) }}" height="120px" width="120px" id="image" style="margin-left:10px;border-radius:38px;">
 </li>
 <br><br>
-					  <li style="margin-top:-90px;" class="menu_item">{{app.user.prenom}} {{app.user.nom}}</li>
-					  <li class="menu_item" style="margin-top:-15px;">{{app.user.email}}</li>
+					<li style="margin-top:-90px;" class="menu_item">{{app.user.prenom}} {{app.user.nom}}</li>
+					<li class="menu_item" style="margin-top:-15px;">{{app.user.email}}</li>
                   <li class="menu_item" style="margin-top:-70px;"><a href="{{path('edit',{'slug':app.user.slug})}}" style="text-decoration:none;" >Compte </a></li>
-					  <li class="menu_item" style="margin-top:-15px;"><a href="{{path('security_logout')}}" style="text-decoration:none;">Déconnexion</a></li>
+					<li class="menu_item" style="margin-top:-15px;"><a href="{{path('security_logout')}}" style="text-decoration:none;">Déconnexion</a></li>
 
 										{% else %}
 <li><a href="#TaskListDialog" role="button" class="btn" data-toggle="modal">S'inscrire</a></li>
@@ -50,10 +48,7 @@
 								 </li>
                 
 </ul>  
-
 </div>
-
-
 </div>
 <div class="main_nav_container" style="background-color:#f5f5f5;height:auto;height:70px;padding:0;">
 		<div class="logo_container">
@@ -132,35 +127,35 @@
 </div>
 			
             
-							 <label>Motivation :</label>
+							<label>Motivation :</label>
 
-              <div class="form-group res-mg-t-15">
-                    <textarea name="motivation"  placeholder="" rows="2" placeholder="Montrer nous votre motivation" class="form-control caret" required>
-					</textarea>
-                      </div>
-					  				 <label>Perspective :</label>
+			<div class="form-group res-mg-t-15">
+				<textarea name="motivation"  placeholder="" rows="2" placeholder="Montrer nous votre motivation" class="form-control caret" required>
+				</textarea>
+					</div>
+									<label>Perspective :</label>
 
-					  <div class="form-group">
+					<div class="form-group">
 <input name="perspective" id="perspective" type="text"    class="form-control caret" required  placeholder="Entrer vos perspectives">
 </div>
 <label>Lien de votre vidéo :</label>
 
-					  <div class="form-group">
+					<div class="form-group">
 <input name="video" id="myUrl" type="text"    class="form-control caret" value="" required >
 </div>
-              
-                  <div class="card-footer text-muted" style="padding-top:5px;"><br><br>
-        <center>
+			
+				<div class="card-footer text-muted" style="padding-top:5px;"><br><br>
+	<center>
 <div class="row">
-                         <div class="col-lg-12" style="margin-top:-25px;">
- <input type="submit" name="ajouter" class="btn  waves-effect waves-light" style="width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;"  value="Enregistrer" />
-                                                    
-                        </div>
-                                                </div>          </center>        
-        </div>
-                </div>
-               
-                 
+						<div class="col-lg-12" style="margin-top:-25px;">
+<input type="submit" name="ajouter" class="btn  waves-effect waves-light" style="width:400px;height:60px;background-color:#96bf31;font-size:25px;font-weight:500;color:white;"  value="Enregistrer" />
+												
+					</div>
+											</div>          </center>        
+	</div>
+			</div>
+			
+				
             
       </div>
       </form>

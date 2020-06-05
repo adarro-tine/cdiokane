@@ -434,36 +434,35 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t<tr class=\"course_section show\">
 \t\t\t\t<td  colspan=\"4\" style=\"color:#686868;font-family:ubuntu\">Section 1: Introduction </td>
 \t\t\t\t<i class=\"fa fa-plus addition\" id=\"hide\"></i>
-\t\t\t\t
-\t\t\t</tr>
+\t</tr>
 \t\t\t";
-        // line 243
+        // line 242
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["cour"]) || array_key_exists("cour", $context) ? $context["cour"] : (function () { throw new RuntimeError('Variable "cour" does not exist.', 243, $this->source); })()), "chapitres", [], "any", false, false, false, 243));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["cour"]) || array_key_exists("cour", $context) ? $context["cour"] : (function () { throw new RuntimeError('Variable "cour" does not exist.', 242, $this->source); })()), "chapitres", [], "any", false, false, false, 242));
         foreach ($context['_seq'] as $context["_key"] => $context["cours"]) {
-            // line 244
+            // line 243
             echo "\t\t\t<tr class=\"course_lesson show tr\">
 \t\t\t<td class=\"curriculum-icon\"><i class=\"fa fa-play-circle\"></i></td>
 \t\t\t\t";
-            // line 246
-            if ((twig_get_attribute($this->env, $this->source, $context["cours"], "etat", [], "any", false, false, false, 246) == false)) {
-                // line 247
+            // line 245
+            if ((twig_get_attribute($this->env, $this->source, $context["cours"], "etat", [], "any", false, false, false, 245) == false)) {
+                // line 246
                 echo "\t\t\t\t<div class=\"course-preview\">
 \t\t\t\t<span>";
-                // line 248
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 248), "html", null, true);
+                // line 247
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 247), "html", null, true);
                 echo "</span>
 \t\t\t\t</div>
 \t\t\t\t<td><a href=\"\" style=\"color:#96bf31\" id=\"a_video\" data-toggle=\"modal\" data-target=\"#myModal\">";
-                // line 250
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 250), "html", null, true);
+                // line 249
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 249), "html", null, true);
                 echo "</a></td>
 \t\t\t  <center>  
 \t\t\t  <div  id=\"myModal\" class=\"modal fade\" role=\"dialog\" style=\"padding-top:150px;\">
 \t\t\t  
                 <iframe width=\"700\" height=\"400\" src=\"";
-                // line 254
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "video", [], "any", false, false, false, 254), "html", null, true);
+                // line 253
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "video", [], "any", false, false, false, 253), "html", null, true);
                 echo "\"></iframe>            
 \t\t\t    </div>
 \t\t\t\t</center>
@@ -471,16 +470,16 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t\t\t\t<td><span class=\"statu\" >gratuit</span> </td>\t\t\t\t
 \t\t\t\t";
             } else {
-                // line 260
+                // line 259
                 echo "\t\t\t\t<td><a >";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 260), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 259), "html", null, true);
                 echo "</a></td>
 \t\t\t\t<td><span class=\"statu\">payant</span> </td>
 \t\t\t\t";
             }
-            // line 263
+            // line 262
             echo "\t\t\t\t<td><span class=\"time\"><i class=\"fa fa-clock-o\"></i> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "duration", [], "any", false, false, false, 263), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "duration", [], "any", false, false, false, 262), "html", null, true);
             echo "</span></td>
 \t\t\t\t</tr>
 \t\t\t";
@@ -488,11 +487,10 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cours'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 266
+        // line 265
         echo "\t\t\t</tbody>
 \t\t\t</table>
 \t\t\t</div>
-
 \t\t</div>
 \t</div>
 \t
@@ -506,44 +504,39 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
     font-family:ubuntu;\">Cours 100% en ligne</h4>
 \t\t</div>
 \t</div>
-\t
-
 \t\t</div>
 \t</div>
 \t<div id=\"menu1\" class=\"container tab-pane fade\"><br>
 \t<div class=\"course_curriculum accordion\">
-<table class=\"table\">\t\t
-\t<tbody>
-\t<tr class=\"course_section show\">
-\t\t\t\t
-\t\t\t</tr>
+\t<table class=\"table\">\t\t
+\t\t<tbody>
 \t\t\t";
-        // line 294
+        // line 287
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["cour"]) || array_key_exists("cour", $context) ? $context["cour"] : (function () { throw new RuntimeError('Variable "cour" does not exist.', 294, $this->source); })()), "chapitres", [], "any", false, false, false, 294));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["cour"]) || array_key_exists("cour", $context) ? $context["cour"] : (function () { throw new RuntimeError('Variable "cour" does not exist.', 287, $this->source); })()), "chapitres", [], "any", false, false, false, 287));
         foreach ($context['_seq'] as $context["_key"] => $context["cours"]) {
-            // line 295
+            // line 288
             echo "\t\t\t<tr class=\"course_lesson show tr\">
 \t\t\t<td class=\"curriculum-icon\"><i class=\"fa fa-play-circle\"></i></td>
 \t\t\t\t";
-            // line 297
-            if ((twig_get_attribute($this->env, $this->source, $context["cours"], "etat", [], "any", false, false, false, 297) == false)) {
-                // line 298
+            // line 290
+            if ((twig_get_attribute($this->env, $this->source, $context["cours"], "etat", [], "any", false, false, false, 290) == false)) {
+                // line 291
                 echo "\t\t\t\t<div class=\"course-preview\">
 \t\t\t\t";
-                // line 300
+                // line 293
                 echo "\t\t\t\t<h3>Ce que vous allez apprendre</h3>
 \t\t\t\t</div>
-\t\t\t\t<td><a href=\"\" style=\"color:#96bf31\" id=\"a_video\" data-toggle=\"modal\" data-target=\"#myModal\">";
-                // line 302
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 302), "html", null, true);
+\t\t\t<td><a href=\"\" style=\"color:#96bf31\" id=\"a_video\" data-toggle=\"modal\" data-target=\"#myModal\">";
+                // line 295
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 295), "html", null, true);
                 echo "</a></td>
-\t\t\t  <center>  
-\t\t\t  <div  id=\"myModal\" class=\"modal fade\" role=\"dialog\" style=\"padding-top:150px;\">
-\t\t\t  
+\t\t\t<center>  
+\t\t\t<div  id=\"myModal\" class=\"modal fade\" role=\"dialog\" style=\"padding-top:150px;\">
+\t\t\t
                 <iframe width=\"700\" height=\"400\" src=\"";
-                // line 306
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "video", [], "any", false, false, false, 306), "html", null, true);
+                // line 299
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "video", [], "any", false, false, false, 299), "html", null, true);
                 echo "\"></iframe>            
 \t\t\t    </div>
 \t\t\t\t</center>
@@ -551,16 +544,16 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t\t\t\t<td><span class=\"statu\" >gratuit</span> </td>\t\t\t\t
 \t\t\t\t";
             } else {
-                // line 312
+                // line 305
                 echo "\t\t\t\t<td><a >";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 312), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "titreChapitre", [], "any", false, false, false, 305), "html", null, true);
                 echo "</a></td>
 \t\t\t\t<td><span class=\"statu\">payant</span> </td>
 \t\t\t\t";
             }
-            // line 315
+            // line 308
             echo "\t\t\t\t<td><span class=\"time\"><i class=\"fa fa-clock-o\"></i> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "duration", [], "any", false, false, false, 315), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cours"], "duration", [], "any", false, false, false, 308), "html", null, true);
             echo "</span></td>
 \t\t\t\t</tr>
 \t\t\t";
@@ -568,7 +561,7 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cours'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 318
+        // line 311
         echo "\t\t\t</tbody>
 \t\t\t</table>
 \t\t\t</div>
@@ -598,7 +591,7 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 
     }
 
-    // line 339
+    // line 332
     public function block_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -608,36 +601,36 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
 
-        // line 340
+        // line 333
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 341
+        // line 334
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/rate.class.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 342
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap4/popper.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 343
+        // line 336
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/bootstrap4/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 344
+        // line 337
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/Isotope/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 345
+        // line 338
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 346
+        // line 339
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 347
+        // line 340
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.js"), "html", null, true);
         echo "\"></script>
 \t<script type=\"text/javascript\">
@@ -678,7 +671,7 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 
     public function getDebugInfo()
     {
-        return array (  641 => 347,  637 => 346,  633 => 345,  629 => 344,  625 => 343,  621 => 342,  617 => 341,  612 => 340,  602 => 339,  572 => 318,  562 => 315,  555 => 312,  546 => 306,  539 => 302,  535 => 300,  532 => 298,  530 => 297,  526 => 295,  522 => 294,  492 => 266,  482 => 263,  475 => 260,  466 => 254,  459 => 250,  454 => 248,  451 => 247,  449 => 246,  445 => 244,  441 => 243,  425 => 230,  421 => 229,  378 => 189,  372 => 187,  367 => 184,  360 => 181,  357 => 180,  351 => 178,  343 => 174,  341 => 173,  331 => 166,  321 => 161,  317 => 159,  167 => 10,  157 => 9,  138 => 7,  119 => 6,  100 => 5,  82 => 4,  64 => 2,  41 => 1,);
+        return array (  634 => 340,  630 => 339,  626 => 338,  622 => 337,  618 => 336,  614 => 335,  610 => 334,  605 => 333,  595 => 332,  565 => 311,  555 => 308,  548 => 305,  539 => 299,  532 => 295,  528 => 293,  525 => 291,  523 => 290,  519 => 288,  515 => 287,  491 => 265,  481 => 262,  474 => 259,  465 => 253,  458 => 249,  453 => 247,  450 => 246,  448 => 245,  444 => 243,  440 => 242,  425 => 230,  421 => 229,  378 => 189,  372 => 187,  367 => 184,  360 => 181,  357 => 180,  351 => 178,  343 => 174,  341 => 173,  331 => 166,  321 => 161,  317 => 159,  167 => 10,  157 => 9,  138 => 7,  119 => 6,  100 => 5,  82 => 4,  64 => 2,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -923,8 +916,7 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t<tr class=\"course_section show\">
 \t\t\t\t<td  colspan=\"4\" style=\"color:#686868;font-family:ubuntu\">Section 1: Introduction </td>
 \t\t\t\t<i class=\"fa fa-plus addition\" id=\"hide\"></i>
-\t\t\t\t
-\t\t\t</tr>
+\t</tr>
 \t\t\t{% for cours in cour.chapitres %}
 \t\t\t<tr class=\"course_lesson show tr\">
 \t\t\t<td class=\"curriculum-icon\"><i class=\"fa fa-play-circle\"></i></td>
@@ -951,7 +943,6 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t\t\t</tbody>
 \t\t\t</table>
 \t\t\t</div>
-
 \t\t</div>
 \t</div>
 \t
@@ -965,17 +956,12 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
     font-family:ubuntu;\">Cours 100% en ligne</h4>
 \t\t</div>
 \t</div>
-\t
-
 \t\t</div>
 \t</div>
 \t<div id=\"menu1\" class=\"container tab-pane fade\"><br>
 \t<div class=\"course_curriculum accordion\">
-<table class=\"table\">\t\t
-\t<tbody>
-\t<tr class=\"course_section show\">
-\t\t\t\t
-\t\t\t</tr>
+\t<table class=\"table\">\t\t
+\t\t<tbody>
 \t\t\t{% for cours in cour.chapitres %}
 \t\t\t<tr class=\"course_lesson show tr\">
 \t\t\t<td class=\"curriculum-icon\"><i class=\"fa fa-play-circle\"></i></td>
@@ -984,10 +970,10 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
 \t\t\t\t{#<span>{{cours.titreChapitre}}</span>#}
 \t\t\t\t<h3>Ce que vous allez apprendre</h3>
 \t\t\t\t</div>
-\t\t\t\t<td><a href=\"\" style=\"color:#96bf31\" id=\"a_video\" data-toggle=\"modal\" data-target=\"#myModal\">{{cours.titreChapitre}}</a></td>
-\t\t\t  <center>  
-\t\t\t  <div  id=\"myModal\" class=\"modal fade\" role=\"dialog\" style=\"padding-top:150px;\">
-\t\t\t  
+\t\t\t<td><a href=\"\" style=\"color:#96bf31\" id=\"a_video\" data-toggle=\"modal\" data-target=\"#myModal\">{{cours.titreChapitre}}</a></td>
+\t\t\t<center>  
+\t\t\t<div  id=\"myModal\" class=\"modal fade\" role=\"dialog\" style=\"padding-top:150px;\">
+\t\t\t
                 <iframe width=\"700\" height=\"400\" src=\"{{cours.video}}\"></iframe>            
 \t\t\t    </div>
 \t\t\t\t</center>
@@ -1047,6 +1033,6 @@ class __TwigTemplate_4f6078563c4376f857f1e7fbc261e328113ae61ad75bc3ce63e7a43ae4f
          \$(\"#myModal\").show();
 \t\t});
 \t\t</script>
-\t{% endblock %}", "cours/detailcour.html.twig", "/var/www/html/CROWDEDU/templates/cours/detailcour.html.twig");
+\t{% endblock %}", "cours/detailcour.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/detailcour.html.twig");
     }
 }

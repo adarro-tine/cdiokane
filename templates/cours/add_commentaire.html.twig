@@ -1,0 +1,42 @@
+{% extends 'home/base.html.twig' %}
+
+{% block body %}
+<style>
+.ici{
+   border:1px solid gainsboro;
+}
+</style>
+
+   
+    
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+      <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+        <div class="row w-100">
+          <div class="col-lg-4 mx-auto">
+            <div class="auto-form-wrapper">
+             
+
+
+    
+                <div class="text-block text-center my-3">
+                
+             {{ form(commentaireForm) }}
+                  {# <span class="text-small font-weight-semibold">Pas un membre ?</span>
+                                    <a href="{{path('registration')}}" class="text-black text-small">S'inscrire</a><br/>
+
+                                    <a href="{{path('app_forgotten_password')}}" class="text-black text-small">Mot de passe oublié</a> #}
+
+                </div>
+            </div>
+          
+            <p class="footer-text text-center">copyright © 2020 Abdoulaye TINE. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+
+{% endblock %}

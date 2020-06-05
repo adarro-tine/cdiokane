@@ -18,6 +18,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <title>crowdedu Africa</title>
 <style id="applicationStylesheet" type="text/css">
@@ -25,9 +29,6 @@
   color: blue;
   font-size: 2px;
 }
-
-
-	
 </style>
 {% endblock %}
 {% include 'contact/flash_messages.html.twig' %}
@@ -46,24 +47,14 @@ overflow-x: hidden;">
 	height: 45px;
 	background: rgba(0,109,164,1);">
 <div class="top_nav_left" style="margin-left:150px;padding-top:3px;">
-
-<a href="#TaskListDialog" role="button" class="btn" data-toggle="modal" style="color:white;margin-top:-12px;font-size:10px;"><i class="fa fa-user" style="padding:5px;"></i>Se connecter
-</a>
-
-
-{#<li><a  >Se connecter</a></li>#}
-
+<a href="#TaskListDialog" role="button" class="btn" data-toggle="modal" style="color:white;margin-top:-12px;font-size:10px;"><i class="fa fa-user" style="padding:5px;"></i>Se connecter</a>
 <ul style="display:flex;flex-wrap:wrap;margin-top:-17px;float:right;">
 				<li style="padding:13px;color:white;"><a href="https://www.facebook.com/crowdedu"><i class="fab fa-facebook-f" style="color:white;"></i></a></li>
 				<li style="padding:13px;"><a href="#"><i class="fab fa-twitter" style="color:white;"></i></a></li>
 				<li style="padding:13px;"><a href="#"><i class="fab fa-instagram" style="color:white;"></i></a></li>
 				<li style="padding:13px;"><a href="#"><i class="fab fa-linkedin-in" style="color:white;"></i></a></li>
-                
-</ul>  
-
+</ul> 
 </div>
-
-
 </div>
 <div class="main_nav_container" style="background-color:#f5f5f5;height:auto;height:70px;padding:0;">
 		<div class="logo_container">
@@ -71,17 +62,17 @@ overflow-x: hidden;">
 						</div>
 			<div class="container">
 				<div class="row"  >
-					<div class="col-lg-12 text-right" style="margin-left:50px;">
+					<div class="col-lg-12 text-right" >
 						
 						
 						<nav class="navbar">
 							<ul class="navbar_menu" style="margin-top:-10px;">
 	
-				<li class="active limenu" style="margin-top:-1px;"><a href="#" id="ACCEUIL" class="active activelien" >Accueil</a></li>
-				<li class="active limenu" style="margin-top:-1px;"><a href="#"  id="COURS" class="active activelien" >Cours</a></li>
-				<li class="limenu" ><a href="#"  id="FORMATEURS" class="active activelien">Formateurs</a></li>
-         <li class="limenu"><a href="#" id="CONTACTEZ_NOUS" class="active activelien">Contactez-nous</a></li>
-
+				{# <li class="active limenu" style="margin-top:-1px;"><a href="{{path('cours')}}" id="ACCEUIL" class="active activelien" >Accueil</a></li> #}
+				<li class="active limenu" style="margin-top:-1px;"><a href=""  id="COURS" class="active activelien" >Cours</a></li>
+				<li class="limenu" ><a href="{{path('poste')}}"  id="FORMATEURS" class="active activelien">Formateurs</a></li>
+         <li class="limenu"><a href="{{path('formation')}}" id="CONTACTEZ_NOUS" class="active activelien">Formation</a></li>
+          <li class="limenu"><a href="{{path('demarrer')}}" id="CROWDFUNDING" class="active activelien">Crowdfunding</a></li>
          <li class="checkoutt" style="margin-right:25px;">{{render(controller('App\\Controller\\PanierController::menu'))}}</li>
 
 				{# <li class="checkouttt" style="margin-left:7px;color:#053651;">{{render(controller('App\\Controller\\PanierController::menu'))}}</li>#}
@@ -95,12 +86,7 @@ overflow-x: hidden;">
 
         </div>
 				</form>	
-                </li>
-               
-								
-               
-
-
+              </li>
 							</ul>
 						
 							<div class="hamburger_container">
@@ -121,7 +107,7 @@ overflow-x: hidden;">
 height:auto; background-position:fixed;
      background-repeat: no-repeat;margin-top:65px;width:100%;">
      <div style="padding:150px;margin-left:-70px;">
-    <h2 id="cours_en_video">Financer votre formation</h2>
+    <h2 id="cours_en_video">Réussissez votre formation</h2>
     {#style="background: -webkit-linear-gradient(right,black,#006DA4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;opacity:100%;#}
@@ -140,39 +126,20 @@ height:auto; background-position:fixed;
 	</div>
     
 
-    <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;background:linear-gradient(90deg,#006DA4,#95C11E);	text-align: left;
-		">
-			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <div id="#Rectangle_396" style="width:300px; right:12px;margin-top:185px;height:50px;background:linear-gradient(90deg,#006DA4,#95C11E);	text-align: left;">
+			{# {% if is_granted('IS_AUTHENTICATED_FULLY') %} #}
     
     <h4 style="	font-family: ubuntu;
 		font-style: normal;
 		font-weight: 200;
 		font-size: 18px;
-		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
-">
-    <a href="{{path('demarrer')}}" role="button"  style="color:white;text-decoration:none;">Démarrer une campagne</a>
+		color: rgba(255,255,255,1);text-align:center;padding-top:15px;">
+    <a href="{{path('registration')}}" role="button"  style="color:white;text-decoration:none;">Inscrivez-vous gratuitement</a>
     </h4>
-    {% else %}
-    <h4 style="	font-family: ubuntu;
-		font-style: normal;
-		font-weight: 200;
-		font-size: 18px;
-		color: rgba(255,255,255,1);text-align:center;padding-top:15px;
-">
-    <a href="{{path('login')}}" style="color:white;text-decoration:none;">Démarrer une campagne</a>
-    		
-
-    </h4>
-    {% endif %}
- 
-
-    </div>
-
-
-
+    </div><br>
+    <a href="{{path('add_commentaire')}}"style="text-decoration:none;">Laisser un commentaire</a>
      </div>
-
-
+     
 </div>
 </div>
 {% endblock %}
@@ -210,14 +177,8 @@ font-weight:bold;">No Barrier For Education.</h1>
 </div>
 </center>
 {% endblock %}
-{% block campagne %}
-  {% endblock %}
-
-
-{% block categories %}
-
-
-{% endblock %}
+{% block campagne %}{% endblock %}
+{% block categories %}{% endblock %}
 {% block tabs %}
 	<div id="TaskListDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" style="width:500px;margin:auto; background-color:white;">
     <div class="modal-header">
@@ -232,7 +193,6 @@ font-weight:bold;">No Barrier For Education.</h1>
 
 				</ul>
 		<br>
-		  
         <div class="tab-content" style="height:400px;">
 				<div id="msg"></div>
 				<div id="info"></div>
@@ -241,29 +201,22 @@ font-weight:bold;">No Barrier For Education.</h1>
 				<br><br>
 			
 				</div>
-        </div>
-				 <div class="c-modal-x-out">
-  <a class="nostyle" aria-label="fermer" href="" role="button" data-track="true" data-track-app="discovery" data-track-action="close" data-courselenium="close-modal-button" >✕</a>
+      </div>
+        <div class="c-modal-x-out">
+<a class="nostyle" aria-label="fermer" href="" role="button" data-track="true" data-track-app="discovery" data-track-action="close" data-courselenium="close-modal-button" >✕</a>
+</div>
   </div>
-   </div>
- 
-   </div>
-	 <!-- Fin div container -->
-	 </div>
-	 <!-- aaaaaaaaaaaaa -->
 
-   {% endblock %}
-   {% block share %}
-	
+  </div>
+  <!-- Fin div container -->
+  </div>
+  <!-- aaaaaaaaaaaaa -->
 
-   {% endblock %}
-	 {% block temoignages %}
-
-	
-	{% endblock %}
- 
-	 {% block footer %}
-	 <!-- Footer -->
+  {% endblock %}
+  {% block share %}{% endblock %}
+  {% block temoignages %}{% endblock %}
+  {% block footer %}
+  <!-- Footer -->
 <footer class="page-footer font-small indigo">
 
   <!-- Footer Links -->
@@ -283,14 +236,17 @@ font-weight:bold;">No Barrier For Education.</h1>
           <li>
             <a href="" class="fl">Accueil</a>
           </li>
-          
           <li>
             <a href="{{path('poste')}}" class="fl">Formateurs</a>
           </li>
           <li>
           <a href="{{path('contact')}}" class="fl">Contact</a>
           </li>
-          
+          {% if is_granted('ROLE_ADMIN') %}
+          <li>
+          <a href="{{path('admin')}}" class="fl">Tableau de bord</a>
+          </li>
+          {% endif %}
         </ul>
 
       </div>
@@ -345,7 +301,7 @@ font-weight:bold;">No Barrier For Education.</h1>
             <a href="#!" class="fl">Business</a>
           </li>
           <li>
-            <a href="#!" class="fl">A propos de nous</a>
+            <a href="#" class="fl">A propos de nous</a>
           </li>
         </ul>
 
@@ -514,7 +470,8 @@ var myId;
  });
 
 </script>
+
+{% endblock %}
 </body>
 </html>
-{% endblock %}
 

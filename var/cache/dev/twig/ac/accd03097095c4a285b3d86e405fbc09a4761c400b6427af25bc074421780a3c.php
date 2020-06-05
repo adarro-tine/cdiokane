@@ -227,6 +227,6 @@ class __TwigTemplate_3516b662c46a77bebe1a3a9a75785ed73ac35dc19f08294cd5c99885622
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/var/www/html/CROWDEDU/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/home/coumba/Bureau/cdiokane/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

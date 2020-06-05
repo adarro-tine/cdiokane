@@ -216,28 +216,6 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
     /**
      * {@inheritDoc}
      */
-    public function getImgC()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImgC', []);
-
-        return parent::getImgC();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setImgC($imgC): \App\Entity\Categorie
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImgC', [$imgC]);
-
-        return parent::setImgC($imgC);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getSlug(): ?string
     {
 
@@ -321,6 +299,28 @@ class Categorie extends \App\Entity\Categorie implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSouscategorie', [$souscategorie]);
 
         return parent::setSouscategorie($souscategorie);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImgC()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImgC', []);
+
+        return parent::getImgC();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImgC($imgC)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImgC', [$imgC]);
+
+        return parent::setImgC($imgC);
     }
 
 }

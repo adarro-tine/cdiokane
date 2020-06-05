@@ -358,7 +358,7 @@ a, a:active, a:focus, a:hover {
         $context['_seq'] = twig_ensure_traversable((isset($context["souscategories"]) || array_key_exists("souscategories", $context) ? $context["souscategories"] : (function () { throw new RuntimeError('Variable "souscategories" does not exist.', 143, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["sc"]) {
             // line 144
-            echo "        \t<li class=\"cat-item cat-item-34\" data-slug=\"technology\"><a href=\"";
+            echo "        <li class=\"cat-item cat-item-34\" data-slug=\"technology\"><a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("souscategorie", ["slug" => twig_get_attribute($this->env, $this->source, $context["sc"], "slug", [], "any", false, false, false, 144)]), "html", null, true);
             echo "\" title=\"1500+ students enrolled\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["sc"], "nom", [], "any", false, false, false, 144), "html", null, true);
@@ -624,7 +624,7 @@ a, a:active, a:focus, a:hover {
         <li style=\"margin-left:17px;\">
         La liste des sous-catégories</li>
         {% for sc in souscategories %}
-        \t<li class=\"cat-item cat-item-34\" data-slug=\"technology\"><a href=\"{{ path('souscategorie',{'slug':sc.slug})}}\" title=\"1500+ students enrolled\">{{sc.nom}}<span></span></a>
+        <li class=\"cat-item cat-item-34\" data-slug=\"technology\"><a href=\"{{ path('souscategorie',{'slug':sc.slug})}}\" title=\"1500+ students enrolled\">{{sc.nom}}<span></span></a>
         </li>
         {% endfor %}
         </ul>
@@ -681,6 +681,6 @@ a, a:active, a:focus, a:hover {
 \t\t\$(\".tr\").toggle();
 \t\t});
 \t\t</script>
-{% endblock %}", "cours/courBySouscategorie.html.twig", "/var/www/html/CROWDEDU/templates/cours/courBySouscategorie.html.twig");
+{% endblock %}", "cours/courBySouscategorie.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/courBySouscategorie.html.twig");
     }
 }

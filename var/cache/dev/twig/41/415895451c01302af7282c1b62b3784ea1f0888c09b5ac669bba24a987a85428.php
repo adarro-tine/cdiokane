@@ -568,6 +568,6 @@ class __TwigTemplate_77c2abf2bff6bcd7824e9dbec2c2ace111f20b677b64c822398b4d15bc6
 
 
 
-", "registration/edit.html.twig", "/var/www/html/CROWDEDU/templates/registration/edit.html.twig");
+", "registration/edit.html.twig", "/home/coumba/Bureau/cdiokane/templates/registration/edit.html.twig");
     }
 }

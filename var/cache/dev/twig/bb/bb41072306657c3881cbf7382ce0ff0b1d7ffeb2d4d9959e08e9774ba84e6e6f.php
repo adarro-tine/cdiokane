@@ -289,6 +289,6 @@ class __TwigTemplate_d61cc75cf8acb4f48ea692df8a29c8cd6f4b09fa190d51c4d640d2e6c2c
         {% endif %}
     </ul>
 {% endif %}
-", "@KnpPaginator/Pagination/materialize_pagination.html.twig", "/var/www/html/CROWDEDU/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/materialize_pagination.html.twig");
+", "@KnpPaginator/Pagination/materialize_pagination.html.twig", "/home/coumba/Bureau/cdiokane/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/materialize_pagination.html.twig");
     }
 }

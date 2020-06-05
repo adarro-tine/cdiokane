@@ -12,7 +12,7 @@
 	<h1 style="font-weight: 700;margin-left:-2px;margin-top:135px;color:#053651;font-family:'Roboto',sans-serif">{{campagne.cours.titreCours}} ({{campagne.cours.universite.nom}})</h1>
     <div style="filter: drop-shadow(0 0f 0.75rem gainsboro);">
     <section style="width:700px;height:400px;padding-top:30px;">
-    <img src="data:image/png;base64,{{ campagne.photo }}" width="680" height="350" alt="" ><br><br>
+    <img src="{{ asset('uploads/')}}{{ campagne.photo }}" width="680" height="350" alt="" ><br><br>
         <h6 style="text-align:center;">{{campagne.user.prenom}} {{campagne.user.nom}} organise cette collecte de fonds pour payer sa formation</h6><br>
         <div style="width:310px;height:50px;margin-bottom:100px;border-top:1px solid #96bf31;border-bottom:1px solid #96bf31;margin-left:170px;">
         {#<p>Date de création: {{campagne.date}}</p>#}

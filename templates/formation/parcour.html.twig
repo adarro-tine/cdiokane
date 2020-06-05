@@ -1,0 +1,504 @@
+{% extends 'home/index.html.twig'%}
+{% block background %}
+<style>
+	ul.breadcrumb {
+	padding: 30px 16px;
+	list-style: none !important;
+	background-color: #96bf31;
+	}
+	ul.breadcrumb li {
+	display: inline;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family:'Roboto',sans-serif;
+	}
+	ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: #ffffff;
+	content: "/\00a0";
+	}
+	ul.breadcrumb li a {
+	color: #ffffff;
+	text-decoration: none;
+	}
+	ul.breadcrumb li a:hover {
+	color: #fff;
+	text-decoration: none;
+	}
+	a{
+	background-color: transparent;
+	}
+	.el{
+	color: #ffffff !important;	
+	}
+	h1{
+	color: #ffffff !important;	
+	margin-top:-30px;
+	}
+	.bp_filled_stars {
+	position: absolute;
+	top: 0;
+	color: #FFCB10;
+	overflow: hidden;
+	float: left;
+	left: 0;
+	}
+	span[id^="grade-"]:hover {
+						opacity: 0.5;
+				}
+	#etoile{
+			
+			list-style-type: none;
+	}
+	#lio{
+		color:#ffffff;
+	}
+	.button{
+	background-color: #96bf31;
+	font-family:'Roboto',sans-serif;
+	color:#053651;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+	width: 100%;
+	text-align: center;
+	border-radius: 2px;
+	letter-spacing: .1em;
+	position: relative;
+	transition: all .3s;
+	z-index: 1;
+	font-size: 12px;
+	font-weight: 600;
+	outline: 0;
+	}
+	.button:hover{
+	color:#fff;
+	}
+	.prix{
+	font-family:'Roboto',sans-serif;
+	color:#96bf31;
+	font-size: 14px;
+	padding-left: 2px;
+	margin-left:7px;
+	margin-top:10px;
+	text-transform: uppercase;
+	}
+	.cadre{
+	height:auto;
+	width:auto;
+	}
+	.titre{
+	height:20%;
+	}
+	.badge{
+	color:#696969;
+	font-size: 14px;
+	padding:10px;
+	}
+	.font{
+	font-size:30px;
+	}
+	.acceuil{
+		color:#696969;
+	font-family:'Roboto',sans-serif;
+	}
+	.tr{
+		font-size:12px;		
+	}
+	.tr td a {
+		color:#686868;
+	}
+	.statu{
+		width:100px;
+		height:20px;
+		font-size:12px;
+		background: #70c989;
+		padding: 2px 8px;
+		margin-left: 10px;
+		color:#fff;
+    	border-radius: 2px;
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.tabla{
+		padding: 15px 20px;
+		letter-spacing: 1px;		
+		font-size: 11px;
+		text-transform: uppercase;
+		opacity: .9;
+		font-weight: 600;
+			
+	}
+	.item  {
+	color: #3d3d3d;
+	}
+	.item:hover {
+	color:#053651;
+	}
+	.addition{
+		margin-left:700px;
+		color:#D3D3D3;
+		font-size:32px;
+	}
+	.course-preview{
+    display: flex;
+    font-size: 18px;
+    padding: 16px 64px 16px 16px;
+	}
+	
+	</style>
+
+<div  style="background-color:#006DA4;background-size:contain;
+height:200px; background-position:fixed;
+     background-repeat: no-repeat;margin-top:65px;width:100%;">
+     <div style="padding:50px;margin-left:-70px;">
+   <center> <font  style="color:#ffffff !important;font-size:27px;vertical-align: inherit;text-align:center">Étudiez ce programme partout dans le monde et recevez un diplôme de l'Université de Caman entièrement accrédité</font></center>
+    
+    </div>
+     </div>
+</div>
+</div><br>
+{% endblock %}
+{% block fonctionnalites %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"></div>        
+        <div class="col-lg-8">
+            <font style="font-size: 4.5vw;">{{parcour.titreCours}}</font><br>
+            <font>Cette suite de nouveaux diplômes en ligne de {{parcour.titreCours}} vous prépare aux
+            emplois technologiques du futur.
+            Nos diplômes utilisent des approches interactives créatives 
+            fournies par Crowdedu, la plus grande plate-forme 
+            d'apprentissage en ligne du monde, pour fournir
+            des expériences d'apprentissage immersives. Choisissez l'une des sept spécialités pour
+            tirer parti de vos intérêts et développer les compétences dont vous avez besoin pour une carrière épanouissante.
+            </font>
+        <div  style="background-color:#006DA4;background-size:contain;
+        height:200px; background-position:fixed;
+            background-repeat: no-repeat;margin-top:65px;width:100%;">
+            <div style="padding:50px;margin-left:-20px;position: absolute;color:#ffffff !important">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-lg-6">
+                                <dl>
+                                    <dt>Modes d'étude:  </dt>      
+                                    <dd></dd>
+
+                                    <dt>Durée du programme:</dt>
+                                    <dd></dd>
+
+                                    <dt>Dates limite d'inscription:</dt>
+                                    <dd></dd>
+
+                                    <dt>Direction academique de:</dt>
+                                    <dd></dd>
+                                </dl>
+                        </div>
+                            <div class="col-lg-6"style="margin-rigth:-20px;">
+                                <dl >
+                                    <dt> <u>En ligne </u></dt>
+                                        <dd></dd>
+
+                                    <dt>{{parcour.duree}}</dt>
+                                        <dd></dd>
+
+                                    <dt>07 septembre 2020</dt>
+                                        <dd></dd><br>
+                                    <dt>CAMAN</dt>
+                                    
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block barrier %}{% endblock %}
+{% block campagne %} 
+<div class="container">
+<div  style="background-color:#006DA4;background-size:contain;
+        height:400px; background-position:fixed;
+            background-repeat: no-repeat;margin-top:65px;width:100%;">
+            <div style="padding:50px;margin-left:-20px;position: absolute;color:#ffffff !important">
+                <div class="conatiner ">
+                    <div class="row ">
+                        <div class="col-lg-4">
+                        <font style="vertical-align: inherit;text-align:center;font-size:30px;">
+                            Votre avenir est à portée de main.
+                            {{parcour.titreCours}} vous permet de développer vos compétences grâce à un travail de projet pratique.
+                        </font>
+                        </div>
+                        <div class="col-lg-8" style="margin-rigth:-20px;padding-bottom:100px;">
+                                <iframe width="700" height="400 "style="margin-left:100px;margin-top:-100px;"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        {% endblock %}
+        {% block categories %}
+        <div class="container">
+<div  style="background-size:contain;
+        height:400px; background-position:fixed;
+            background-repeat: no-repeat;margin-top:65px;width:100%;">
+            <div style="padding:50px;margin-left:-20px;position: absolute;">
+                <div class="container ">
+                    <div class="row ">
+                        
+                        <div class="col-lg-12">
+                            <font style="vertical-align: inherit;font-size: 20px;">
+                                En étudiant ce diplôme, vous:
+                            </font>
+                            <ul>
+                            <li>{{parcour.competence}}</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+</div>
+        {% endblock %}
+    {% block tabs %}
+<div class="container" style="margin-top:-150px">
+    <div class="row"style="background-size:contain;background-color:#f3f0ec;
+                height:auto;background-repeat: no-repeat;width:100%;">
+    	<div class="container mt-3">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs tabla">
+			<li class="nav-item">
+				<a class="nav-link active item" data-toggle="tab" href="#home">Acceuil</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link item" data-toggle="tab" href="#menu1">Programme de cours</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link item" data-toggle="tab" href="#menu2">Avis</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link item" data-toggle="tab" href="#menu3">Enseignant</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link item" data-toggle="tab" href="#menu4">Option d'inscription</a>
+			</li>
+			</ul>
+			<!-- Tab panes -->
+		<div class="tab-content">
+			 <div id="home" class="container tab-pane active">
+				<div class="row">
+					<div class="col-lg-8" style="border:1px solid gainsboro;padding:15px;">
+						{# <h6 class="acceuil"><strong >{{parcour.petitDescription}}</strong></h6> #}
+						<p class="acceuil">{{parcour.description}}.</p><br><br><br>
+						<div class="course_curriculum accordion">
+							<h3 class="heading">
+								<span style="font-family:ubuntu;text-transform: uppercase;font-size:16px;">Programme de Formation</span>
+							</h3>
+							<div class="course_curriculum accordion">
+								<table class="table">		
+									<tbody>
+										<tr class="course_section show">
+											<td  colspan="4" style="color:#686868;font-family:ubuntu">Section 1: Introduction </td>
+											{# <i class="fa fa-plus addition" id="hide"></i> #}
+										</tr>
+											{% for chap in chapitre %}
+												<tr class="chape_lesson show tr">
+													<td class="curriculum-icon"><i class="fa fa-play-circle"></i></td>
+													{% if chap.etat == false %}
+													<div class="chape-preview">
+														<span>{{chap.titreChapitre}}</span>
+													</div>
+														<td><a href="" style="color:#96bf31" id="a_video" data-toggle="modal" data-target="#myModal">{{chap.titreChapitre}}</a></td>
+														<center>  
+															<div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
+															<iframe width="700" height="400" src="{{chap.video}}"></iframe>            
+															</div>
+														</center>
+															<td><span class="statu" >gratuit</span> </td>				
+													{% else %}
+															<td><a >{{chap.titreChapitre}}</a></td>
+															<td><span class="statu">payant</span></td>
+													{% endif %}
+															<td><span class="time"><i class="fa fa-clock-o"></i> {{chap.duration}}</span></td>
+												</tr>
+												{% endfor %}
+										</tbody>
+								</table>
+								</div>
+							</div>
+						</div>
+					<div class="col-lg-4" style="padding:15px;">
+						<div class="students">
+							<i class="fas fa-globe-africa" style="font-size:25px;"></i>
+							<h4 style="margin-left:35px;margin-top:-28px;
+							font-size: 1.25rem;
+							line-height: 1.5rem;
+							font-weight: bold;
+							font-family:ubuntu;">chap 100% en ligne</h4>
+						</div>
+					</div>
+				</div>
+			</div> 
+		
+			<div id="menu1" class="container tab-pane fade"><br>
+				<div class="chape_curriculum accordion">
+					<table class="table">		
+						<tbody>
+							{% for chap in chapitre %}
+							<tr class="chape_lesson show tr">
+							<td class="curriculum-icon"><i class="fa fa-play-circle"></i></td>
+								{% if chap.etat == false %}
+								<div class="chape-preview">
+								{#<span>{{chap.titreChapitre}}</span>#}
+								<h3>Ce que vous allez apprendre</h3>
+								</div>
+								<td><a href="" style="color:#96bf31" id="a_video" data-toggle="modal" data-target="#myModal">{{chap.titreChapitre}}</a></td>
+								<center>  
+								<div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
+							
+								<iframe width="700" height="400" src="{{chap.video}}"></iframe>            
+								</div>
+								</center>
+								
+								<td><span class="statu" >gratuit</span> </td>				
+								{% else %}
+								<td><a >{{chap.titreChapitre}}</a></td>
+								<td><span class="statu">payant</span> </td>
+								{% endif %}
+								<td><span class="time"><i class="fa fa-clock-o"></i> {{chap.duree}}</span></td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+					<div id="menu2" class="container tab-pane fade"><br>
+						<h3>Menu 2</h3>
+						<p></p>
+					</div>
+					<div id="menu3" class="container tab-pane fade"><br>
+						<h3>Menu 2</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					</div>
+					<div id="menu4" class="container tab-pane fade"><br>
+						<h3>Menu 2</h3>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+    </div><br><br>
+        {% endblock %}
+        {% block share %}
+<div class="container">
+    <div class="row">
+            {# <div class="col-lg-8 ">
+					<img src="{{ asset('uploads/')}}{{ parcour.image }}" width="366" height="320.5" alt="" id="tine">
+			</div> #}
+			
+                <div class="col-lg-4">
+                    {# <div class="card cadre"> #}
+                            <div class="card-body">
+                                {% if panier[parcour.id] is not defined %}
+                                        <form action="{{ path('page_ajouterPanier',{'id':parcour.id}) }}" method="get">
+                                            <button type="submit" class="btn button" style="width:100%; height:60px;font-size: 16px;margin-bottom:5px;background-color:#96bf31;color:white;">PRENDRE CETTE FORMATION</button>
+                                        </form>
+                                            {% else %}
+                                                <a class="btn btn-success" href="{{ path('page_panier')}}">Déja au panier</a>
+                                            {% endif %}
+                                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                            <a href="{{path('demarrer')}}" class="btn button" style="width:100%; height:60px;font-size: 16px;margin-bottom:5px;background-color:#96bf31;color:white;padding:18px;">NE PEUT PAS PAYER</a>
+
+                                            {% else %}
+                                            <a href="#TaskListDialog" role="" data-toggle="" class="" style="width:100%; height:60px;font-size: 16px;margin-bottom:5px;padding:18px;color:#000000">Aide financiére</a>
+
+                                            {% endif %}
+                                            <p class="card-text prix">{{parcour.prix}} CFA pour 10 jours</p>
+                                            <ul >
+                                                <li class="badge">{{parcour.duree}}</li><i class="far fa-clock"></i><br>
+                                                <li class="badge">BADGE DE FORMATION</li><i class="far fa-id-badge"></i>
+                                                <li class="badge">CERTIFICAT DE FORMATION</li><i class="fas fa-graduation-cap"></i>
+                                            </ul>
+                                            <a href="#" class="card-link"><i class="fab fa-facebook-f"style="font-size: inherit;"></i></a>
+                                            <a href="#" class="card-link"><i class="fab fa-twitter"></i></a>
+										<a href="#" class="card-link"><i class="fab fa-linkedin-in"></i></a>
+									</div>
+								</div>                        
+							{# </div> #}
+							<div class="col-lg-4"></div>
+			<div class="col-lg-4"></div>
+						</div>
+					</div><br>
+ {% endblock %}
+         {% block temoignages %}
+                 {# <div class="container" style="margin-top:100px;margin-bottom:50px;">
+        <h2 style="font-size: 1.5rem;font-weight: 900;line-height: 2rem;margin-left:10px;margin-top:135px;">Obtenez votre diplôme</h2>
+	<div class="row">
+					{% for coursSimilaire in coursSimilaire %}
+                
+			<div class="col-lg-4 cole" style="padding:20px;">
+					<div class="card rower  mk" style="width:250px;overflow:hidden;">
+					<a href="#">
+						<img src="{{ asset('uploads/')}}{{ coursSimilaire.image}}" width="250" height="200" alt="" id="image">
+					</a>
+
+					<div class="card-body" style="">
+
+            <h5 class="card-title titre" style="text-align:center;white-space: nowrap;
+                font-family: ubuntu;
+                font-style: normal;
+                font-weight: normal;">
+                <a href="#" style="text-decoration:none;color: #053651;
+                display: block;
+                font-weight: 900;">{{coursSimilaire.titreCours}}</a></a></h5><br>
+                <h5 style="text-align:center;white-space: nowrap;
+                font-family: ubuntu;
+                font-style: normal;
+                font-weight: normal;color:#053651;">{{coursSimilaire.prix}} FCFA</h5>
+
+        <a href="{{ path('parcour',{'slug':coursSimilaire.slug})}}" class="btn" style=";width:100%;background-color:#96bf31;color:white;">Voir le parcous</a>
+            </div>
+        
+        </div>
+        
+        </div>
+        
+            {% endfor %}
+			</div>
+			</div> #}
+        {% endblock %}
+		{% block script %}
+	<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('js/rate.class.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/popper.js')}}"></script>
+	<script src="{{asset('css/bootstrap4/bootstrap.min.js')}}"></script>
+	<script src="{{asset('plugins/Isotope/isotope.pkgd.min.js')}}"></script>
+	<script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+	<script src="{{asset('plugins/easing/easing.js')}}"></script>
+	<script src="{{asset('js/custom.js')}}"></script>
+	<script type="text/javascript">
+		$(function() {
+				$('.li').each(function() {
+						$(this).append(objRate.initRate(objRate.maxRate));
+				});
+
+				$('.fa-star-o, .fa-star').on('mouseenter mouseleave', objRate.hoverHandler);
+				$('.fa-star-o, .fa-star').on('click', objRate.clickHandler);
+		});
+		$("#hide").click(function(){
+		$(".tr").toggle();
+		});
+		$("#myModal").hide();
+		$('#a_video').click(function(){
+         $("#myModal").show();
+		});
+		</script>
+	{% endblock %}

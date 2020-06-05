@@ -1,0 +1,66 @@
+
+  {% extends 'admin.html.twig' %}
+  {% block row %}
+     <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            {# <a type="button"  href="{{path('add_commande')}}"id="addToTable" class="btn btn-primary waves-effect waves-light">Ajouter <i class="fa fa-plus"></i></a> #}
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Prénom</th>
+                                            <th>Adresse</th>
+                                            <th>Pays</th>
+                                            <th>Ville</th>
+                                            <th>Téléphone</th>
+                                            <th>Subvention</th>
+                                             <th>Cour</th>
+                                              <th>statut</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                
+                                {% for commande in commande %}
+                                    <tr>
+                                <td>{{commande.user.nom}} </td>
+                                        <td>{{commande.user.prenom}} </td>
+                                            <td>{{commande.adresse}} </td>
+                                                <td>{{commande.pays}} </td>
+                                                    <td>{{commande.ville}} </td>
+                                                            <td>{{commande.telephone}} </td>
+                                                                <td> 
+                                                                    {% if commande.subvention == 1 %}
+                                                                        OUI
+                                                                            {% elseif commande.subvention == 0 %}
+                                                                            NON
+                                                                            {% endif %}
+                                                                </td> 
+                                                                <td>{{commande.cours.titreCours}} </td>
+                                                                    <td>{{commande.statut}} </td>
+                                                            <td class="actions">
+                                                            {# <td>{{ user.cour|length }}</td> #}
+                                                {# <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                                <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a> #}
+                                                {# <a href="{{ path('modifier_commande', {'id': commande.id}) }}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>#}
+                                                <a href="{{ path('delete_commande',{'id':commande.id}) }}" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>  
+                                            </td>
+                                            </tr>
+                                           
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end: page -->
+
+                        </div> <!-- end Panel -->
+
+   {% endblock %}

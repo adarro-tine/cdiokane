@@ -226,7 +226,7 @@
 	<div id="home" class="container tab-pane active"><br>
 	<div class="row">
 	<div class="col-lg-8" style="border:1px solid gainsboro;padding:15px;">
-		<h6 class="acceuil"><strong >{{cour.petitDescription}}</strong></h6>
+		<h6 class="acceuil"><strong >{{cour.competence}}</strong></h6>
 		<p class="acceuil">{{cour.description}}.</p><br><br><br>
 		<div class="course_curriculum accordion">
 			<h3 class="heading">
@@ -238,8 +238,7 @@
 	<tr class="course_section show">
 				<td  colspan="4" style="color:#686868;font-family:ubuntu">Section 1: Introduction </td>
 				<i class="fa fa-plus addition" id="hide"></i>
-				
-			</tr>
+	</tr>
 			{% for cours in cour.chapitres %}
 			<tr class="course_lesson show tr">
 			<td class="curriculum-icon"><i class="fa fa-play-circle"></i></td>
@@ -266,7 +265,6 @@
 			</tbody>
 			</table>
 			</div>
-
 		</div>
 	</div>
 	
@@ -280,17 +278,12 @@
     font-family:ubuntu;">Cours 100% en ligne</h4>
 		</div>
 	</div>
-	
-
 		</div>
 	</div>
 	<div id="menu1" class="container tab-pane fade"><br>
 	<div class="course_curriculum accordion">
-<table class="table">		
-	<tbody>
-	<tr class="course_section show">
-				
-			</tr>
+	<table class="table">		
+		<tbody>
 			{% for cours in cour.chapitres %}
 			<tr class="course_lesson show tr">
 			<td class="curriculum-icon"><i class="fa fa-play-circle"></i></td>
@@ -299,10 +292,10 @@
 				{#<span>{{cours.titreChapitre}}</span>#}
 				<h3>Ce que vous allez apprendre</h3>
 				</div>
-				<td><a href="" style="color:#96bf31" id="a_video" data-toggle="modal" data-target="#myModal">{{cours.titreChapitre}}</a></td>
-			  <center>  
-			  <div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
-			  
+			<td><a href="" style="color:#96bf31" id="a_video" data-toggle="modal" data-target="#myModal">{{cours.titreChapitre}}</a></td>
+			<center>  
+			<div  id="myModal" class="modal fade" role="dialog" style="padding-top:150px;">
+			
                 <iframe width="700" height="400" src="{{cours.video}}"></iframe>            
 			    </div>
 				</center>

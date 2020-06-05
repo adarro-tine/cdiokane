@@ -287,6 +287,6 @@ class __TwigTemplate_8cf28abdef23285a481d9196ffea96f0478d87f4f2c5d4b969d0646f245
         <button class=\"btn\">Register</button>
     {{ form_end(registration) }}
     </div>
-{% endblock %}", "registration/new.html.twig", "/var/www/html/CROWDEDU/templates/registration/new.html.twig");
+{% endblock %}", "registration/new.html.twig", "/home/coumba/Bureau/cdiokane/templates/registration/new.html.twig");
     }
 }

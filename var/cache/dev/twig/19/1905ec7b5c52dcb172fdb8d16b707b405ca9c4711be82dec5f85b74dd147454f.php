@@ -413,8 +413,9 @@ class __TwigTemplate_376d3db3f35d0d16432b9481150f677d8916e56abbe136880595b100f2f
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-8\">
 \t\t\t\t<div class=\"product_image\">
-\t\t\t\t\t<img src=\"data:image/png;base64,";
+\t\t\t\t\t<img src=\"";
         // line 182
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/"), "html", null, true);
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cour"]) || array_key_exists("cour", $context) ? $context["cour"] : (function () { throw new RuntimeError('Variable "cour" does not exist.', 182, $this->source); })()), "image", [], "any", false, false, false, 182), "html", null, true);
         echo "\" width=\"300\" height=\"450\" alt=\"\">
 \t\t\t\t\t</div>
@@ -665,7 +666,7 @@ class __TwigTemplate_376d3db3f35d0d16432b9481150f677d8916e56abbe136880595b100f2f
 
     public function getDebugInfo()
     {
-        return array (  628 => 305,  624 => 304,  620 => 303,  616 => 302,  612 => 301,  608 => 300,  604 => 299,  599 => 298,  589 => 297,  550 => 267,  541 => 264,  534 => 260,  528 => 257,  523 => 255,  518 => 252,  514 => 251,  498 => 238,  494 => 237,  452 => 198,  446 => 196,  444 => 195,  438 => 193,  432 => 190,  429 => 189,  427 => 188,  418 => 182,  399 => 166,  394 => 164,  240 => 12,  230 => 11,  212 => 10,  194 => 9,  176 => 8,  158 => 7,  140 => 6,  122 => 5,  104 => 4,  86 => 3,  68 => 2,  45 => 1,);
+        return array (  629 => 305,  625 => 304,  621 => 303,  617 => 302,  613 => 301,  609 => 300,  605 => 299,  600 => 298,  590 => 297,  551 => 267,  542 => 264,  535 => 260,  529 => 257,  524 => 255,  519 => 252,  515 => 251,  499 => 238,  495 => 237,  453 => 198,  447 => 196,  445 => 195,  439 => 193,  433 => 190,  430 => 189,  428 => 188,  418 => 182,  399 => 166,  394 => 164,  240 => 12,  230 => 11,  212 => 10,  194 => 9,  176 => 8,  158 => 7,  140 => 6,  122 => 5,  104 => 4,  86 => 3,  68 => 2,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -851,7 +852,7 @@ class __TwigTemplate_376d3db3f35d0d16432b9481150f677d8916e56abbe136880595b100f2f
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-8\">
 \t\t\t\t<div class=\"product_image\">
-\t\t\t\t\t<img src=\"data:image/png;base64,{{ cour.image }}\" width=\"300\" height=\"450\" alt=\"\">
+\t\t\t\t\t<img src=\"{{ asset('uploads/')}}{{ cour.image }}\" width=\"300\" height=\"450\" alt=\"\">
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-4\">
@@ -992,6 +993,6 @@ class __TwigTemplate_376d3db3f35d0d16432b9481150f677d8916e56abbe136880595b100f2f
          \$(\"#myModal\").show();
 \t\t});
 \t\t</script>
-\t{% endblock %}", "cours/chapitres.html.twig", "/var/www/html/CROWDEDU/templates/cours/chapitres.html.twig");
+\t{% endblock %}", "cours/chapitres.html.twig", "/home/coumba/Bureau/cdiokane/templates/cours/chapitres.html.twig");
     }
 }

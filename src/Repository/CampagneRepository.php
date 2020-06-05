@@ -47,4 +47,13 @@ class CampagneRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    function campagneUser($user){
+        return $this->createQueryBuilder('c')
+        ->where('c.user = :user')
+        ->setParameter('user', $user)
+        ->orderBy('c.id', 'ASC')
+        ->getQuery()
+        ->getResult();   
+    }
 }

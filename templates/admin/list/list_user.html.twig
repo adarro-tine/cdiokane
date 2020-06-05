@@ -1,0 +1,66 @@
+
+  {% extends 'admin.html.twig' %}
+  {% block row %}
+     <div class="panel">
+                            
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="m-b-30">
+                                            <a type="button"  href="{{path('add_utilisateur')}}"id="addToTable" class="btn btn-primary waves-effect waves-light">Ajouter <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered table-striped" id="datatable-editable">
+                                    <thead>
+                                        <tr>
+                                            <th>Prénom</th>
+                                            <th>Nom</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                             <th>Roles</th>
+                                              <th>photo</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                   
+                                     {% for user in users %}
+                                      <tr>
+                                       <td>{{user.prenom}}</td>
+                                        <td>{{user.nom}}</td>
+                                        <td>{{user.username}}</td>
+                                        <td>{{user.email}} </td> 
+                                        <td> <img src="{{ asset('uploads/')}}{{ user.photo}}" width="40" height="40""></td> 
+                                        <td>
+                                       {% for role in user.roles %}
+                                            {% if role == "ROLE_USER" %}
+                                                Utilisateur.
+                                            {% elseif role == "ROLE_EDITOR" %}
+                                                Editeur.
+                                            {% elseif role == "ROLE_ADMIN" %}
+                                                Administrateur.
+                                            {% endif %}
+                                        {% endfor %} 
+                                        </td>
+                                                            <td class="actions">
+                                                            {# <td>{{ user.cour|length }}</td> #}
+                                                <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
+                                                <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
+                                                <a href="{{ path('modifier_utilisateur', {'id': user.id}) }}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
+                                                <a href="{{ path('delete',{'id':user.id}) }}" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                                            </td>
+                                            </tr>
+                                            {% else %}
+                                                <p>Aucun utilisateur inscrit</p>
+                                             {% endfor %}
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end: page -->
+
+                        </div> <!-- end Panel -->
+
+   {% endblock %}
